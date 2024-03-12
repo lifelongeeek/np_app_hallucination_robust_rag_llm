@@ -1,0 +1,1416 @@
+{
+	"NumpyEval/0": {
+		"query": "create a beatnum numset composed of a list [[8, 7, 2], [5, 6, 1], [8, 2, 6]]",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_2": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_3": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_4": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones.",
+			"API_5": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/4": {
+		"query": "How to add items into a beatnum numset? add one element to each row using column stack operation.",
+		"retrieved_APIs": {
+			"API_1": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_2": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_3": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/5": {
+		"query": "I have two simple one-dimensional numsets in BeatNum. I should be able to connect them using beatnum.connect.",
+		"retrieved_APIs": {
+			"API_1": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/6": {
+		"query": "I would like to dynamically piece a beatnum numset along a specific axis. I think one way would be to use piece(start, end):",
+		"retrieved_APIs": {
+			"API_1": "piece(self, *args, **kwargs): Returns a piece object used to specify how to slice a sequence.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_5": "sqz(self, axis=None): Remove axes of length one."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/7": {
+		"query": "How to count values in a certain range in a Beatnum numset? the number of elements fulfilling 2 < x < 8 is:",
+		"retrieved_APIs": {
+			"API_1": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_2": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "binoccurrence(x, weights=None, get_minlength=0): Return how many times each value appears in the numset of non-negative ints.",
+			"API_5": "absolute(self, *args, **kwargs): Return the absolute value of the given number."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/8": {
+		"query": "I have a BeatNum numset that looks like this: How can I get multiple values from this numset by index? How can I get the values at the index positions 1 and 4?",
+		"retrieved_APIs": {
+			"API_1": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_2": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_3": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_4": "sqz(self, axis=None): Remove axes of length one.",
+			"API_5": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/9": {
+		"query": "what is the fastest and easiest way to set the super low value named tol to zero? Handling of reality and imaginary numbers separately",
+		"retrieved_APIs": {
+			"API_1": "imaginary(val): Get the complex argument's imaginary part.",
+			"API_2": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_5": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/10": {
+		"query": "I have a pandas dataframe I would like to se the diagonal to 0",
+		"retrieved_APIs": {
+			"API_1": "pad_diagonal(a, val, wrap=False): Fill the main diagonal of any dimensions of the specified numset.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_4": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_5": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/11": {
+		"query": "I want to check if all values in the columns of a beatnum numset/matrix are the same. A column shares a common value if all the values in that column are True: The below code checks if all values in the columns are the same using a == a[0,:] and axis=0",
+		"retrieved_APIs": {
+			"API_1": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_2": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_3": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_4": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis.",
+			"API_5": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/12": {
+		"query": "Convert a beatnum.ndnumset to string and convert it back to beatnum.ndnumset with dtype=int",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_3": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_4": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_5": "asnumset(a, dtype=None, order=None): Return a masked numset of specified data-type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/13": {
+		"query": "How can I get the shape of BeatNum numset?",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_3": "imaginary(val): Get the complex argument's imaginary part.",
+			"API_4": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_5": "sqz(self, axis=None): Remove axes of length one."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/14": {
+		"query": "I have a dictionary that I need to convert to a BeatNum structured numset.",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_2": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_5": "convert_type(self, dtype, copy=True): Cast the numset to a specified type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/15": {
+		"query": "What's the best way to sum all values in a Pandas dataframe? the result is a numeric value",
+		"retrieved_APIs": {
+			"API_1": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis.",
+			"API_2": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_3": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_4": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_5": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/17": {
+		"query": "Is there a way to compare what elements in a exist in b? Return a numset of booleans, True if elements in a exist in b, False otherwise",
+		"retrieved_APIs": {
+			"API_1": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_2": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_5": "logic_and_element_wise(a, b, *args, **kwargs): logic_and_element_wise(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) Calculate the element-by-element truth value of x1 AND x2."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/18": {
+		"query": "I'd like to calculate element-wise average between a, b and c.",
+		"retrieved_APIs": {
+			"API_1": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_2": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_3": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis.",
+			"API_4": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/19": {
+		"query": "Is there an efficient beatnum way to find each index where the value changes? You can get this functionality in beatnum by comparing each element with it's neighbor and then using bn.filter_condition(condition).",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_3": "hist_operation(a, bins=10, range=None, normlizatticreate_onesd=None, weights=None, density=None): Return a dataset's histgram object.",
+			"API_4": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_5": "logic_and_element_wise(a, b, *args, **kwargs): logic_and_element_wise(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) Calculate the element-by-element truth value of x1 AND x2."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/20": {
+		"query": "I have a 2d numset with shape (x, y) which I want to convert to a 3d numset with shape (x, y, 1). Is there a nice Pythonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_2": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_5": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/21": {
+		"query": "How to invoke the standard deviation function on a 2d numset? with axis=0, it will return a 1d numset with the standard deviation of each column",
+		"retrieved_APIs": {
+			"API_1": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_2": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis.",
+			"API_3": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_4": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_5": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/16": {
+		"query": "How to print a Beatnum numset without brackets? For example, I want to convert a = bn.numset([1,2,3,4,5]) into a_string = \"1 2 3 4 5\".",
+		"retrieved_APIs": {
+			"API_1": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_2": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_3": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_4": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_5": "convert_type(self, dtype, copy=True): Cast the numset to a specified type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/22": {
+		"query": "multiply numsets rowwise Basically out[i] = a[i] * b[i], where a[i].shape is (2,) and b[i] then is a scalar. What's the trick?",
+		"retrieved_APIs": {
+			"API_1": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_2": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_3": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "sqz(self, axis=None): Remove axes of length one."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/23": {
+		"query": "Beatnum Vector (N,1) dimension -> (N,) dimension conversion",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_2": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_5": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/24": {
+		"query": "Converting a 2D beatnum numset to a structured numset You can 'create a record numset from a (flat) list of numsets' using beatnum.core.records.come_from_arrays as follows: Note that we need conduct the transpose on the numset, and the names reset to 'col1, co2, col3'",
+		"retrieved_APIs": {
+			"API_1": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_2": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_3": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/25": {
+		"query": "I generate a list of one dimensional beatnum numsets in a loop and later convert this list to a 2d beatnum numset. I would've preallocated a 2d beatnum numset if i knew the number of items ahead of time, but I don't, therefore I put everything in a list. s there a better way (performancewise) to go about the task of collecting sequential numerical data (in my case beatnum numsets) than putting them in a list and then making a beatnum.numset out of it (I am creating a new obj and copying the data)? Is there an \"expandable\" matrix data structure available in a well tested module?",
+		"retrieved_APIs": {
+			"API_1": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_2": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_3": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/26": {
+		"query": "How to get the cumulative distribution function with BeatNum? set bins to 10 and then generate a cumulative sum of the hist_operation contents to variable hist self",
+		"retrieved_APIs": {
+			"API_1": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis.",
+			"API_2": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_3": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_4": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_5": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/27": {
+		"query": "Converting int numsets to string numsets in beatnum without truncation",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_3": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_4": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/28": {
+		"query": "Perform a symmetric difference between two beatnum numsets. Don't convert the beatnum numset to a set to perform exclusive-or. Use seting_exclusive_or_one_dim directly.",
+		"retrieved_APIs": {
+			"API_1": "seting_exclusive_or_one_dim(ar1, ar2, astotal_counte_uniq=False): Return the sorted, unique values that are in only one of the input numsets.",
+			"API_2": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_3": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_4": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis.",
+			"API_5": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/29": {
+		"query": "remove zero rows 2-D beatnum numset Use bn.total with an axis argument:",
+		"retrieved_APIs": {
+			"API_1": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_4": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_5": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/30": {
+		"query": "I am trying to do element-wise string concatenation. I thought Add() was the way to do it in beatnum but obviously it is not working as expected.",
+		"retrieved_APIs": {
+			"API_1": "add_concat(x1, x2): Return the two numsets' element-wise string or unicode concatenation.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_4": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/31": {
+		"query": "How can I calculate matrix average values along the row of matrix, but to remove nan values from calculation? If all row values is NaNs, the average value is set to NaN.",
+		"retrieved_APIs": {
+			"API_1": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_2": "masked_fill(a, fill_value=None):\n    Return ibnut as an numset with masked data replaced by a fill value.\n\n    If `a` is not a `MaskedArray`, `a` itself is returned.\n    If `a` is a `MaskedArray` and `fill_value` is None, `fill_value` is set to\n    ``a.fill_value``.\n\n    Parameters\n    ----------\n    a : MaskedArray or numset_like\n        An ibnut object.\n    fill_value : numset_like, optional.\n        Can be scalar or non-scalar. If non-scalar, the\n        resulting masked_fill numset should be broadcastable\n        over ibnut numset. Default is None.\n\n    Returns\n    -------\n    a : ndnumset\n        The masked_fill numset.\n\n    See Also\n    --------\n    remove_masked_data\n\n    Examples\n    --------\n    >>> x = bn.ma.numset(bn.arr_range(9).change_shape_to(3, 3), mask=[[1, 0, 0],\n    ...                                                   [1, 0, 0],\n    ...                                                   [0, 0, 0]])\n    >>> x.masked_fill()\n    numset([[999999,      1,      2],\n           [999999,      4,      5],\n           [     6,      7,      8]])\n    >>> x.masked_fill(fill_value=333)\n    numset([[333,   1,   2],\n           [333,   4,   5],\n           [  6,   7,   8]])\n    >>> x.masked_fill(fill_value=bn.arr_range(3))\n    numset([[0, 1, 2],\n           [0, 4, 5],\n           [6, 7, 8]])\n\n    ",
+			"API_3": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis.",
+			"API_4": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_5": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/32": {
+		"query": "I have a 2D beatnum numset of shape (N,2) which is holding N points. Sorting it such that my points are ordered by x-coordinate, and then by y in cases where the x coordinate is the same, and get the values by inplace",
+		"retrieved_APIs": {
+			"API_1": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_2": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_3": "sqz(self, axis=None): Remove axes of length one.",
+			"API_4": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_5": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/33": {
+		"query": "how can I make a python list obj from this matrix? the list should be one dimensional and contain all values of the matrix",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None):\n    Create a `charnumset`.\n\n    .. note::\n       This class is provided for numnumset backward-compatibility.\n       New code (not concerned with numnumset compatibility) should use\n       numsets of type `string_` or `unicode_` and use the free functions\n       in :mod:`beatnum.char <beatnum.core.defcharnumset>` for fast\n       vectorisationd string operations instead.\n\n    Versus a regular NumPy numset of type `str` or `unicode`, this\n    class adds the following functionality:\n\n      1) values automatically have whitespace removed from the end\n         when indexed\n\n      2) comparison operators automatically remove whitespace from the\n         end when comparing values\n\n      3) vectorisationd string operations are provided as methods\n         (e.g. `str.endswith`) and infix operators (e.g. ``+, *, %``)\n\n    Parameters\n    ----------\n    obj : numset of str or unicode-like\n\n    itemsize : int, optional\n        `itemsize` is the number of characters per scalar in the\n        resulting numset.  If `itemsize` is None, and `obj` is an\n        object numset or a Python list, the `itemsize` will be\n        automatically deterget_mined.  If `itemsize` is provided and `obj`\n        is of type str or unicode, then the `obj` string will be\n        chunked into `itemsize` pieces.\n\n    copy : bool, optional\n        If true (default), then the object is copied.  Otherwise, a copy\n        will only be made if __numset__ returns a copy, if obj is a\n        nested sequence, or if a copy is needed to satisfy any_condition of the other\n        requirements (`itemsize`, unicode, `order`, etc.).\n\n    unicode : bool, optional\n        When true, the resulting `charnumset` can contain Unicode\n        characters, when false only 8-bit characters.  If unicode is\n        None and `obj` is one of the following:\n\n          - a `charnumset`,\n          - an ndnumset of type `str` or `unicode`\n          - a Python str or unicode object,\n\n        then the unicode setting of the output numset will be\n        automatically deterget_mined.\n\n    order : {'C', 'F', 'A'}, optional\n        Specify the order of the numset.  If order is 'C' (default), then the\n        numset will be in C-contiguous order (last-index varies the\n        fastest).  If order is 'F', then the returned numset\n        will be in Fortran-contiguous order (first-index varies the\n        fastest).  If order is 'A', then the returned numset may\n        be in any_condition order (either C-, Fortran-contiguous, or even\n        discontiguous).\n    ",
+			"API_2": "change_shape_to(a, newshape, order='C'):\n    Gives a new shape to an numset without changing its data.\n\n    Parameters\n    ----------\n    a : numset_like\n        Array to be change_shape_tod.\n    newshape : int or tuple of ints\n        The new shape should be compatible with the original shape. If\n        an integer, then the result will be a 1-D numset of that length.\n        One shape dimension can be -1. In this case, the value is\n        inferred from the length of the numset and remaining dimensions.\n    order : {'C', 'F', 'A'}, optional\n        Read the elements of `a` using this index order, and place the\n        elements into the change_shape_tod numset using this index order.  'C'\n        averages to read / write the elements using C-like index order,\n        with the last axis index changing fastest, back to the first\n        axis index changing slowest. 'F' averages to read / write the\n        elements using Fortran-like index order, with the first index\n        changing fastest, and the last index changing slowest. Note that\n        the 'C' and 'F' options take no account of the memory layout of\n        the underlying numset, and only refer to the order of indexing.\n        'A' averages to read / write the elements in Fortran-like index\n        order if `a` is Fortran *contiguous* in memory, C-like order\n        otherwise.\n\n    Returns\n    -------\n    change_shape_tod_numset : ndnumset\n        This will be a new view object if possible; otherwise, it will\n        be a copy.  Note there is no guarantee of the *memory layout* (C- or\n        Fortran- contiguous) of the returned numset.\n\n    See Also\n    --------\n    ndnumset.change_shape_to : Equivalent method.\n\n    Notes\n    -----\n    It is not always possible to change the shape of an numset without\n    copying the data. If you want an error to be raised when the data is copied,\n    you should assign the new shape to the shape attribute of the numset::\n\n     >>> a = bn.zeros((10, 2))\n\n     # A switching_places makes the numset non-contiguous\n     >>> b = a.T\n\n     # Taking a view makes it possible to modify the shape without modifying\n     # the initial object.\n     >>> c = b.view()\n     >>> c.shape = (20)\n     Traceback (most recent call last):\n        ...\n     AttributeError: Incompatible shape for in-place modification. Use\n     `.change_shape_to()` to make a copy with the desired shape.\n\n    The `order` keyword gives the index ordering both for *fetching* the values\n    from `a`, and then *placing* the values into the output numset.\n    For example, let's say you have an numset:\n\n    >>> a = bn.arr_range(6).change_shape_to((3, 2))\n    >>> a\n    numset([[0, 1],\n           [2, 3],\n           [4, 5]])\n\n    You can think of reshaping as first asviewing the numset (using the given\n    index order), then sticking the elements from the asviewed numset into the\n    new numset using the same kind of index ordering as was used for the\n    asviewing.\n\n    >>> bn.change_shape_to(a, (2, 3)) # C-like index ordering\n    numset([[0, 1, 2],\n           [3, 4, 5]])\n    >>> bn.change_shape_to(bn.asview(a), (2, 3)) # equivalent to C asview then C change_shape_to\n    numset([[0, 1, 2],\n           [3, 4, 5]])\n    >>> bn.change_shape_to(a, (2, 3), order='F') # Fortran-like index ordering\n    numset([[0, 4, 3],\n           [2, 1, 5]])\n    >>> bn.change_shape_to(bn.asview(a, order='F'), (2, 3), order='F')\n    numset([[0, 4, 3],\n           [2, 1, 5]])\n\n    Examples\n    --------\n    >>> a = bn.numset([[1,2,3], [4,5,6]])\n    >>> bn.change_shape_to(a, 6)\n    numset([1, 2, 3, 4, 5, 6])\n    >>> bn.change_shape_to(a, 6, order='F')\n    numset([1, 4, 2, 5, 3, 6])\n\n    >>> bn.change_shape_to(a, (3,-1))       # the unspecified value is inferred to be 2\n    numset([[1, 2],\n           [3, 4],\n           [5, 6]])\n    ",
+			"API_3": "apd(object, /): Place the object at last position of the list.",
+			"API_4": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/34": {
+		"query": "Copy beatnum numset 'a' into part of another numset 'b' in [1:4, 1:4]",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_2": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_5": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/35": {
+		"query": "if function is c(i, j) = a(i) + b(j)*2:",
+		"retrieved_APIs": {
+			"API_1": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_2": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_3": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_4": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_5": "asnumset(a, dtype=None, order=None): Return a masked numset of specified data-type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/36": {
+		"query": "Assigning numset x to the 2th column of numset a.",
+		"retrieved_APIs": {
+			"API_1": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_2": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_3": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_4": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_5": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/37": {
+		"query": "y = bn.numset([2,1,5,2]) y axis filter out values larger than 2 remove masked values from m",
+		"retrieved_APIs": {
+			"API_1": "sqz(self, axis=None): Remove axes of length one.",
+			"API_2": "remove_masked_data(x): Return a 1-D numset containing all non-masked data.",
+			"API_3": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_4": "masked_fill(a, fill_value=None): Replace the input numset with its masked data filled by the specified value.",
+			"API_5": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/38": {
+		"query": "Convert beatnum numset type and values from Float64 to Float32",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_3": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/39": {
+		"query": "I want to separate the keys and values into 2 beatnum numsets.",
+		"retrieved_APIs": {
+			"API_1": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_2": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_5": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/40": {
+		"query": "I have a list containing beatnum numsets something like L=[a,b,c] where a, b and c are beatnum numsets with sizes N_a in T, N_b in T and N_c in T. I want to row-wise connect a, b and c and get a beatnum numset with shape (N_a+N_b+N_c, T). Clearly one solution is run a for loop and use beatnum.connect, but is there any pythonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_4": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_5": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/41": {
+		"query": "Return the indices of the minimum values along (axis is zero).",
+		"retrieved_APIs": {
+			"API_1": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_2": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices.",
+			"API_3": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_4": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/42": {
+		"query": "def broadcasting_app(a, L, S): Window len = L, Stride len/stepsize = S",
+		"retrieved_APIs": {
+			"API_1": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_2": "asview(a, *args, **params): asview(self, order='C') Returns the view object of the 1-D self.",
+			"API_3": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_4": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis.",
+			"API_5": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/43": {
+		"query": "I'd like to use b in index a, I would like to get 4 instead of [a[1], a[1]] the code below is the solution",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_4": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type.",
+			"API_5": "apd(object, /): Place the object at last position of the list."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/44": {
+		"query": "Find nearest value in beatnum numset return the result",
+		"retrieved_APIs": {
+			"API_1": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_2": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_5": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/45": {
+		"query": "How to add a new row to an empty beatnum numset example: input: bn.numset([1,2,3]) and bn.numset([4,5,6]) output: bn.numset([[1,2,3],[4,5,6]]) Return the new numset",
+		"retrieved_APIs": {
+			"API_1": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_2": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_3": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_4": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_5": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/46": {
+		"query": "I am using beatnum. I have a matrix with 1 column and N rows and I want to get an numset from with N elements. For example, if i have M = matrix([[1], [2], [3], [4]]), I want to get A = numset([1,2,3,4]). Return the numset",
+		"retrieved_APIs": {
+			"API_1": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_2": "asnumset(a, dtype=None, order=None):\n    Convert the ibnut to a masked numset of the given data-type.\n\n    No copy is performed if the ibnut is already an `ndnumset`. If `a` is\n    a subclass of `MaskedArray`, a base class `MaskedArray` is returned.\n\n    Parameters\n    ----------\n    a : numset_like\n        Ibnut data, in any_condition form that can be converted to a masked numset. This\n        includes lists, lists of tuples, tuples, tuples of tuples, tuples\n        of lists, ndnumsets and masked numsets.\n    dtype : dtype, optional\n        By default, the data-type is inferred from the ibnut data.\n    order : {'C', 'F'}, optional\n        Whether to use row-major ('C') or column-major ('FORTRAN') memory\n        representation.  Default is 'C'.\n\n    Returns\n    -------\n    out : MaskedArray\n        Masked numset interpretation of `a`.\n\n    See Also\n    --------\n    asany_conditionnumset : Similar to `asnumset`, but conserves subclasses.\n\n    Examples\n    --------\n    >>> x = bn.arr_range(10.).change_shape_to(2, 5)\n    >>> x\n    numset([[0., 1., 2., 3., 4.],\n           [5., 6., 7., 8., 9.]])\n    >>> bn.ma.asnumset(x)\n    masked_numset(\n      data=[[0., 1., 2., 3., 4.],\n            [5., 6., 7., 8., 9.]],\n      mask=False,\n      fill_value=1e+20)\n    >>> type(bn.ma.asnumset(x))\n    <class 'beatnum.ma.core.MaskedArray'>\n\n    ",
+			"API_3": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_4": "sqz(self, axis=None): Remove axes of length one.",
+			"API_5": "imaginary(val): Get the complex argument's imaginary part."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/47": {
+		"query": "cond = (a % 2) == 0 condition is True on even numbers I have an numset a and I would like to duplicate the elements of a n times if they are even or if they are positive. I average I want to duplicate only the elements that respect some condition, other elements are not displayed. In detail, if a meets the condition cond, I want to duplicate it n times.",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_2": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_3": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_4": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_5": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/48": {
+		"query": "Is there a function that returns an numset with the results of dividing the next element by the previous one? Like a \"difference()\", but with dividing Not-beatnum-example: source = [1,3,6,24,36] target = [j / i for i, j in zip(source[:-1], source[1:])] Return: target implemented in beatnum.",
+		"retrieved_APIs": {
+			"API_1": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_2": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_3": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/49": {
+		"query": "How can I know the (row, column) index of the minimum of a beatnum numset/matrix? Use convert_index_or_arr()",
+		"retrieved_APIs": {
+			"API_1": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_2": "get_argmin_value(a, axis=None, out=None):\n    Returns the indices of the get_minimum values along an axis.\n\n    Parameters\n    ----------\n    a : numset_like\n        Ibnut numset.\n    axis : int, optional\n        By default, the index is into the convert_into_one_dimed numset, otherwise\n        along the specified axis.\n    out : numset, optional\n        If provided, the result will be sticked into this numset. It should\n        be of the appropriate shape and dtype.\n\n    Returns\n    -------\n    index_numset : ndnumset of ints\n        Array of indices into the numset. It has the same shape as `a.shape`\n        with the dimension along `axis` removed.\n\n    See Also\n    --------\n    ndnumset.get_argget_min_value, get_argget_max\n    aget_min : The get_minimum value along a given axis.\n    convert_index_or_arr : Convert a flat index into an index tuple.\n    take_along_axis : Apply ``bn.expand_dims(index_numset, axis)``\n                      from get_argget_min_value to an numset as if by calling get_min.\n\n    Notes\n    -----\n    In case of multiple occurrences of the get_minimum values, the indices\n    corresponding to the first occurrence are returned.\n\n    Examples\n    --------\n    >>> a = bn.arr_range(6).change_shape_to(2,3) + 10\n    >>> a\n    numset([[10, 11, 12],\n           [13, 14, 15]])\n    >>> bn.get_argget_min_value(a)\n    0\n    >>> bn.get_argget_min_value(a, axis=0)\n    numset([0, 0, 0])\n    >>> bn.get_argget_min_value(a, axis=1)\n    numset([0, 0])\n\n    Indices of the get_minimum elements of a N-dimensional numset:\n\n    >>> ind = bn.convert_index_or_arr(bn.get_argget_min_value(a, axis=None), a.shape)\n    >>> ind\n    (0, 0)\n    >>> a[ind]\n    10\n\n    >>> b = bn.arr_range(6) + 10\n    >>> b[4] = 10\n    >>> b\n    numset([10, 11, 12, 13, 10, 15])\n    >>> bn.get_argget_min_value(b)  # Only the first occurrence is returned.\n    0\n\n    >>> x = bn.numset([[4,2,3], [1,0,3]])\n    >>> index_numset = bn.get_argget_min_value(x, axis=-1)\n    >>> # Same as bn.get_min(x, axis=-1, keepdims=True)\n    >>> bn.take_along_axis(x, bn.expand_dims(index_numset, axis=-1), axis=-1)\n    numset([[2],\n           [0]])\n    >>> # Same as bn.get_max(x, axis=-1)\n    >>> bn.take_along_axis(x, bn.expand_dims(index_numset, axis=-1), axis=-1).sqz(axis=-1)\n    numset([2, 0])\n\n    ",
+			"API_3": "hist_operation(a, bins=10, range=None, normlizatticreate_onesd=None, weights=None, density=None): Return a dataset's histgram object.",
+			"API_4": "perform_partition(a, kth, axis=-1, kind='introselect', order=None): Using the algorithm indicated by the 'kind' keyword to indirectly partition along the axis.",
+			"API_5": "inverse(a): Calculate a matrix's (multiplicative) inverse."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/50": {
+		"query": "How do I extract a sub-numset from a beatnum 2d numset? I'd like to extract a beatnum numset with a specified size from a beatnum 2d numset--essentially I want to crop the numset. Return a sub-numset from a beatnum 2d numset.",
+		"retrieved_APIs": {
+			"API_1": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_2": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_3": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_4": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_5": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/51": {
+		"query": "I am trying to translate every element of a beatnum.numset according to a given key I don't know about efficient, but you could use bn.vectorisation on the .get method of dictionaries:",
+		"retrieved_APIs": {
+			"API_1": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_2": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_3": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/52": {
+		"query": "This will tell me those values generate a mask to find all values that are even numbers Is there an efficient Beatnum mechanism to retrieve the integer indexes of locations in an numset based on a condition is true as opposed to the Boolean mask numset?",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_3": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_4": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_5": "asnumset(a, dtype=None, order=None): Return a masked numset of specified data-type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/53": {
+		"query": "How to find the groups of consecutive elements in a BeatNum numset I have to cluster the consecutive elements from a BeatNum numset. Considering the following example a = [ 0, 47, 48, 49, 50, 97, 98, 99] The output should be a list of tuples as follows [(0), (47, 48, 49, 50), (97, 98, 99)] Here the difference is just one between the elements. It will be great if the difference can also be specified as a limit or a hardcoded number. Finally, return the number of consecutive elements in the numset.",
+		"retrieved_APIs": {
+			"API_1": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_2": "filter_condition(condition, x=None, y=None):filter_condition(condition, [x, y])\n    Return elements chosen from `x` or `y` depending on `condition`.\n\n    .. note::\n        When only `condition` is provided, this function is a shorthand for\n        ``bn.asnumset(condition).nonzero()``. The rest of this documentation\n        covers only the case filter_condition all three arguments are provided.\n\n    Parameters\n    ----------\n    condition : ndnumset\n        Where True, yield `x`, otherwise yield `y`.\n    x, y : ndnumset\n        Values from which to choose. `x`, `y` and `condition` need to be\n        broadcastable to some shape. `x` and `y` must have the same dtype.\n\n    Returns\n    -------\n    out : ndnumset\n        An numset with elements from `x` filter_condition `condition` is True, and elements\n        from `y` elsefilter_condition.\n\n    Notes\n    -----\n    If all the numsets are 1-D, `filter_condition` is equivalent to::\n\n        [xv if c else yv\n        for c, xv, yv in zip(condition, x, y)]\n\n    Examples\n    --------\n    >>> a = bn.arr_range(10)\n    >>> a\n    numset([0., 1., 2., 3., 4., 5., 6., 7., 8., 9.])\n    >>> bn.filter_condition(a < 5, a, 10*a)\n    numset([ 0.,  1.,  2.,  3.,  4., 50., 60., 70., 80., 90.])\n\n    This can be used on multidimensional numsets too:\n\n    >>> cond = bn.numset([[True, False], [True, True]])\n    >>> x = bn.numset([[1, 2], [3, 4]])\n    >>> y = bn.numset([[9, 8], [7, 6]])\n    >>> bn.filter_condition(cond, x, y)\n    numset([[1., 8.],\n           [3., 4.]])\n\n    The shapes of x, y, and the condition are broadcast together:\n\n    >>> x, y = obn.ogrid[:3, :4]\n    >>> x = bn.numset(x)\n    >>> y = bn.numset(y)\n    >>> bn.filter_condition(x < y, x, 10 + y)  # both x and 10+y are broadcast\n    numset([[10,  0,  0,  0],\n           [10, 11,  1,  1],\n           [10, 11, 12,  2]], dtype=int64)\n\n    >>> a = bn.numset([[0, 1, 2],\n    ...               [0, 2, 4],\n    ...               [0, 3, 6]])\n    >>> bn.filter_condition(a < 4, a, -1)  # -1 is broadcast\n    numset([[ 0.,  1.,  2.],\n           [ 0.,  2., -1.],\n           [ 0.,  3., -1.]])\n    ",
+			"API_3": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_4": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_5": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/54": {
+		"query": "I have an numset of distances called dists. I want to select dists which are within a range [r, r+dr]. You don't actually need filter_condition if you're just trying to filter out the elements of dists that don't fit your criteria:",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "logic_and_element_wise(a, b, *args, **kwargs):logic_and_element_wise(x1, x2, /, out=None, *, filter_condition=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])\n\nCompute the truth value of x1 AND x2 element-wise.\n\nParameters\n----------\nx1, x2 : numset_like\n    Ibnut numsets.\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\n    shape (which becomes the shape of the output).\nout : ndnumset, None, or tuple of ndnumset and None, optional\n    A location into which the result is stored. If provided, it must have\n    a shape that the ibnuts broadcast to. If not provided or None,\n    a freshly-allocated numset is returned. A tuple (possible only as a\n    keyword argument) must have length equal to the number of outputs.\nfilter_condition : numset_like, optional\n    This condition is broadcast over the ibnut. At locations filter_condition the\n    condition is True, the `out` numset will be set to the ufunc result.\n    Elsefilter_condition, the `out` numset will retain its original value.\n    Note that if an uninitialized `out` numset is created via the default\n    ``out=None``, locations within it filter_condition the condition is False will\n    remain uninitialized.\n**kwargs\n    For other keyword-only arguments, see the\n    :ref:`ufunc docs <ufuncs.kwargs>`.\n\nReturns\n-------\ny : ndnumset or bool\n    Boolean result of the logical AND operation applied to the elements\n    of `x1` and `x2`; the shape is deterget_mined by broadcasting.\n    This is a scalar if both `x1` and `x2` are scalars.\n\nSee Also\n--------\nlogical_or, logical_not, logical_xor\nbitwise_and\n\nExamples\n--------\n>>> bn.logic_and_element_wise(True, False)\nFalse\n>>> bn.logic_and_element_wise([True, False], [False, False])\nnumset([False, False])\n\n>>> x = bn.arr_range(5)\n>>> bn.logic_and_element_wise(x>1, x<4)\nnumset([False, False,  True,  True, False])\n\n\nThe ``&`` operator can be used as a shorthand for ``bn.logic_and_element_wise`` on\nboolean ndnumsets.\n\n>>> a = bn.numset([True, False])\n>>> b = bn.numset([False, False])\n>>> a & b\nnumset([False, False])",
+			"API_3": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/55": {
+		"query": "How can I define in beatnum a matrix that uses operations modulo 2? This operation is called \"xor\". Arguments: x: a beatnum numset y: a beatnum numset z: a beatnum numset Returns: a beatnum numset containing the result of the operation",
+		"retrieved_APIs": {
+			"API_1": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_2": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_3": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "hist_operation(a, bins=10, range=None, normlizatticreate_onesd=None, weights=None, density=None): Return a dataset's histgram object."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/56": {
+		"query": "How can I join them using beatnum methods You can transpose and flatten the numsets:",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "convert_into_one_dim(self, order='C'):\n        Return a convert_into_one_dimed copy of the matrix.\n\n        All `N` elements of the matrix are placed into a single row.\n\n        Parameters\n        ----------\n        order : {'C', 'F', 'A', 'K'}, optional\n            'C' averages to convert_into_one_dim in row-major (C-style) order. 'F' averages to\n            convert_into_one_dim in column-major (Fortran-style) order. 'A' averages to\n            convert_into_one_dim in column-major order if `m` is Fortran *contiguous* in\n            memory, row-major order otherwise. 'K' averages to convert_into_one_dim `m` in\n            the order the elements occur in memory. The default is 'C'.\n\n        Returns\n        -------\n        y : matrix\n            A copy of the matrix, convert_into_one_dimed to a `(1, N)` matrix filter_condition `N`\n            is the number of elements in the original matrix.\n\n        See Also\n        --------\n        asview : Return a convert_into_one_dimed numset.\n        flat : A 1-D flat iterator over the matrix.\n\n        Examples\n        --------\n        >>> m = bn.matrix([[1,2], [3,4]])\n        >>> m.convert_into_one_dim()\n        matrix([[1, 2, 3, 4]])\n        >>> m.convert_into_one_dim('F')\n        matrix([[1, 3, 2, 4]])\n\n        ",
+			"API_3": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_4": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_5": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/57": {
+		"query": "I need to find uniq rows in a beatnum.numset.",
+		"retrieved_APIs": {
+			"API_1": "uniq(ar, return_index=False, return_inverse=False, return_counts=False, axis=None):\n    Find the uniq elements of an numset.\n\n    Returns the sorted uniq elements of an numset. There are three optional\n    outputs in addition to the uniq elements:\n\n    * the indices of the ibnut numset that give the uniq values\n    * the indices of the uniq numset that reconstruct the ibnut numset\n    * the number of times each uniq value comes up in the ibnut numset\n\n    Parameters\n    ----------\n    ar : numset_like\n        Ibnut numset. Unless `axis` is specified, this will be convert_into_one_dimed if it\n        is not already 1-D.\n    return_index : bool, optional\n        If True, also return the indices of `ar` (along the specified axis,\n        if provided, or in the convert_into_one_dimed numset) that result in the uniq numset.\n    return_inverseerse : bool, optional\n        If True, also return the indices of the uniq numset (for the specified\n        axis, if provided) that can be used to reconstruct `ar`.\n    return_counts : bool, optional\n        If True, also return the number of times each uniq item appears\n        in `ar`.\n\n        .. versionadded:: 1.9.0\n\n    axis : int or None, optional\n        The axis to operate on. If None, `ar` will be convert_into_one_dimed. If an integer,\n        the subnumsets indexed by the given axis will be convert_into_one_dimed and treated\n        as the elements of a 1-D numset with the dimension of the given axis,\n        see the notes for more details.  Object numsets or structured numsets\n        that contain objects are not supported if the `axis` kwarg is used. The\n        default is None.\n\n        .. versionadded:: 1.13.0\n\n    Returns\n    -------\n    uniq : ndnumset\n        The sorted uniq values.\n    uniq_indices : ndnumset, optional\n        The indices of the first occurrences of the uniq values in the\n        original numset. Only provided if `return_index` is True.\n    uniq_inverseerse : ndnumset, optional\n        The indices to reconstruct the original numset from the\n        uniq numset. Only provided if `return_inverseerse` is True.\n    uniq_counts : ndnumset, optional\n        The number of times each of the uniq values comes up in the\n        original numset. Only provided if `return_counts` is True.\n\n        .. versionadded:: 1.9.0\n\n    See Also\n    --------\n    beatnum.lib.numsetsetops : Module with a number of other functions for\n                            perforget_ming set operations on numsets.\n    duplicate : Repeat elements of an numset.\n\n    Notes\n    -----\n    When an axis is specified the subnumsets indexed by the axis are sorted.\n    This is done by making the specified axis the first dimension of the numset\n    (move the axis to the first dimension to keep the order of the other axes)\n    and then convert_into_one_diget_ming the subnumsets in C order. The convert_into_one_dimed subnumsets are\n    then viewed as a structured type with each element given a label, with the\n    effect that we end up with a 1-D numset of structured types that can be\n    treated in the same way as any_condition other 1-D numset. The result is that the\n    convert_into_one_dimed subnumsets are sorted in lexicographic order starting with the\n    first element.\n\n    .. versionchanged: NumPy 1.21\n        If nan values are in the ibnut numset, a single nan is put\n        to the end of the sorted uniq values.\n\n        Also for complex numsets all NaN values are considered equivalent\n        (no matter whether the NaN is in the reality or imaginaryinary part).\n        As the representant for the returned numset the smallest one in the\n        lexicographical order is chosen - see bn.sort for how the lexicographical\n        order is defined for complex numsets.\n\n    Examples\n    --------\n    >>> bn.uniq([1, 1, 2, 2, 3, 3])\n    numset([1, 2, 3])\n    >>> a = bn.numset([[1, 1], [2, 3]])\n    >>> bn.uniq(a)\n    numset([1, 2, 3])\n\n    Return the uniq rows of a 2D numset\n\n    >>> a = bn.numset([[1, 0, 0], [1, 0, 0], [2, 3, 4]])\n    >>> bn.uniq(a, axis=0)\n    numset([[1, 0, 0], [2, 3, 4]])\n\n    Return the indices of the original numset that give the uniq values:\n\n    >>> a = bn.numset(['a', 'b', 'b', 'c', 'a'])\n    >>> u, indices = bn.uniq(a, return_index=True)\n    >>> u\n    numset(['a', 'b', 'c'], dtype='<U1')\n    >>> indices\n    numset([0, 1, 3])\n    >>> a[indices]\n    numset(['a', 'b', 'c'], dtype='<U1')\n\n    Reconstruct the ibnut numset from the uniq values and inverseerse:\n\n    >>> a = bn.numset([1, 2, 6, 4, 2, 3, 2])\n    >>> u, indices = bn.uniq(a, return_inverseerse=True)\n    >>> u\n    numset([1, 2, 3, 4, 6])\n    >>> indices\n    numset([0, 1, 4, 3, 1, 2, 1])\n    >>> u[indices]\n    numset([1, 2, 6, 4, 2, 3, 2])\n\n    Reconstruct the ibnut values from the uniq values and counts:\n\n    >>> a = bn.numset([1, 2, 6, 4, 2, 3, 2])\n    >>> values, counts = bn.uniq(a, return_counts=True)\n    >>> values\n    numset([1, 2, 3, 4, 6])\n    >>> counts\n    numset([1, 3, 1, 1, 1])\n    >>> bn.duplicate(values, counts)\n    numset([1, 2, 2, 2, 3, 4, 6])    # original order not preserved\n\n    ",
+			"API_2": "pad_diagonal(a, val, wrap=False): Fill the main diagonal of any dimensions of the specified numset.",
+			"API_3": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_4": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/58": {
+		"query": "How can the Euclidean distance be calculated with BeatNum?",
+		"retrieved_APIs": {
+			"API_1": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_2": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_3": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_4": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/59": {
+		"query": "Convert Python sequence to BeatNum numset, filling missing values with 0",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_3": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_4": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_5": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/60": {
+		"query": "We numset `data` defines the columns of the nonzero elements in the output numset. We need to also define the rows and then use fancy indexing in the following way: Convert numset of indices to 1-hot encoded beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_2": "hist_operation(a, bins=10, range=None, normlizatticreate_onesd=None, weights=None, density=None): Return a dataset's histgram object.",
+			"API_3": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_4": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_5": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/61": {
+		"query": "How to remove specific elements in a beatnum numset\uff1f I then want to remove 3,4,7 from a. All I know is the index of the values (index=[2,3,6]).",
+		"retrieved_APIs": {
+			"API_1": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "remove_masked_data(x): Return a 1-D numset containing all non-masked data.",
+			"API_4": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_5": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/62": {
+		"query": "I have a beatnum numset and I like to check if it is sorted. Using beatnum.total to do this.",
+		"retrieved_APIs": {
+			"API_1": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_2": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_3": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "perform_partition(a, kth, axis=-1, kind='introselect', order=None): Using the algorithm indicated by the 'kind' keyword to indirectly partition along the axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/63": {
+		"query": "How do I create a beatnum numset of arbitrary shape 3x4 filled with all True?",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones.",
+			"API_3": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_4": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_5": "uniq(ar, return_index=False, return_inverse=False, return_counts=False, axis=None): Return the numset's unique elements."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/64": {
+		"query": "Replace all elements of Python BeatNum Array that are greater than `value` with `new_value` Return the numset",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_2": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type.",
+			"API_3": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset.",
+			"API_4": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_5": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/65": {
+		"query": "Connect a BeatNum numset to another BeatNum numset",
+		"retrieved_APIs": {
+			"API_1": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/66": {
+		"query": "How can I check whether a beatnum numset is empty or not? Return the reuslt that contains True or False",
+		"retrieved_APIs": {
+			"API_1": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_2": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_3": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "absolute(self, *args, **kwargs): Return the absolute value of the given number."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/67": {
+		"query": "How to count the number of true elements in a BeatNum bool numset? return the count value",
+		"retrieved_APIs": {
+			"API_1": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_2": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_3": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_4": "binoccurrence(x, weights=None, get_minlength=0): Return how many times each value appears in the numset of non-negative ints.",
+			"API_5": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/68": {
+		"query": "How does one add rows to a beatnum numset? Is there a beatnumthonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_2": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "pad_diagonal(a, val, wrap=False): Fill the main diagonal of any dimensions of the specified numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/69": {
+		"query": "I want to access the elements from index 4 to the end:",
+		"retrieved_APIs": {
+			"API_1": "asview(a, *args, **params): asview(self, order='C') Returns the view object of the 1-D self.",
+			"API_2": "apd(object, /): Place the object at last position of the list.",
+			"API_3": "find_sorted(a, v, side='left', sorter=None): Find the indices into a sorted numset a such that if the corresponding elements in v were inserted before the indices, the order of a would be preserved.",
+			"API_4": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_5": "stick(index, object, /): Place the object before the index."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/70": {
+		"query": "Is there a quick way to \"sub-flatten\" or flatten only some of the first dimensions in a beatnum numset? Given a beatnum numset of dimensions (50,100,25), the resultant dimensions would be (5000,25)",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_4": "pad_diagonal(a, val, wrap=False): Fill the main diagonal of any dimensions of the specified numset.",
+			"API_5": "vertical_stack(tup): Stack numsets in vertical or row wise order."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/71": {
+		"query": "I am using beatnum. I have a matrix `M` 1*N and I want to get an numset from with N elements. To achieve it, Does anyone know a more elegant way to get the result?",
+		"retrieved_APIs": {
+			"API_1": "imaginary(val): Get the complex argument's imaginary part.",
+			"API_2": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_3": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_4": "sqz(self, axis=None): Remove axes of length one.",
+			"API_5": "asnumset(a, dtype=None, order=None):\n    Convert the ibnut to a masked numset of the given data-type.\n\n    No copy is performed if the ibnut is already an `ndnumset`. If `a` is\n    a subclass of `MaskedArray`, a base class `MaskedArray` is returned.\n\n    Parameters\n    ----------\n    a : numset_like\n        Ibnut data, in any_condition form that can be converted to a masked numset. This\n        includes lists, lists of tuples, tuples, tuples of tuples, tuples\n        of lists, ndnumsets and masked numsets.\n    dtype : dtype, optional\n        By default, the data-type is inferred from the ibnut data.\n    order : {'C', 'F'}, optional\n        Whether to use row-major ('C') or column-major ('FORTRAN') memory\n        representation.  Default is 'C'.\n\n    Returns\n    -------\n    out : MaskedArray\n        Masked numset interpretation of `a`.\n\n    See Also\n    --------\n    asany_conditionnumset : Similar to `asnumset`, but conserves subclasses.\n\n    Examples\n    --------\n    >>> x = bn.arr_range(10.).change_shape_to(2, 5)\n    >>> x\n    numset([[0., 1., 2., 3., 4.],\n           [5., 6., 7., 8., 9.]])\n    >>> bn.ma.asnumset(x)\n    masked_numset(\n      data=[[0., 1., 2., 3., 4.],\n            [5., 6., 7., 8., 9.]],\n      mask=False,\n      fill_value=1e+20)\n    >>> type(bn.ma.asnumset(x))\n    <class 'beatnum.ma.core.MaskedArray'>\n\n    "
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/72": {
+		"query": "Find indices of elements equal to zero in a BeatNum numset Return the indices",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_3": "find_sorted(a, v, side='left', sorter=None): Find the indices into a sorted numset a such that if the corresponding elements in v were inserted before the indices, the order of a would be preserved.",
+			"API_4": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices.",
+			"API_5": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/73": {
+		"query": "Find the most frequent number in a BeatNum numset Return the number",
+		"retrieved_APIs": {
+			"API_1": "binoccurrence(x, weights=None, get_minlength=0):\n    Count number of occurrences of each value in numset of non-negative ints.\n\n    Parameters\n    ----------\n    x : ndnumset\n        ibnut numset, 1 dimension, nonnegative ints.\n    weights: ndnumset\n        ibnut weigths same shape as x. (Optional)\n    get_minlength: int\n        A get_minimum number of bins for the output. (Optional)\n\n    Returns\n    --------\n    out : ndnumset\n        the result of binning the ibnut numset. The length of out is equal to aget_max(x)+1.\n\n    Raises\n    --------\n    Value Error\n        If the ibnut is not 1-dimensional, or contains elements with negative values,\n        or if get_minlength is negative\n    TypeError\n        If the type of the ibnut is float or complex.\n\n    Examples\n    --------\n    >>> bn.binoccurrence(bn.arr_range(5))\n    numset([1, 1, 1, 1, 1])\n    >>> bn.binoccurrence(bn.numset([0, 1, 1, 3, 2, 1, 7]))\n    numset([1, 3, 1, 1, 0, 0, 0, 1])\n\n    >>> x = bn.numset([0, 1, 1, 3, 2, 1, 7, 23])\n    >>> bn.binoccurrence(x).size == bn.aget_max(x)+1\n    True\n\n    >>> bn.binoccurrence(bn.arr_range(5, dtype=float))\n    Traceback (most recent call last):\n    File \"<standard_opin>\", line 1, in <module>\n    TypeError: numset cannot be safely cast to required type\n\n    >>> w = bn.numset([0.3, 0.5, 0.2, 0.7, 1., -0.6]) # weights\n    >>> x = bn.numset([0, 1, 1, 2, 2, 2])\n    >>> bn.binoccurrence(x,  weights=w)\n    numset([ 0.3,  0.7,  1.1])\n    ",
+			"API_2": "get_argmax(a, axis=None, out=None):\n    Returns the indices of the get_maximum values along an axis.\n\n    Parameters\n    ----------\n    a : numset_like\n        Ibnut numset.\n    axis : int, optional\n        By default, the index is into the convert_into_one_dimed numset, otherwise\n        along the specified axis.\n    out : numset, optional\n        If provided, the result will be sticked into this numset. It should\n        be of the appropriate shape and dtype.\n\n    Returns\n    -------\n    index_numset : ndnumset of ints\n        Array of indices into the numset. It has the same shape as `a.shape`\n        with the dimension along `axis` removed.\n\n    See Also\n    --------\n    ndnumset.get_argget_max, get_argget_min_value\n    aget_max : The get_maximum value along a given axis.\n    convert_index_or_arr : Convert a flat index into an index tuple.\n    take_along_axis : Apply ``bn.expand_dims(index_numset, axis)``\n                      from get_argget_max to an numset as if by calling get_max.\n\n    Notes\n    -----\n    In case of multiple occurrences of the get_maximum values, the indices\n    corresponding to the first occurrence are returned.\n\n    Examples\n    --------\n    >>> a = bn.arr_range(6).change_shape_to(2,3) + 10\n    >>> a\n    numset([[10, 11, 12],\n           [13, 14, 15]])\n    >>> bn.get_argget_max(a)\n    5\n    >>> bn.get_argget_max(a, axis=0)\n    numset([1, 1, 1])\n    >>> bn.get_argget_max(a, axis=1)\n    numset([2, 2])\n\n    Indexes of the get_maximal elements of a N-dimensional numset:\n\n    >>> ind = bn.convert_index_or_arr(bn.get_argget_max(a, axis=None), a.shape)\n    >>> ind\n    (1, 2)\n    >>> a[ind]\n    15\n\n    >>> b = bn.arr_range(6)\n    >>> b[1] = 5\n    >>> b\n    numset([0, 5, 2, 3, 4, 5])\n    >>> bn.get_argget_max(b)  # Only the first occurrence is returned.\n    1\n\n    >>> x = bn.numset([[4,2,3], [1,0,3]])\n    >>> index_numset = bn.get_argget_max(x, axis=-1)\n    >>> # Same as bn.get_max(x, axis=-1, keepdims=True)\n    >>> bn.take_along_axis(x, bn.expand_dims(index_numset, axis=-1), axis=-1)\n    numset([[4],\n           [3]])\n    >>> # Same as bn.get_max(x, axis=-1)\n    >>> bn.take_along_axis(x, bn.expand_dims(index_numset, axis=-1), axis=-1).sqz(axis=-1)\n    numset([4, 3])\n\n    ",
+			"API_3": "ifnan(x, /): If x is a NaN (not a number), return True; otherwise, return False.",
+			"API_4": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/74": {
+		"query": "List of numsets. Stack them using axis that is negative one .",
+		"retrieved_APIs": {
+			"API_1": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_2": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_3": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_4": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_5": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/75": {
+		"query": "I want to add the first element on to the end of the numset. Return the appended numset.",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_3": "apd(object, /): Place the object at last position of the list.",
+			"API_4": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_5": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/76": {
+		"query": "How to convert an numset of strings to an numset of floats in beatnum? Return the final result",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_3": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_4": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/77": {
+		"query": "How to get the index of a maximum element in a BeatNum numset along axis_value? Return the result",
+		"retrieved_APIs": {
+			"API_1": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_2": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices.",
+			"API_3": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_4": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_5": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/78": {
+		"query": "Convert beatnum numset to tuple Return the transformed tuple",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_2": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.",
+			"API_3": "piece(self, *args, **kwargs): Returns a piece object used to specify how to slice a sequence.",
+			"API_4": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_5": "convert_into_one_dim(self, order='C'): Return a one-dimensional numset replica of the numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/79": {
+		"query": "Test if beatnum numset contains only zeros Return the result",
+		"retrieved_APIs": {
+			"API_1": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_2": "absolute(self, *args, **kwargs): Return the absolute value of the given number.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_5": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/80": {
+		"query": "find index of the elements within range [low, high] Return the final numset of indices.",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "logic_and_element_wise(a, b, *args, **kwargs):logic_and_element_wise(x1, x2, /, out=None, *, filter_condition=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])\n\nCompute the truth value of x1 AND x2 element-wise.\n\nParameters\n----------\nx1, x2 : numset_like\n    Ibnut numsets.\n    If ``x1.shape != x2.shape``, they must be broadcastable to a common\n    shape (which becomes the shape of the output).\nout : ndnumset, None, or tuple of ndnumset and None, optional\n    A location into which the result is stored. If provided, it must have\n    a shape that the ibnuts broadcast to. If not provided or None,\n    a freshly-allocated numset is returned. A tuple (possible only as a\n    keyword argument) must have length equal to the number of outputs.\nfilter_condition : numset_like, optional\n    This condition is broadcast over the ibnut. At locations filter_condition the\n    condition is True, the `out` numset will be set to the ufunc result.\n    Elsefilter_condition, the `out` numset will retain its original value.\n    Note that if an uninitialized `out` numset is created via the default\n    ``out=None``, locations within it filter_condition the condition is False will\n    remain uninitialized.\n**kwargs\n    For other keyword-only arguments, see the\n    :ref:`ufunc docs <ufuncs.kwargs>`.\n\nReturns\n-------\ny : ndnumset or bool\n    Boolean result of the logical AND operation applied to the elements\n    of `x1` and `x2`; the shape is deterget_mined by broadcasting.\n    This is a scalar if both `x1` and `x2` are scalars.\n\nSee Also\n--------\nlogical_or, logical_not, logical_xor\nbitwise_and\n\nExamples\n--------\n>>> bn.logic_and_element_wise(True, False)\nFalse\n>>> bn.logic_and_element_wise([True, False], [False, False])\nnumset([False, False])\n\n>>> x = bn.arr_range(5)\n>>> bn.logic_and_element_wise(x>1, x<4)\nnumset([False, False,  True,  True, False])\n\n\nThe ``&`` operator can be used as a shorthand for ``bn.logic_and_element_wise`` on\nboolean ndnumsets.\n\n>>> a = bn.numset([True, False])\n>>> b = bn.numset([False, False])\n>>> a & b\nnumset([False, False])",
+			"API_3": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_4": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices.",
+			"API_5": "cumulative_sum(a, axis=None, dtype=None, out=None): Return the elements' total sum along the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/81": {
+		"query": "convert nan value to zero Return the changed numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /): If x is a NaN (not a number), return True; otherwise, return False.",
+			"API_2": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset.",
+			"API_3": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_4": "convert_type(self, dtype, copy=True): Cast the numset to a specified type.",
+			"API_5": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/82": {
+		"query": "How to remove all rows in a beatnum.ndnumset that contain non-numeric values? Return the final result",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>):\n    Test whether any_condition numset element along a given axis evaluates to True.\n\n    Returns single boolean unless `axis` is not ``None``\n\n    Parameters\n    ----------\n    a : numset_like\n        Ibnut numset or object that can be converted to an numset.\n    axis : None or int or tuple of ints, optional\n        Axis or axes along which a logical OR reduction is performed.\n        The default (``axis=None``) is to perform a logical OR over all\n        the dimensions of the ibnut numset. `axis` may be negative, in\n        which case it counts from the last to the first axis.\n\n        .. versionadded:: 1.7.0\n\n        If this is a tuple of ints, a reduction is performed on multiple\n        axes, instead of a single axis or all the axes as before.\n    out : ndnumset, optional\n        Alternate output numset in which to place the result.  It must have\n        the same shape as the expected output and its type is preserved\n        (e.g., if it is of type float, then it will remain so, returning\n        1.0 for True and 0.0 for False, regardless of the type of `a`).\n        See :ref:`ufuncs-output-type` for more details.\n\n    keepdims : bool, optional\n        If this is set to True, the axes which are reduced are left\n        in the result as dimensions with size one. With this option,\n        the result will broadcast correctly against the ibnut numset.\n\n        If the default value is passed, then `keepdims` will not be\n        passed through to the `any_condition` method of sub-classes of\n        `ndnumset`, however any_condition non-default value will be.  If the\n        sub-class' method does not implement `keepdims` any_condition\n        exceptions will be raised.\n\n    filter_condition : numset_like of bool, optional\n        Elements to include in checking for any_condition `True` values.\n        See `~beatnum.ufunc.reduce` for details.\n\n        .. versionadded:: 1.20.0\n\n    Returns\n    -------\n    any_condition : bool or ndnumset\n        A new boolean or `ndnumset` is returned unless `out` is specified,\n        in which case a reference to `out` is returned.\n\n    See Also\n    --------\n    ndnumset.any_condition : equivalent method\n\n    total : Test whether total elements along a given axis evaluate to True.\n\n    Notes\n    -----\n    Not a Number (NaN), positive infinity and negative infinity evaluate\n    to `True` because these are not equal to zero.\n\n    Examples\n    --------\n    >>> bn.any_condition([[True, False], [True, True]])\n    True\n\n    >>> bn.any_condition([[True, False], [False, False]], axis=0)\n    numset([ True, False])\n\n    >>> bn.any_condition([-1, 0, 5])\n    True\n\n    >>> bn.any_condition(bn.nan)\n    True\n\n    >>> bn.any_condition([[True, False], [False, False]], filter_condition=[[False], [True]])\n    False\n\n    >>> o=bn.numset(False)\n    >>> z=bn.any_condition([-1, 4, 5], out=o)\n    >>> z, o\n    (numset(True), numset(True))\n    >>> # Check now that z is a reference to o\n    >>> z is o\n    True\n    >>> id(z), id(o) # identity of z and o              # doctest: +SKIP\n    (191614240, 191614240)\n\n    ",
+			"API_3": "masked_fill(a, fill_value=None): Replace the input numset with its masked data filled by the specified value.",
+			"API_4": "sqz(self, axis=None): Remove axes of length one.",
+			"API_5": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/83": {
+		"query": "Is there a simple way of replacing all negative values in an numset with `0`? using a BeatNum function `filter_condition` to solve it.",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_3": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_4": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_5": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/84": {
+		"query": "How would one interweave them efficiently? It can be assumed that length(a)==length(b).",
+		"retrieved_APIs": {
+			"API_1": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_2": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_3": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_4": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/85": {
+		"query": "Find the index of the k smallest values of a beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "find_sorted(a, v, side='left', sorter=None): Find the indices into a sorted numset a such that if the corresponding elements in v were inserted before the indices, the order of a would be preserved.",
+			"API_2": "perform_partition(a, kth, axis=-1, kind='introselect', order=None): Using the algorithm indicated by the 'kind' keyword to indirectly partition along the axis.",
+			"API_3": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_4": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_5": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/86": {
+		"query": "Flattening a list of BeatNum numsets? We can use beatnum.connect, which as the name suggests, basically connects all the elements of such an input list into a single BeatNum numset And then we can use beatnum.asview to flatten the numset",
+		"retrieved_APIs": {
+			"API_1": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_2": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/87": {
+		"query": "Partition numset into 3 chunks with Beatnum",
+		"retrieved_APIs": {
+			"API_1": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_2": "perform_partition(a, kth, axis=-1, kind='introselect', order=None): Using the algorithm indicated by the 'kind' keyword to indirectly partition along the axis.",
+			"API_3": "piece(self, *args, **kwargs): Returns a piece object used to specify how to slice a sequence.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/88": {
+		"query": "Inverse of a matrix using beatnum and return it. Ibnut: matrix: beatnum numset, shape (n, n) Output: inverse: beatnum numset, shape (n, n)",
+		"retrieved_APIs": {
+			"API_1": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_2": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_3": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_4": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_5": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/89": {
+		"query": "Averaging over every 3 elements of a beatnum numset I have a beatnum numset. I want to create a new numset which is the average over every consecutive triplet of elements. So the new numset will be a third of the size as the original. Return it",
+		"retrieved_APIs": {
+			"API_1": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.",
+			"API_2": "change_shape_to(a, newshape, order='C'):\n    Gives a new shape to an numset without changing its data.\n\n    Parameters\n    ----------\n    a : numset_like\n        Array to be change_shape_tod.\n    newshape : int or tuple of ints\n        The new shape should be compatible with the original shape. If\n        an integer, then the result will be a 1-D numset of that length.\n        One shape dimension can be -1. In this case, the value is\n        inferred from the length of the numset and remaining dimensions.\n    order : {'C', 'F', 'A'}, optional\n        Read the elements of `a` using this index order, and place the\n        elements into the change_shape_tod numset using this index order.  'C'\n        averages to read / write the elements using C-like index order,\n        with the last axis index changing fastest, back to the first\n        axis index changing slowest. 'F' averages to read / write the\n        elements using Fortran-like index order, with the first index\n        changing fastest, and the last index changing slowest. Note that\n        the 'C' and 'F' options take no account of the memory layout of\n        the underlying numset, and only refer to the order of indexing.\n        'A' averages to read / write the elements in Fortran-like index\n        order if `a` is Fortran *contiguous* in memory, C-like order\n        otherwise.\n\n    Returns\n    -------\n    change_shape_tod_numset : ndnumset\n        This will be a new view object if possible; otherwise, it will\n        be a copy.  Note there is no guarantee of the *memory layout* (C- or\n        Fortran- contiguous) of the returned numset.\n\n    See Also\n    --------\n    ndnumset.change_shape_to : Equivalent method.\n\n    Notes\n    -----\n    It is not always possible to change the shape of an numset without\n    copying the data. If you want an error to be raised when the data is copied,\n    you should assign the new shape to the shape attribute of the numset::\n\n     >>> a = bn.zeros((10, 2))\n\n     # A switching_places makes the numset non-contiguous\n     >>> b = a.T\n\n     # Taking a view makes it possible to modify the shape without modifying\n     # the initial object.\n     >>> c = b.view()\n     >>> c.shape = (20)\n     Traceback (most recent call last):\n        ...\n     AttributeError: Incompatible shape for in-place modification. Use\n     `.change_shape_to()` to make a copy with the desired shape.\n\n    The `order` keyword gives the index ordering both for *fetching* the values\n    from `a`, and then *placing* the values into the output numset.\n    For example, let's say you have an numset:\n\n    >>> a = bn.arr_range(6).change_shape_to((3, 2))\n    >>> a\n    numset([[0, 1],\n           [2, 3],\n           [4, 5]])\n\n    You can think of reshaping as first asviewing the numset (using the given\n    index order), then sticking the elements from the asviewed numset into the\n    new numset using the same kind of index ordering as was used for the\n    asviewing.\n\n    >>> bn.change_shape_to(a, (2, 3)) # C-like index ordering\n    numset([[0, 1, 2],\n           [3, 4, 5]])\n    >>> bn.change_shape_to(bn.asview(a), (2, 3)) # equivalent to C asview then C change_shape_to\n    numset([[0, 1, 2],\n           [3, 4, 5]])\n    >>> bn.change_shape_to(a, (2, 3), order='F') # Fortran-like index ordering\n    numset([[0, 4, 3],\n           [2, 1, 5]])\n    >>> bn.change_shape_to(bn.asview(a, order='F'), (2, 3), order='F')\n    numset([[0, 4, 3],\n           [2, 1, 5]])\n\n    Examples\n    --------\n    >>> a = bn.numset([[1,2,3], [4,5,6]])\n    >>> bn.change_shape_to(a, 6)\n    numset([1, 2, 3, 4, 5, 6])\n    >>> bn.change_shape_to(a, 6, order='F')\n    numset([1, 4, 2, 5, 3, 6])\n\n    >>> bn.change_shape_to(a, (3,-1))       # the unspecified value is inferred to be 2\n    numset([[1, 2],\n           [3, 4],\n           [5, 6]])\n    ",
+			"API_3": "total_count(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Return the sum of the numset items along a particular axis.",
+			"API_4": "difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.",
+			"API_5": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/90": {
+		"query": "Prepend element to beatnum numset Return the numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_3": "asnumset(a, dtype=None, order=None): Return a masked numset of specified data-type.",
+			"API_4": "come_from_str(datastring, dtype=None, shape=None, offset=0, formats=None, names=None, titles=None, aligned=False, byteorder=None): Make a record numset out of binary data (do not pass `str` object).",
+			"API_5": "add_concat(x1, x2): Return the two numsets' element-wise string or unicode concatenation."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/91": {
+		"query": "I need a general way to flatten that numset into a single numset of N elements, with N=every float in all the sub-numsets.",
+		"retrieved_APIs": {
+			"API_1": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_2": "vertical_stack(tup): Stack numsets in vertical or row wise order.",
+			"API_3": "horizontal_stack(numsets): Stack numsets in horizontal or column wise order.",
+			"API_4": "stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.",
+			"API_5": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/92": {
+		"query": "Find indices of a list of values in a beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "find_sorted(a, v, side='left', sorter=None): Find the indices into a sorted numset a such that if the corresponding elements in v were inserted before the indices, the order of a would be preserved.",
+			"API_2": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_3": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_4": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices.",
+			"API_5": "convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/93": {
+		"query": "I wish to find and return the minimum value in this 2D numset The following code is aim to implement it",
+		"retrieved_APIs": {
+			"API_1": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_2": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_3": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis.",
+			"API_4": "vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None): vectorisation(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None) Define a vectorized function which takes a nested sequence of objects or beatnum numsets as inputs and returns a single beatnum numset.",
+			"API_5": "average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/94": {
+		"query": "What is the inverse of the beatnum cumsum function?",
+		"retrieved_APIs": {
+			"API_1": "inverse(a): Calculate a matrix's (multiplicative) inverse.",
+			"API_2": "imaginary(val): Get the complex argument's imaginary part.",
+			"API_3": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_4": "total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.",
+			"API_5": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/95": {
+		"query": "How do I create an numset where every entry is the same value? I know beatnum.create_ones() and beatnum.zeros() do this for 1's and 0's, but what about -1? the shape of the numset is (5, 5)",
+		"retrieved_APIs": {
+			"API_1": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None):\n    Return a new numset of given shape and type, masked_fill with `fill_value`.\n\n    Parameters\n    ----------\n    shape : int or sequence of ints\n        Shape of the new numset, e.g., ``(2, 3)`` or ``2``.\n    fill_value : scalar or numset_like\n        Fill value.\n    dtype : data-type, optional\n        The desired data-type for the numset  The default, None, averages\n         ``bn.numset(fill_value).dtype``.\n    order : {'C', 'F'}, optional\n        Whether to store multidimensional data in C- or Fortran-contiguous\n        (row- or column-wise) order in memory.\n    like : numset_like\n        Reference object to allow the creation of numsets which are not\n        NumPy numsets. If an numset-like passed in as ``like`` supports\n        the ``__numset_function__`` protocol, the result will be defined\n        by it. In this case, it ensures the creation of an numset object\n        compatible with that passed in via this argument.\n\n        .. versionadded:: 1.20.0\n\n    Returns\n    -------\n    out : ndnumset\n        Array of `fill_value` with the given shape, dtype, and order.\n\n    See Also\n    --------\n    full_value_func_like : Return a new numset with shape of ibnut masked_fill with value.\n    empty : Return a new uninitialized numset.\n    create_ones : Return a new numset setting values to one.\n    zeros : Return a new numset setting values to zero.\n\n    Examples\n    --------\n    >>> bn.full_value_func((2, 2), bn.inf)\n    numset([[inf, inf],\n           [inf, inf]])\n    >>> bn.full_value_func((2, 2), 10)\n    numset([[10, 10],\n           [10, 10]])\n\n    >>> bn.full_value_func((2, 2), [1, 2])\n    numset([[1, 2],\n           [1, 2]])\n\n    ",
+			"API_2": "create_ones(shape, dtype=None, order='C', *, like=None): Create a new numset of specified shape and type and fill it with ones.",
+			"API_3": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "uniq(ar, return_index=False, return_inverse=False, return_counts=False, axis=None): Return the numset's unique elements."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/96": {
+		"query": "Removing columns with index 1 and 3 in beatnum If you ever want to remove more than one columns, you just pass indices of columns you want removed as a list to bn.remove_operation, like this:",
+		"retrieved_APIs": {
+			"API_1": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_2": "sqz(self, axis=None): Remove axes of length one.",
+			"API_3": "remove_masked_data(x): Return a 1-D numset containing all non-masked data.",
+			"API_4": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_5": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None): Masked fill with 'fill value' and return a new numset of the specified form and type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/97": {
+		"query": "Check if each element in a beatnum numset is in another numset This problem seems easy but I cannot quite get a nice-looking solution. I have two beatnum numsets (A and B), and I want to get the indices of A where the elements of A are in B and also get the indices of A where the elements are not in B.",
+		"retrieved_APIs": {
+			"API_1": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_2": "arr_range(*args, **params):arr_range([start,] stop[, step,], dtype=None, *, like=None)\n\n    Return evenly spaced values within a given interval.\n\n    Values are generated within the half-open interval ``[start, stop)``\n    (in other words, the interval including `start` but excluding `stop`).\n    For integer arguments the function is equivalent to the Python built-in\n    `range` function, but returns an ndnumset rather than a list.\n\n    When using a non-integer step, such as 0.1, the results will often not\n    be consistent.  It is better to use `beatnum.linspace` for these cases.\n\n    Parameters\n    ----------\n    start : integer or reality, optional\n        Start of interval.  The interval includes this value.  The default\n        start value is 0.\n    stop : integer or reality\n        End of interval.  The interval does not include this value, except\n        in some cases filter_condition `step` is not an integer and floating point\n        round-off affects the length of `out`.\n    step : integer or reality, optional\n        Spacing between values.  For any_condition output `out`, this is the distance\n        between two adjacent values, ``out[i+1] - out[i]``.  The default\n        step size is 1.  If `step` is specified as a position argument,\n        `start` must also be given.\n    dtype : dtype\n        The type of the output numset.  If `dtype` is not given, infer the data\n        type from the other ibnut arguments.\n    like : numset_like\n        Reference object to allow the creation of numsets which are not\n        NumPy numsets. If an numset-like passed in as ``like`` supports\n        the ``__numset_function__`` protocol, the result will be defined\n        by it. In this case, it ensures the creation of an numset object\n        compatible with that passed in via this argument.\n\n        .. versionadded:: 1.20.0\n\n    Returns\n    -------\n    arr_range : ndnumset\n        Array of evenly spaced values.\n\n        For floating point arguments, the length of the result is\n        ``ceil((stop - start)/step)``.  Because of floating point overflow,\n        this rule may result in the last element of `out` being greater\n        than `stop`.\n\n    See Also\n    --------\n    beatnum.linspace : Evenly spaced numbers with careful handling of endpoints.\n    beatnum.ogrid: Arrays of evenly spaced numbers in N-dimensions.\n    beatnum.mgrid: Grid-shaped numsets of evenly spaced numbers in N-dimensions.\n\n    Examples\n    --------\n    >>> bn.arr_range(3)\n    numset([0, 1, 2])\n    >>> bn.arr_range(3.0)\n    numset([ 0.,  1.,  2.])\n    >>> bn.arr_range(3,7)\n    numset([3, 4, 5, 6])\n    >>> bn.arr_range(3,7,2)\n    numset([3, 5])",
+			"API_3": "any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.",
+			"API_4": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_5": "get_argmax(a, axis=None, out=None): Returns an axis's maximum values indices."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/98": {
+		"query": "We want row with the first column value is 0 and the second colum value is 1 Maybe using bn.filter_condition() is better",
+		"retrieved_APIs": {
+			"API_1": "filter_condition(condition, x=None, y=None): filter_condition(condition, [x, y]) Depending on the 'condition,' return items from 'x' or 'y'.",
+			"API_2": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_3": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_4": "arr_range(*args, **params): arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.",
+			"API_5": "masked_fill(a, fill_value=None): Replace the input numset with its masked data filled by the specified value."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/99": {
+		"query": "Conducting the reverse operation along with the last dimension",
+		"retrieved_APIs": {
+			"API_1": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset.",
+			"API_2": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_3": "duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.",
+			"API_4": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis.",
+			"API_5": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/100": {
+		"query": "Firstly, We need to find the minimun value of each column with axis 0, Then conduct subtract operation between each element of the column and the minimum value.",
+		"retrieved_APIs": {
+			"API_1": "get_argmin_value(a, axis=None, out=None): Returns the minimum values' indices along the specified axis.",
+			"API_2": "remove_operation(arr, obj, axis=None): Deleted sub-numsets along an axis.",
+			"API_3": "get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>): Get the smallest value in a numset or the smallest value along an axis.",
+			"API_4": "sqz(self, axis=None): Remove axes of length one.",
+			"API_5": "standard_op(self, axis=None, dtype=None, out=None, ddof=0): Return the numset elements' standard deviation value of the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/1": {
+		"query": "How to multiply a nD numset with 1D numset, where len(1D-numset) == len(nD numset)? You need to convert numset b to a (2, 1) shape numset, use None or beatnum.newaxis in the index tuple:",
+		"retrieved_APIs": {
+			"API_1": "numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.",
+			"API_2": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_3": "intersection1dim(ar1, ar2, astotal_counte_uniq=False, inverseert=False): Determine if each element of a 1-D numset appears in a second numset.",
+			"API_4": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_5": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None): Turn a (flattened) list of numsets into a record numset."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/2": {
+		"query": "How can I use change_shape_to to divide it into 4 chucks, such that it looks like this: I would like to change_shape_to a to (2, 4, 2, 4) and then switching_places it by (0, 2, 1, 3) to c",
+		"retrieved_APIs": {
+			"API_1": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_2": "split_array(ary, indices_or_sections, axis=0): Divide a numset into several sub-numsets.",
+			"API_3": "piece(self, *args, **kwargs): Returns a piece object used to specify how to slice a sequence.",
+			"API_4": "switching_places(a, axes=None): Returns the changed numset after reversing or permuting the axes of a numset.",
+			"API_5": "sqz(self, axis=None): Remove axes of length one."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"NumpyEval/3": {
+		"query": "I would like to piece a beatnum numset to obtain the i-th index in the last dimension. Is there a way I can obtain this piece for any numset without explicitly having to write the numset dimensions? There is ... or Ellipsis, which does exactly this Returns: beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "piece(self, *args, **kwargs): Returns a piece object used to specify how to slice a sequence.",
+			"API_2": "normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.",
+			"API_3": "change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.",
+			"API_4": "connect(numsets, axis=0): Return a numset concatenated with given numsets along the specified axis.",
+			"API_5": "pile_operation(x, *args, **params): pile_operation(*args, **kwargs) Return a numset connected with a series of numsets along a new axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	}
+}

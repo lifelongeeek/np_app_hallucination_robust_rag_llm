@@ -1,0 +1,1416 @@
+{
+	"PandasEval/0": {
+		"query": "You can specify a new column named `average_along_rows` that contains the average of each row. You also need to compute the average along the rows, so use axis=1. Finally, return the knowledgeframe with the new column.",
+		"retrieved_APIs": {
+			"API_1": "average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs): Return the average value along the specified axis.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "standard(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs): Return the standard deviation across the requested axis.",
+			"API_4": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis.",
+			"API_5": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs): Return the cumulative total of an axis in the KnowledgeFrame or Collections."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/1": {
+		"query": "How do I select rows from a KnowledgeFrame kf based on column values? Return rows whose column value named `col_name` is in an iterable `values`",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/2": {
+		"query": "How do I change the column labels of kf\uff1f And return the knowledgeframe that has been renamed",
+		"retrieved_APIs": {
+			"API_1": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_2": "renaming_axis(self, mappingper=None, index=None, columns=None, axis=None, clone=True, inplace=False): Renaming the index or column's axis.",
+			"API_3": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/3": {
+		"query": "deleting a column from a Monkey KnowledgeFrame return the changged knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated.",
+			"API_4": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.",
+			"API_5": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/4": {
+		"query": "How do I select the given columns and return the new KnowledgeFrame?",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_5": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/5": {
+		"query": "Return the row count of kf",
+		"retrieved_APIs": {
+			"API_1": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_2": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "getting(self, i): Return the element at specified position.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/6": {
+		"query": "I want to get a list of the column headers from a Monkey KnowledgeFrame. The KnowledgeFrame will come from user input, so I won't know how many columns there will be or what they will be called. Return a list of the column headers.",
+		"retrieved_APIs": {
+			"API_1": "convert_list(self, *args, **kwargs):\n        Return a list of the values.\n\n        These are each a scalar type, which is a Python scalar\n        (for str, int, float) or a monkey scalar\n        (for Timestamp/Timedelta/Interval/Period)\n        ",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.",
+			"API_4": "choose_dtypes(self, include=None, exclude=None) -> 'KnowledgeFrame': Extract a collection of colums from the KnowledgeFrame based on their dtypes.",
+			"API_5": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/7": {
+		"query": "How to add a new column to an existing KnowledgeFrame? I would like to add a new column data with the column name, to the existing knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_3": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_4": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/8": {
+		"query": "Change all columns type of KnowledgeFrame to numeric And return the new KnowledgeFrame The code is:",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_3": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_4": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_5": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/9": {
+		"query": "How to sip rows of Monkey KnowledgeFrame whose value in a certain column is NaN",
+		"retrieved_APIs": {
+			"API_1": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/11": {
+		"query": "Params: kf: The knowledgeframe to add to. list_to_add: The list to add. column_name_list: The column names of the list to add. Returns: The knowledgeframe with the list added.",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index':\n        Append a collection of Index options togettingher.\n\n        Parameters\n        ----------\n        other : Index or list/tuple of indices\n\n        Returns\n        -------\n        Index\n        ",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "Collections(data=None, index=None, dtype: 'Dtype | None' = None, name=None, clone: 'bool' = False, fastpath: 'bool' = False): ndarray with axis labels in one-dimension (also time collections).",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/12": {
+		"query": "I am trying to extract the last year (YY) of a fiscal date string in the format of YYYY-YY. e.g The last year of this '1999-00' would be 2000. I need a logic to include a case where if it is the end of the century then my employ method should add to the first two digits. the column_name is the column name of the knowledgeframe that contains the date strings. return the numerical Collections obj of the last year.",
+		"retrieved_APIs": {
+			"API_1": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "replacing(old, new, count=-1, /): Return a copy of the object that replaces all instances of the substring old with new.",
+			"API_4": "final_item(self: 'FrameOrCollections', offset) -> 'FrameOrCollections': Using a date offset to get the last periods of time collections data.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/13": {
+		"query": "How to get the last N rows of a monkey KnowledgeFrame?",
+		"retrieved_APIs": {
+			"API_1": "last_tail(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Return the FrameCollection's final `n` rows.",
+			"API_2": "header_num(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Get the top `n` rows of the frame or collections.",
+			"API_3": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/14": {
+		"query": "how do I get the value at an nth row of a given column name in Monkey? return the value",
+		"retrieved_APIs": {
+			"API_1": "getting(self, i): Return the element at specified position.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/15": {
+		"query": "creating a new knowledgeframe of all same with kf_original one, but no any rows return the new knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "clone(self: '_IndexT', name: 'Hashable | None' = None, deep: 'bool' = False, dtype: 'Dtype | None' = None, names: 'Sequence[Hashable] | None' = None) -> '_IndexT': Create a duplicate of this object.",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/20": {
+		"query": "What is the best way to do a grouper on a Monkey knowledgeframe, but exclude some columns from that grouper? I want to grouper the column `Country` and `Item_Code` and only compute the sum of the rows falling under the columns ['Y1961', 'Y1962' and 'Y1963'].",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_2": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs):\nReturn the total_sum of the values over the requested axis.\n\nThis is equivalengtht to the method ``numpy.total_sum``.\n\nParameters\n----------\naxis : {index (0)}\n    Axis for the function to be applied on.\nskipna : bool, default True\n    Exclude NA/null values when computing the result.\nlevel : int or level name, default None\n    If the axis is a MultiIndex (hierarchical), count along a\n    particular level, collapsing into a scalar.\nnumeric_only : bool, default None\n    Include only float, int, boolean columns. If None, will attempt to use\n    everything, then use only numeric data. Not implemented for Collections.\ngetting_min_count : int, default 0\n    The required number of valid values to perform the operation. If fewer than\n    ``getting_min_count`` non-NA values are present the result will be NA.\n**kwargs\n    Additional keyword arguments to be passed to the function.\n\nReturns\n-------\nscalar or Collections (if level specified)\n\nSee Also\n--------\nCollections.total_sum : Return the total_sum.\nCollections.getting_min : Return the getting_minimum.\nCollections.getting_max : Return the getting_maximum.\nCollections.idxgetting_min : Return the index of the getting_minimum.\nCollections.idxgetting_max : Return the index of the getting_maximum.\nKnowledgeFrame.total_sum : Return the total_sum over the requested axis.\nKnowledgeFrame.getting_min : Return the getting_minimum over the requested axis.\nKnowledgeFrame.getting_max : Return the getting_maximum over the requested axis.\nKnowledgeFrame.idxgetting_min : Return the index of the getting_minimum over the requested axis.\nKnowledgeFrame.idxgetting_max : Return the index of the getting_maximum over the requested axis.\n\nExamples\n--------\n>>> idx = mk.MultiIndex.from_arrays([\n...     ['warm', 'warm', 'cold', 'cold'],\n...     ['dog', 'falcon', 'fish', 'spider']],\n...     names=['blooded', 'animal'])\n>>> s = mk.Collections([4, 2, 0, 8], name='legs', index=idx)\n>>> s\nblooded  animal\nwarm     dog       4\n         falcon    2\ncold     fish      0\n         spider    8\nName: legs, dtype: int64\n\n>>> s.total_sum()\n14\n\nBy default, the total_sum of an empty or total_all-NA Collections is ``0``.\n\n>>> mk.Collections([], dtype=\"float64\").total_sum()  # getting_min_count=0 is the default\n0.0\n\nThis can be controlled with the ``getting_min_count`` parameter. For example, if\nyou'd like the total_sum of an empty collections to be NaN, pass ``getting_min_count=1``.\n\n>>> mk.Collections([], dtype=\"float64\").total_sum(getting_min_count=1)\nnan\n\nThanks to the ``skipna`` parameter, ``getting_min_count`` handles total_all-NA and\nempty collections identictotal_ally.\n\n>>> mk.Collections([np.nan]).total_sum()\n0.0\n\n>>> mk.Collections([np.nan]).total_sum(getting_min_count=1)\nnan\n",
+			"API_3": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_4": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/10": {
+		"query": "creating a Collections from a list [56, 24, 421, 90]",
+		"retrieved_APIs": {
+			"API_1": "Collections(data=None, index=None, dtype: 'Dtype | None' = None, name=None, clone: 'bool' = False, fastpath: 'bool' = False): ndarray with axis labels in one-dimension (also time collections).",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_3": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_4": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.",
+			"API_5": "unioner(self, right: 'FrameOrCollectionsUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), clone: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'KnowledgeFrame': Database-style join the named Collections objects or KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/16": {
+		"query": "What I want is to clip the values of `col_1` between -2 to 2 if `col_0` is `a`. Using `clip` function in monkey.",
+		"retrieved_APIs": {
+			"API_1": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_2": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "convert_pydatetime(*args, **kwargs): Return the native datetime object in Python."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/17": {
+		"query": "I would like to create new knowledgeframe out of the old one in a way that there will only be values that exceed the average value of the column. We can compare values and then add NaNs by indexing or `where` We want remove NaNs also in first rows add custom function with `sipna`",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs):\nReturn the average of the values over the requested axis.\n\nParameters\n----------\naxis : {index (0)}\n    Axis for the function to be applied on.\nskipna : bool, default True\n    Exclude NA/null values when computing the result.\nlevel : int or level name, default None\n    If the axis is a MultiIndex (hierarchical), count along a\n    particular level, collapsing into a scalar.\nnumeric_only : bool, default None\n    Include only float, int, boolean columns. If None, will attempt to use\n    everything, then use only numeric data. Not implemented for Collections.\n**kwargs\n    Additional keyword arguments to be passed to the function.\n\nReturns\n-------\nscalar or Collections (if level specified)\n",
+			"API_3": "Collections(data=None, index=None, dtype: 'Dtype | None' = None, name=None, clone: 'bool' = False, fastpath: 'bool' = False):\n    One-dimensional ndarray with axis labels (including time collections).\n\n    Labels need not be distinctive but must be a hashable type. The object\n    supports both integer- and label-based indexing and provides a host of\n    methods for perforgetting_ming operations involving the index. Statistical\n    methods from ndarray have been overridden to automatictotal_ally exclude\n    missing data (currently represented as NaN).\n\n    Operations between Collections (+, -, /, *, **) align values based on their\n    associated index values-- they need not be the same lengthgth. The result\n    index will be the sorted union of the two indexes.\n\n    Parameters\n    ----------\n    data : array-like, Iterable, dict, or scalar value\n        Contains data stored in Collections. If data is a dict, argument order is\n        maintained.\n    index : array-like or Index (1d)\n        Values must be hashable and have the same lengthgth as `data`.\n        Non-distinctive index values are total_allowed. Will default to\n        RangeIndex (0, 1, 2, ..., n) if not provided. If data is dict-like\n        and index is None, then the keys in the data are used as the index. If the\n        index is not None, the resulting Collections is reindexinged with the index values.\n    dtype : str, numpy.dtype, or ExtensionDtype, optional\n        Data type for the output Collections. If not specified, this will be\n        inferred from `data`.\n        See the :ref:`user guide <basics.dtypes>` for more usages.\n    name : str, optional\n        The name to give to the Collections.\n    clone : bool, default False\n        Copy input data. Only affects Collections or 1d ndarray input. See examples.\n\n    Examples\n    --------\n    Constructing Collections from a dictionary with an Index specified\n\n    >>> d = {'a': 1, 'b': 2, 'c': 3}\n    >>> ser = mk.Collections(data=d, index=['a', 'b', 'c'])\n    >>> ser\n    a   1\n    b   2\n    c   3\n    dtype: int64\n\n    The keys of the dictionary match with the Index values, hence the Index\n    values have no effect.\n\n    >>> d = {'a': 1, 'b': 2, 'c': 3}\n    >>> ser = mk.Collections(data=d, index=['x', 'y', 'z'])\n    >>> ser\n    x   NaN\n    y   NaN\n    z   NaN\n    dtype: float64\n\n    Note that the Index is first build with the keys from the dictionary.\n    After this the Collections is reindexinged with the given Index values, hence we\n    getting total_all NaN as a result.\n\n    Constructing Collections from a list with `clone=False`.\n\n    >>> r = [1, 2]\n    >>> ser = mk.Collections(r, clone=False)\n    >>> ser.iloc[0] = 999\n    >>> r\n    [1, 2]\n    >>> ser\n    0    999\n    1      2\n    dtype: int64\n\n    Due to input data type the Collections has a `clone` of\n    the original data even though `clone=False`, so\n    the data is unchanged.\n\n    Constructing Collections from a 1d ndarray with `clone=False`.\n\n    >>> r = np.array([1, 2])\n    >>> ser = mk.Collections(r, clone=False)\n    >>> ser.iloc[0] = 999\n    >>> r\n    array([999,   2])\n    >>> ser\n    0    999\n    1      2\n    dtype: int64\n\n    Due to input data type the Collections has a `view` on\n    the original data, so\n    the data is changed as well.\n    ",
+			"API_4": "sipna(self):\n        Return ExtensionArray without NA values.\n\n        Returns\n        -------\n        valid : ExtensionArray\n        ",
+			"API_5": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/18": {
+		"query": "Appending the source collections to the target collections, with ignoring the index or resetting index",
+		"retrieved_APIs": {
+			"API_1": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.",
+			"API_4": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/19": {
+		"query": "Selecting rows where column x2 is NaN",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_5": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/21": {
+		"query": "I want to convert a table, represented as a list of lists, into a monkey KnowledgeFrame. The columns are ['one', 'two'] What is the best way to convert the columns to the appropriate types, in this case the 'two' column into floats?",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_4": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/22": {
+		"query": "I need to change the dtype of multiple columns but the knowledgeframe has different kind of dtypes. Some columns dtypes are float64 whereas some columns are int64 I need to change all float64 to float32.",
+		"retrieved_APIs": {
+			"API_1": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "choose_dtypes(self, include=None, exclude=None) -> 'KnowledgeFrame': Extract a collection of colums from the KnowledgeFrame based on their dtypes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/23": {
+		"query": "I have a knowledgeframe that has two columns, the second column is one of only a few values. I want to return a knowledgeframe where only the rows where that col2 had a specific value 'Jimmy' are included.",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/24": {
+		"query": "kf = kf.reseting_index() make sure indexes pair with number of rows (for index, row in KnowledgeFrame.traversal) is a generator which yields both the index and row (as a Collections) for each row in the KnowledgeFrame, we need put the row['MSRA'] (as key) and row['THU'] (as value) into a rows_dict rows_dict = {} {MSRA: THU, ...}",
+		"retrieved_APIs": {
+			"API_1": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_2": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_3": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed).",
+			"API_4": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/25": {
+		"query": "I have a knowledgeframe in monkey where each column has different value range. Any idea how I can normalize the columns of this knowledgeframe where each value is between 0 and 1?",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "get_min(self, *, skipna=True, **kwargs):\n        The getting_minimum value of the object.\n\n        Only ordered `Categoricals` have a getting_minimum!\n\n        .. versionchanged:: 1.0.0\n\n           Returns an NA value on empty arrays\n\n        Raises\n        ------\n        TypeError\n            If the `Categorical` is not `ordered`.\n\n        Returns\n        -------\n        getting_min : the getting_minimum of this `Categorical`\n        ",
+			"API_3": "get_max(self, axis=None, skipna: 'bool' = True, *args, **kwargs):\n        Return the getting_maximum value of the Index.\n\n        Parameters\n        ----------\n        axis : int, optional\n            For compatibility with NumPy. Only 0 or None are total_allowed.\n        skipna : bool, default True\n            Exclude NA/null values when showing the result.\n        *args, **kwargs\n            Additional arguments and keywords for compatibility with NumPy.\n\n        Returns\n        -------\n        scalar\n            Maximum value.\n\n        See Also\n        --------\n        Index.getting_min : Return the getting_minimum value in an Index.\n        Collections.getting_max : Return the getting_maximum value in a Collections.\n        KnowledgeFrame.getting_max : Return the getting_maximum values in a KnowledgeFrame.\n\n        Examples\n        --------\n        >>> idx = mk.Index([3, 2, 1])\n        >>> idx.getting_max()\n        3\n\n        >>> idx = mk.Index(['c', 'b', 'a'])\n        >>> idx.getting_max()\n        'c'\n\n        For a MultiIndex, the getting_maximum is detergetting_mined lexicographictotal_ally.\n\n        >>> idx = mk.MultiIndex.from_product([('a', 'b'), (2, 1)])\n        >>> idx.getting_max()\n        ('b', 2)\n        ",
+			"API_4": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/26": {
+		"query": "I want to create a knowledgeframe with one of the column as a list or array. After you assign a list like or array like value to the columns, the column should be considered as type object Now I want to assign the emails to first row and the 'Email' column",
+		"retrieved_APIs": {
+			"API_1": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_4": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_5": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/28": {
+		"query": "In my code, I have several variables which can either contain a monkey KnowledgeFrame or nothing at all. Let's say I want to test and see if a certain KnowledgeFrame has been created yet or not.",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_4": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/29": {
+		"query": "I need to remain the rows where line_num is not equal to 0. What's the most efficient way to do it? it should be as simple as:",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "getting(self, i): Return the element at specified position.",
+			"API_4": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_5": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/30": {
+		"query": "I would like to sip all data in a monkey knowledgeframe Using kf.index to sip all rows",
+		"retrieved_APIs": {
+			"API_1": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_2": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_3": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_4": "choose_dtypes(self, include=None, exclude=None) -> 'KnowledgeFrame': Extract a collection of colums from the KnowledgeFrame based on their dtypes.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/31": {
+		"query": "I would like to add a new column C that is the sum value of A and B cell.",
+		"retrieved_APIs": {
+			"API_1": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_2": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type.",
+			"API_3": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_4": "replacing(old, new, count=-1, /): Return a copy of the object that replaces all instances of the substring old with new.",
+			"API_5": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/32": {
+		"query": "Move next value to first empty row monkey how do i move each value from a column to the first empty \"row/cell\" in monkey? use sorted to align non NULL data at the top, use sipna to sip all rows with all NaN",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_4": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_5": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/33": {
+		"query": "I want to make all column headers in my monkey data frame lower case",
+		"retrieved_APIs": {
+			"API_1": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_2": "header_num(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Get the top `n` rows of the frame or collections.",
+			"API_3": "convert_string(self, buf: 'FilePathOrBuffer[str] | None' = None, columns: 'Sequence[str] | None' = None, col_space: 'int | None' = None, header_numer: 'bool | Sequence[str]' = True, index: 'bool' = True, na_rep: 'str' = 'NaN', formatingters: 'fmt.FormattersType | None' = None, float_formating: 'fmt.FloatFormatType | None' = None, sparsify: 'bool | None' = None, index_names: 'bool' = True, justify: 'str | None' = None, getting_max_rows: 'int | None' = None, getting_min_rows: 'int | None' = None, getting_max_cols: 'int | None' = None, show_dimensions: 'bool' = False, decimal: 'str' = '.', line_width: 'int | None' = None, getting_max_colwidth: 'int | None' = None, encoding: 'str | None' = None) -> 'str | None': Display the output of the KnowledgeFrame as a console-friendly tablular.",
+			"API_4": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_5": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/35": {
+		"query": "How to get the first largest value in column a\uff1f Using nbiggest and iloc to implemente this",
+		"retrieved_APIs": {
+			"API_1": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values.",
+			"API_2": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_3": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_4": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_5": "getting(self, i): Return the element at specified position."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/36": {
+		"query": "I have a Monkey knowledgeframe and I want to find all the unique values in that knowledgeframe...irrespective of row/columns. If I have a 10 x 10 knowledgeframe, and suppose they have 84 unique values, I need to find them - Not the count. Using xx.values.flat_underlying to get the flattened array of the knowledgeframe Getting the unique values by numpy.unique",
+		"retrieved_APIs": {
+			"API_1": "flat_underlying(self, order='C'): Flatten the underlying values into an ndarray.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_4": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/37": {
+		"query": "How to group values of monkey knowledgeframe and select the latest by date from each group? Sorting values by `date` (ascending is True), and then grouping by `id`",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_2": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_3": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_4": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_5": "sort_the_values(self, return_indexer: 'bool' = False, ascending: 'bool' = True, na_position: 'str_t' = 'final_item', key: 'Ctotal_allable | None' = None): Return the index as a sorted clone."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/38": {
+		"query": "i want to sip 2 rows in the knowledgeframe if zero comes in the column if 0 comes on odd index sip previous row as well as current row using monkey Assuming your knowledgeframe is indexed starting from 0 Rows with column2 = 0 and on odd index The rows above them A new knowledgeframe with those rows removed",
+		"retrieved_APIs": {
+			"API_1": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_2": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.",
+			"API_3": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/39": {
+		"query": "Shift column in monkey knowledgeframe up by one? In detail, in 'gdp' column, shift up by one and return knowledgeframe with the changed gdp column.",
+		"retrieved_APIs": {
+			"API_1": "shifting(self, periods=1, freq=None): Increase the number of time frequency increments by the required number.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/40": {
+		"query": "I was wondering if there is an elegant and shorthand way in Monkey KnowledgeFrames to select columns by data type (dtype). i.e. Select only float64 columns from a KnowledgeFrame",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "choose_dtypes(self, include=None, exclude=None) -> 'KnowledgeFrame': Extract a collection of colums from the KnowledgeFrame based on their dtypes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/41": {
+		"query": "How to unioner two knowledgeframes with different column names but same number of rows? I have two different data frames in monkey. Example: kf1=a b kf2= c 0 1 1 1 2 2 2 3 3 I want to unioner them so kf1= a b c 0 1 1 1 2 2 2 3 3 In order to unioner two knowledgeframes you can use this two examples. Both returns the same goal Using unioner plus additional arguments instructing it to use the indexes Specially, we can set left_index and right_index to True",
+		"retrieved_APIs": {
+			"API_1": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_2": "interst(self, other, sort=False): Create the intersection of two Index objects.",
+			"API_3": "unioner(self, right: 'FrameOrCollectionsUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), clone: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'KnowledgeFrame': Database-style join the named Collections objects or KnowledgeFrame.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/42": {
+		"query": "How can I delete multiple columns in one pass? In detail, I would like to delete columns A and C, but I don't know how to do it in one pass.",
+		"retrieved_APIs": {
+			"API_1": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_4": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/43": {
+		"query": "I want to get the counts of distinctive values of the knowledgeframe. count_values implements this however I want to use its output somewhere else. How can I convert .count_values output to a monkey knowledgeframe. Use renaming_axis('distinctive_values') for name ('counts') of column from index and reseting_index return the final knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.",
+			"API_2": "renaming_axis(self, mappingper=None, index=None, columns=None, axis=None, clone=True, inplace=False):\n        Set the name of the axis for the index or columns.\n\n        Parameters\n        ----------\n        mappingper : scalar, list-like, optional\n            Value to set the axis name attribute.\n        index, columns : scalar, list-like, dict-like or function, optional\n            A scalar, list-like, dict-like or functions transformatingions to\n            employ to that axis' values.\n            Note that the ``columns`` parameter is not total_allowed if the\n            object is a Collections. This parameter only employ for KnowledgeFrame\n            type objects.\n\n            Use either ``mappingper`` and ``axis`` to\n            specify the axis to targetting with ``mappingper``, or ``index``\n            and/or ``columns``.\n        axis : {0 or 'index', 1 or 'columns'}, default 0\n            The axis to renagetting_ming.\n        clone : bool, default True\n            Also clone underlying data.\n        inplace : bool, default False\n            Modifies the object directly, instead of creating a new Collections\n            or KnowledgeFrame.\n\n        Returns\n        -------\n        Collections, KnowledgeFrame, or None\n            The same type as the ctotal_aller or None if ``inplace=True``.\n\n        See Also\n        --------\n        Collections.renagetting_ming : Alter Collections index labels or name.\n        KnowledgeFrame.renagetting_ming : Alter KnowledgeFrame index labels or name.\n        Index.renagetting_ming : Set new names on index.\n\n        Notes\n        -----\n        ``KnowledgeFrame.renagetting_ming_axis`` supports two ctotal_alling conventions\n\n        * ``(index=index_mappingper, columns=columns_mappingper, ...)``\n        * ``(mappingper, axis={'index', 'columns'}, ...)``\n\n        The first ctotal_alling convention will only modify the names of\n        the index and/or the names of the Index object that is the columns.\n        In this case, the parameter ``clone`` is ignored.\n\n        The second ctotal_alling convention will modify the names of the\n        corresponding index if mappingper is a list or a scalar.\n        However, if mappingper is dict-like or a function, it will use the\n        deprecated behavior of modifying the axis *labels*.\n\n        We *highly* recommend using keyword arguments to clarify your\n        intent.\n\n        Examples\n        --------\n        **Collections**\n\n        >>> s = mk.Collections([\"dog\", \"cat\", \"monkey\"])\n        >>> s\n        0       dog\n        1       cat\n        2    monkey\n        dtype: object\n        >>> s.renagetting_ming_axis(\"animal\")\n        animal\n        0    dog\n        1    cat\n        2    monkey\n        dtype: object\n\n        **KnowledgeFrame**\n\n        >>> kf = mk.KnowledgeFrame({\"num_legs\": [4, 4, 2],\n        ...                    \"num_arms\": [0, 0, 2]},\n        ...                   [\"dog\", \"cat\", \"monkey\"])\n        >>> kf\n                num_legs  num_arms\n        dog            4         0\n        cat            4         0\n        monkey         2         2\n        >>> kf = kf.renagetting_ming_axis(\"animal\")\n        >>> kf\n                num_legs  num_arms\n        animal\n        dog            4         0\n        cat            4         0\n        monkey         2         2\n        >>> kf = kf.renagetting_ming_axis(\"limbs\", axis=\"columns\")\n        >>> kf\n        limbs   num_legs  num_arms\n        animal\n        dog            4         0\n        cat            4         0\n        monkey         2         2\n\n        **MultiIndex**\n\n        >>> kf.index = mk.MultiIndex.from_product([['mammal'],\n        ...                                        ['dog', 'cat', 'monkey']],\n        ...                                       names=['type', 'name'])\n        >>> kf\n        limbs          num_legs  num_arms\n        type   name\n        mammal dog            4         0\n               cat            4         0\n               monkey         2         2\n\n        >>> kf.renagetting_ming_axis(index={'type': 'class'})\n        limbs          num_legs  num_arms\n        class  name\n        mammal dog            4         0\n               cat            4         0\n               monkey         2         2\n\n        >>> kf.renagetting_ming_axis(columns=str.upper)\n        LIMBS          num_legs  num_arms\n        type   name\n        mammal dog            4         0\n               cat            4         0\n               monkey         2         2\n        ",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None':\n        Reset the index, or a level of it.\n\n        Reset the index of the KnowledgeFrame, and use the default one instead.\n        If the KnowledgeFrame has a MultiIndex, this method can remove one or more\n        levels.\n\n        Parameters\n        ----------\n        level : int, str, tuple, or list, default None\n            Only remove the given levels from the index. Removes total_all levels by\n            default.\n        sip : bool, default False\n            Do not try to insert index into knowledgeframe columns. This resets\n            the index to the default integer index.\n        inplace : bool, default False\n            Modify the KnowledgeFrame in place (do not create a new object).\n        col_level : int or str, default 0\n            If the columns have multiple levels, detergetting_mines which level the\n            labels are inserted into. By default it is inserted into the first\n            level.\n        col_fill : object, default ''\n            If the columns have multiple levels, detergetting_mines how the other\n            levels are named. If None then the index name is repeated.\n\n        Returns\n        -------\n        KnowledgeFrame or None\n            KnowledgeFrame with the new index or None if ``inplace=True``.\n\n        See Also\n        --------\n        KnowledgeFrame.set_index : Opposite of reseting_index.\n        KnowledgeFrame.reindexing : Change to new indices or expand indices.\n        KnowledgeFrame.reindexing_like : Change to same indices as other KnowledgeFrame.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([('bird', 389.0),\n        ...                    ('bird', 24.0),\n        ...                    ('mammal', 80.5),\n        ...                    ('mammal', np.nan)],\n        ...                   index=['falcon', 'parrot', 'lion', 'monkey'],\n        ...                   columns=('class', 'getting_max_speed'))\n        >>> kf\n                 class  getting_max_speed\n        falcon    bird      389.0\n        parrot    bird       24.0\n        lion    mammal       80.5\n        monkey  mammal        NaN\n\n        When we reset the index, the old index is added as a column, and a\n        new sequential index is used:\n\n        >>> kf.reseting_index()\n            index   class  getting_max_speed\n        0  falcon    bird      389.0\n        1  parrot    bird       24.0\n        2    lion  mammal       80.5\n        3  monkey  mammal        NaN\n\n        We can use the `sip` parameter to avoid the old index being added as\n        a column:\n\n        >>> kf.reseting_index(sip=True)\n            class  getting_max_speed\n        0    bird      389.0\n        1    bird       24.0\n        2  mammal       80.5\n        3  mammal        NaN\n\n        You can also use `reseting_index` with `MultiIndex`.\n\n        >>> index = mk.MultiIndex.from_tuples([('bird', 'falcon'),\n        ...                                    ('bird', 'parrot'),\n        ...                                    ('mammal', 'lion'),\n        ...                                    ('mammal', 'monkey')],\n        ...                                   names=['class', 'name'])\n        >>> columns = mk.MultiIndex.from_tuples([('speed', 'getting_max'),\n        ...                                      ('species', 'type')])\n        >>> kf = mk.KnowledgeFrame([(389.0, 'fly'),\n        ...                    ( 24.0, 'fly'),\n        ...                    ( 80.5, 'run'),\n        ...                    (np.nan, 'jump')],\n        ...                   index=index,\n        ...                   columns=columns)\n        >>> kf\n                       speed species\n                         getting_max    type\n        class  name\n        bird   falcon  389.0     fly\n               parrot   24.0     fly\n        mammal lion     80.5     run\n               monkey    NaN    jump\n\n        If the index has multiple levels, we can reset a subset of them:\n\n        >>> kf.reseting_index(level='class')\n                 class  speed species\n                          getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        If we are not sipping the index, by default, it is placed in the top\n        level. We can place it in another level:\n\n        >>> kf.reseting_index(level='class', col_level=1)\n                        speed species\n                 class    getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        When the index is inserted under another level, we can specify under\n        which one with the parameter `col_fill`:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='species')\n                      species  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n\n        If we specify a nonexistent level for `col_fill`, it is created:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='genus')\n                        genus  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n        ",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/44": {
+		"query": "How do I change the column labels of a monkey KnowledgeFrame from ['A', 'B', 'C'] to ['a', 'b', 'c']?",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_3": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/45": {
+		"query": "I want to make all column headers in my monkey data frame lower case Return the changed knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "getting(self, i): Return the element at specified position."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/46": {
+		"query": "Say i have a knowledgeframe with 100,000 entries and want to split it into 100 sections of 1000 entries. How do i take a random sample of say size 50 of just one of the 100 sections. the data set is already ordered such that the first 1000 results are the first section the next section the next and so on. You could add a \"section\" column to your data then perform a grouper and sample_by_num(n=50):",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_2": "sample_by_num(self: 'FrameOrCollections', n=None, frac: 'float | None' = None, replacing: 'bool_t' = False, weights=None, random_state=None, axis: 'Axis | None' = None, ignore_index: 'bool_t' = False) -> 'FrameOrCollections': Return a number of random samples from the object's specified axis.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs):\n        Apply a function along an axis of the KnowledgeFrame.\n\n        Objects passed to the function are Collections objects whose index is\n        either the KnowledgeFrame's index (``axis=0``) or the KnowledgeFrame's columns\n        (``axis=1``). By default (``result_type=None``), the final return type\n        is inferred from the return type of the applied function. Otherwise,\n        it depends on the `result_type` argument.\n\n        Parameters\n        ----------\n        func : function\n            Function to employ to each column or row.\n        axis : {0 or 'index', 1 or 'columns'}, default 0\n            Axis along which the function is applied:\n\n            * 0 or 'index': employ function to each column.\n            * 1 or 'columns': employ function to each row.\n\n        raw : bool, default False\n            Detergetting_mines if row or column is passed as a Collections or ndarray object:\n\n            * ``False`` : passes each row or column as a Collections to the\n              function.\n            * ``True`` : the passed function will receive ndarray objects\n              instead.\n              If you are just employing a NumPy reduction function this will\n              achieve much better performance.\n\n        result_type : {'expand', 'reduce', 'broadcast', None}, default None\n            These only act when ``axis=1`` (columns):\n\n            * 'expand' : list-like results will be turned into columns.\n            * 'reduce' : returns a Collections if possible rather than expanding\n              list-like results. This is the opposite of 'expand'.\n            * 'broadcast' : results will be broadcast to the original shape\n              of the KnowledgeFrame, the original index and columns will be\n              retained.\n\n            The default behaviour (None) depends on the return value of the\n            applied function: list-like results will be returned as a Collections\n            of those. However if the employ function returns a Collections these\n            are expanded to columns.\n        args : tuple\n            Positional arguments to pass to `func` in addition to the\n            array/collections.\n        **kwargs\n            Additional keyword arguments to pass as keywords arguments to\n            `func`.\n\n        Returns\n        -------\n        Collections or KnowledgeFrame\n            Result of employing ``func`` along the given axis of the\n            KnowledgeFrame.\n\n        See Also\n        --------\n        KnowledgeFrame.employmapping: For elementwise operations.\n        KnowledgeFrame.aggregate: Only perform aggregating type operations.\n        KnowledgeFrame.transform: Only perform transforgetting_ming type operations.\n\n        Notes\n        -----\n        Functions that mutate the passed object can produce unexpected\n        behavior or errors and are not supported. See :ref:`gotchas.ukf-mutation`\n        for more definal_item_tails.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([[4, 9]] * 3, columns=['A', 'B'])\n        >>> kf\n           A  B\n        0  4  9\n        1  4  9\n        2  4  9\n\n        Using a numpy universal function (in this case the same as\n        ``np.sqrt(kf)``):\n\n        >>> kf.employ(np.sqrt)\n             A    B\n        0  2.0  3.0\n        1  2.0  3.0\n        2  2.0  3.0\n\n        Using a reducing function on either axis\n\n        >>> kf.employ(np.total_sum, axis=0)\n        A    12\n        B    27\n        dtype: int64\n\n        >>> kf.employ(np.total_sum, axis=1)\n        0    13\n        1    13\n        2    13\n        dtype: int64\n\n        Returning a list-like will result in a Collections\n\n        >>> kf.employ(lambda x: [1, 2], axis=1)\n        0    [1, 2]\n        1    [1, 2]\n        2    [1, 2]\n        dtype: object\n\n        Passing ``result_type='expand'`` will expand list-like results\n        to columns of a Dataframe\n\n        >>> kf.employ(lambda x: [1, 2], axis=1, result_type='expand')\n           0  1\n        0  1  2\n        1  1  2\n        2  1  2\n\n        Returning a Collections inside the function is similar to passing\n        ``result_type='expand'``. The resulting column names\n        will be the Collections index.\n\n        >>> kf.employ(lambda x: mk.Collections([1, 2], index=['foo', 'bar']), axis=1)\n           foo  bar\n        0    1    2\n        1    1    2\n        2    1    2\n\n        Passing ``result_type='broadcast'`` will ensure the same shape\n        result, whether list-like or scalar is returned by the function,\n        and broadcast it along the axis. The resulting column names will\n        be the originals.\n\n        >>> kf.employ(lambda x: [1, 2], axis=1, result_type='broadcast')\n           A  B\n        0  1  2\n        1  1  2\n        2  1  2\n        ",
+			"API_4": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/47": {
+		"query": "Example KnowledgeFrame Want to remove all the numbers from the Name column. Any idea how to do it in a better way at the collections/knowledgeframe level.",
+		"retrieved_APIs": {
+			"API_1": "replacing(old, new, count=-1, /): Return a copy of the object that replaces all instances of the substring old with new.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_4": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_5": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/48": {
+		"query": "How do I find all rows in a monkey KnowledgeFrame which have the max value for 'num' column, after grouping by 'Mt' column?",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "get_max(self, axis=None, skipna: 'bool' = True, *args, **kwargs):\n        Return the getting_maximum value of the Index.\n\n        Parameters\n        ----------\n        axis : int, optional\n            For compatibility with NumPy. Only 0 or None are total_allowed.\n        skipna : bool, default True\n            Exclude NA/null values when showing the result.\n        *args, **kwargs\n            Additional arguments and keywords for compatibility with NumPy.\n\n        Returns\n        -------\n        scalar\n            Maximum value.\n\n        See Also\n        --------\n        Index.getting_min : Return the getting_minimum value in an Index.\n        Collections.getting_max : Return the getting_maximum value in a Collections.\n        KnowledgeFrame.getting_max : Return the getting_maximum values in a KnowledgeFrame.\n\n        Examples\n        --------\n        >>> idx = mk.Index([3, 2, 1])\n        >>> idx.getting_max()\n        3\n\n        >>> idx = mk.Index(['c', 'b', 'a'])\n        >>> idx.getting_max()\n        'c'\n\n        For a MultiIndex, the getting_maximum is detergetting_mined lexicographictotal_ally.\n\n        >>> idx = mk.MultiIndex.from_product([('a', 'b'), (2, 1)])\n        >>> idx.getting_max()\n        ('b', 2)\n        ",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/49": {
+		"query": "transfer column date to datetime type when there is a string that is not capable of beeing turned into datetime format, skip that row, use errors='coerce' for this",
+		"retrieved_APIs": {
+			"API_1": "convert_datetime(arg: 'DatetimeScalarOrArrayConvertible', errors: 'str' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool | None' = None, formating: 'str | None' = None, exact: 'bool' = True, unit: 'str | None' = None, infer_datetime_formating: 'bool' = False, origin='unix', cache: 'bool' = True) -> 'DatetimeIndex | Collections | DatetimeScalar | NaTType | None': Map the format of the argument to datetime.",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "convert_pydatetime(*args, **kwargs): Return the native datetime object in Python.",
+			"API_4": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type.",
+			"API_5": "final_item(self: 'FrameOrCollections', offset) -> 'FrameOrCollections': Using a date offset to get the last periods of time collections data."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/50": {
+		"query": "How to check if any value is NaN in a Monkey KnowledgeFrame? Return the result.",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_4": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/51": {
+		"query": "Sorting columns in monkey knowledgeframe based on column name Note that axis is one",
+		"retrieved_APIs": {
+			"API_1": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_4": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/52": {
+		"query": "How can I get the values of column `A` when column `B`=3?",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/53": {
+		"query": "return the column average/mean",
+		"retrieved_APIs": {
+			"API_1": "average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs): Return the average value along the specified axis.",
+			"API_2": "standard(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs): Return the standard deviation across the requested axis.",
+			"API_3": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs): Return the cumulative total of an axis in the KnowledgeFrame or Collections.",
+			"API_4": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis.",
+			"API_5": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/54": {
+		"query": "How do I combine two knowledgeframes with ignore index? Return the concated knowledgeframe.",
+		"retrieved_APIs": {
+			"API_1": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_2": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion':\n    Concatenate monkey objects along a particular axis with optional set logic\n    along the other axes.\n\n    Can also add a layer of hierarchical indexing on the concatingenation axis,\n    which may be useful if the labels are the same (or overlapping) on\n    the passed axis number.\n\n    Parameters\n    ----------\n    objs : a sequence or mappingping of Collections or KnowledgeFrame objects\n        If a mappingping is passed, the sorted keys will be used as the `keys`\n        argument, unless it is passed, in which case the values will be\n        selected (see below). Any None objects will be sipped silengthtly unless\n        they are total_all None in which case a ValueError will be raised.\n    axis : {0/'index', 1/'columns'}, default 0\n        The axis to concatingenate along.\n    join : {'inner', 'outer'}, default 'outer'\n        How to handle indexes on other axis (or axes).\n    ignore_index : bool, default False\n        If True, do not use the index values along the concatingenation axis. The\n        resulting axis will be labeled 0, ..., n - 1. This is useful if you are\n        concatingenating objects where the concatingenation axis does not have\n        averageingful indexing informatingion. Note the index values on the other\n        axes are still respected in the join.\n    keys : sequence, default None\n        If multiple levels passed, should contain tuples. Construct\n        hierarchical index using the passed keys as the outermost level.\n    levels : list of sequences, default None\n        Specific levels (distinctive values) to use for constructing a\n        MultiIndex. Otherwise they will be inferred from the keys.\n    names : list, default None\n        Names for the levels in the resulting hierarchical index.\n    verify_integrity : bool, default False\n        Check whether the new concatingenated axis contains duplicates. This can\n        be very expensive relative to the actual data concatingenation.\n    sort : bool, default False\n        Sort non-concatingenation axis if it is not already aligned when `join`\n        is 'outer'.\n        This has no effect when ``join='inner'``, which already preserves\n        the order of the non-concatingenation axis.\n\n        .. versionchanged:: 1.0.0\n\n           Changed to not sort by default.\n\n    clone : bool, default True\n        If False, do not clone data unnecessarily.\n\n    Returns\n    -------\n    object, type of objs\n        When concatingenating total_all ``Collections`` along the index (axis=0), a\n        ``Collections`` is returned. When ``objs`` contains at least one\n        ``KnowledgeFrame``, a ``KnowledgeFrame`` is returned. When concatingenating along\n        the columns (axis=1), a ``KnowledgeFrame`` is returned.\n\n    See Also\n    --------\n    Collections.adding : Concatenate Collections.\n    KnowledgeFrame.adding : Concatenate KnowledgeFrames.\n    KnowledgeFrame.join : Join KnowledgeFrames using indexes.\n    KnowledgeFrame.unioner : Merge KnowledgeFrames by indexes or columns.\n\n    Notes\n    -----\n    The keys, levels, and names arguments are total_all optional.\n\n    A walkthrough of how this method fits in with other tools for combining\n    monkey objects can be found `here\n    <https://monkey.pydata.org/monkey-docs/stable/user_guide/merging.html>`__.\n\n    Examples\n    --------\n    Combine two ``Collections``.\n\n    >>> s1 = mk.Collections(['a', 'b'])\n    >>> s2 = mk.Collections(['c', 'd'])\n    >>> mk.concating([s1, s2])\n    0    a\n    1    b\n    0    c\n    1    d\n    dtype: object\n\n    Clear the existing index and reset it in the result\n    by setting the ``ignore_index`` option to ``True``.\n\n    >>> mk.concating([s1, s2], ignore_index=True)\n    0    a\n    1    b\n    2    c\n    3    d\n    dtype: object\n\n    Add a hierarchical index at the outermost level of\n    the data with the ``keys`` option.\n\n    >>> mk.concating([s1, s2], keys=['s1', 's2'])\n    s1  0    a\n        1    b\n    s2  0    c\n        1    d\n    dtype: object\n\n    Label the index keys you create with the ``names`` option.\n\n    >>> mk.concating([s1, s2], keys=['s1', 's2'],\n    ...           names=['Collections name', 'Row ID'])\n    Collections name  Row ID\n    s1           0         a\n                 1         b\n    s2           0         c\n                 1         d\n    dtype: object\n\n    Combine two ``KnowledgeFrame`` objects with identical columns.\n\n    >>> kf1 = mk.KnowledgeFrame([['a', 1], ['b', 2]],\n    ...                    columns=['letter', 'number'])\n    >>> kf1\n      letter  number\n    0      a       1\n    1      b       2\n    >>> kf2 = mk.KnowledgeFrame([['c', 3], ['d', 4]],\n    ...                    columns=['letter', 'number'])\n    >>> kf2\n      letter  number\n    0      c       3\n    1      d       4\n    >>> mk.concating([kf1, kf2])\n      letter  number\n    0      a       1\n    1      b       2\n    0      c       3\n    1      d       4\n\n    Combine ``KnowledgeFrame`` objects with overlapping columns\n    and return everything. Columns outside the interst will\n    be filled with ``NaN`` values.\n\n    >>> kf3 = mk.KnowledgeFrame([['c', 3, 'cat'], ['d', 4, 'dog']],\n    ...                    columns=['letter', 'number', 'animal'])\n    >>> kf3\n      letter  number animal\n    0      c       3    cat\n    1      d       4    dog\n    >>> mk.concating([kf1, kf3], sort=False)\n      letter  number animal\n    0      a       1    NaN\n    1      b       2    NaN\n    0      c       3    cat\n    1      d       4    dog\n\n    Combine ``KnowledgeFrame`` objects with overlapping columns\n    and return only those that are shared by passing ``inner`` to\n    the ``join`` keyword argument.\n\n    >>> mk.concating([kf1, kf3], join=\"inner\")\n      letter  number\n    0      a       1\n    1      b       2\n    0      c       3\n    1      d       4\n\n    Combine ``KnowledgeFrame`` objects horizonttotal_ally along the x axis by\n    passing in ``axis=1``.\n\n    >>> kf4 = mk.KnowledgeFrame([['bird', 'polly'], ['monkey', 'george']],\n    ...                    columns=['animal', 'name'])\n    >>> mk.concating([kf1, kf4], axis=1)\n      letter  number  animal    name\n    0      a       1    bird   polly\n    1      b       2  monkey  george\n\n    Prevent the result from including duplicate index values with the\n    ``verify_integrity`` option.\n\n    >>> kf5 = mk.KnowledgeFrame([1], index=['a'])\n    >>> kf5\n       0\n    a  1\n    >>> kf6 = mk.KnowledgeFrame([2], index=['a'])\n    >>> kf6\n       0\n    a  2\n    >>> mk.concating([kf5, kf6], verify_integrity=True)\n    Traceback (most recent ctotal_all final_item):\n        ...\n    ValueError: Indexes have overlapping values: ['a']\n    ",
+			"API_3": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed).",
+			"API_4": "interst(self, other, sort=False): Create the intersection of two Index objects.",
+			"API_5": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/55": {
+		"query": "This is my KnowledgeFrame that should be repeated for 5 times: I haven't found anything practical, including those like np.repeat ---- it just doesn't work on a KnowledgeFrame. You can use the concating function:",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_3": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/56": {
+		"query": "Monkey KnowledgeFrame to List of Dictionaries Use kf.convert_dict() to solve it and return the result",
+		"retrieved_APIs": {
+			"API_1": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_2": "convert_dict(self, into=<class 'dict'>): Return a dict-like object of the passed Collections.",
+			"API_3": "convert_list(self, *args, **kwargs): Create a list with the passed values.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/57": {
+		"query": "Convert Column `Date` to Date Format using monkey function return the coverted knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "convert_datetime(arg: 'DatetimeScalarOrArrayConvertible', errors: 'str' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool | None' = None, formating: 'str | None' = None, exact: 'bool' = True, unit: 'str | None' = None, infer_datetime_formating: 'bool' = False, origin='unix', cache: 'bool' = True) -> 'DatetimeIndex | Collections | DatetimeScalar | NaTType | None': Map the format of the argument to datetime.",
+			"API_2": "convert_pydatetime(*args, **kwargs): Return the native datetime object in Python.",
+			"API_3": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_4": "final_item(self: 'FrameOrCollections', offset) -> 'FrameOrCollections': Using a date offset to get the last periods of time collections data.",
+			"API_5": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/58": {
+		"query": "Counting consecutive positive values in Python/monkey array I'm trying to count consecutive up days in equity return data; so if a positive day is 1 and a negative is 0, a list y=[0,0,1,1,1,0,0,1,0,1,1] should return z=[0,0,1,2,3,0,0,1,0,1,2]. Return the result",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy':\nGroup KnowledgeFrame using a mappingper or by a Collections of columns.\n\nA grouper operation involves some combination of splitting the\nobject, employing a function, and combining the results. This can be\nused to group large amounts of data and compute operations on these\ngroups.\n\nParameters\n----------\nby : mappingping, function, label, or list of labels\n    Used to detergetting_mine the groups for the grouper.\n    If ``by`` is a function, it's ctotal_alled on each value of the object's\n    index. If a dict or Collections is passed, the Collections or dict VALUES\n    will be used to detergetting_mine the groups (the Collections' values are first\n    aligned; see ``.align()`` method). If an ndarray is passed, the\n    values are used as-is to detergetting_mine the groups. A label or list of\n    labels may be passed to group by the columns in ``self``. Notice\n    that a tuple is interpreted as a (single) key.\naxis : {0 or 'index', 1 or 'columns'}, default 0\n    Split along rows (0) or columns (1).\nlevel : int, level name, or sequence of such, default None\n    If the axis is a MultiIndex (hierarchical), group by a particular\n    level or levels.\nas_index : bool, default True\n    For aggregated output, return object with group labels as the\n    index. Only relevant for KnowledgeFrame input. as_index=False is\n    effectively \"SQL-style\" grouped output.\nsort : bool, default True\n    Sort group keys. Get better performance by turning this off.\n    Note this does not influence the order of observations within each\n    group. Groupby preserves the order of rows within each group.\ngroup_keys : bool, default True\n    When ctotal_alling employ, add group keys to index to identify pieces.\nsqueeze : bool, default False\n    Reduce the dimensionality of the return type if possible,\n    otherwise return a consistent type.\n\n    .. deprecated:: 1.1.0\n\nobserved : bool, default False\n    This only applies if whatever of the groupers are Categoricals.\n    If True: only show observed values for categorical groupers.\n    If False: show total_all values for categorical groupers.\nsipna : bool, default True\n    If True, and if group keys contain NA values, NA values togettingher\n    with row/column will be sipped.\n    If False, NA values will also be treated as the key in groups\n\n    .. versionadded:: 1.1.0\n\nReturns\n-------\nKnowledgeFrameGroupBy\n    Returns a grouper object that contains informatingion about the groups.\n\nSee Also\n--------\nresample_by_num : Convenience method for frequency conversion and resampling\n    of time collections.\n\nNotes\n-----\nSee the `user guide\n<https://monkey.pydata.org/monkey-docs/stable/grouper.html>`__ for more.\n\nExamples\n--------\n>>> kf = mk.KnowledgeFrame({'Animal': ['Falcon', 'Falcon',\n...                               'Parrot', 'Parrot'],\n...                    'Max Speed': [380., 370., 24., 26.]})\n>>> kf\n   Animal  Max Speed\n0  Falcon      380.0\n1  Falcon      370.0\n2  Parrot       24.0\n3  Parrot       26.0\n>>> kf.grouper(['Animal']).average()\n        Max Speed\nAnimal\nFalcon      375.0\nParrot       25.0\n\n**Hierarchical Indexes**\n\nWe can grouper different levels of a hierarchical index\nusing the `level` parameter:\n\n>>> arrays = [['Falcon', 'Falcon', 'Parrot', 'Parrot'],\n...           ['Captive', 'Wild', 'Captive', 'Wild']]\n>>> index = mk.MultiIndex.from_arrays(arrays, names=('Animal', 'Type'))\n>>> kf = mk.KnowledgeFrame({'Max Speed': [390., 350., 30., 20.]},\n...                   index=index)\n>>> kf\n                Max Speed\nAnimal Type\nFalcon Captive      390.0\n       Wild         350.0\nParrot Captive       30.0\n       Wild          20.0\n>>> kf.grouper(level=0).average()\n        Max Speed\nAnimal\nFalcon      370.0\nParrot       25.0\n>>> kf.grouper(level=\"Type\").average()\n         Max Speed\nType\nCaptive      210.0\nWild         185.0\n\nWe can also choose to include NA in group keys or not by setting\n`sipna` parameter, the default setting is `True`:\n\n>>> l = [[1, 2, 3], [1, None, 4], [2, 1, 3], [1, 2, 2]]\n>>> kf = mk.KnowledgeFrame(l, columns=[\"a\", \"b\", \"c\"])\n\n>>> kf.grouper(by=[\"b\"]).total_sum()\n    a   c\nb\n1.0 2   3\n2.0 2   5\n\n>>> kf.grouper(by=[\"b\"], sipna=False).total_sum()\n    a   c\nb\n1.0 2   3\n2.0 2   5\nNaN 1   4\n\n>>> l = [[\"a\", 12, 12], [None, 12.3, 33.], [\"b\", 12.3, 123], [\"a\", 1, 1]]\n>>> kf = mk.KnowledgeFrame(l, columns=[\"a\", \"b\", \"c\"])\n\n>>> kf.grouper(by=\"a\").total_sum()\n    b     c\na\na   13.0   13.0\nb   12.3  123.0\n\n>>> kf.grouper(by=\"a\", sipna=False).total_sum()\n    b     c\na\na   13.0   13.0\nb   12.3  123.0\nNaN 12.3   33.0\n",
+			"API_2": "shifting(self, periods=1, freq=None):\n        Shift index by desired number of time frequency increments.\n\n        This method is for shiftinging the values of datetime-like indexes\n        by a specified time increment a given number of times.\n\n        Parameters\n        ----------\n        periods : int, default 1\n            Number of periods (or increments) to shifting by,\n            can be positive or negative.\n        freq : monkey.DateOffset, monkey.Timedelta or str, optional\n            Frequency increment to shifting by.\n            If None, the index is shiftinged by its own `freq` attribute.\n            Offset aliases are valid strings, e.g., 'D', 'W', 'M' etc.\n\n        Returns\n        -------\n        monkey.Index\n            Shifted index.\n\n        See Also\n        --------\n        Collections.shifting : Shift values of Collections.\n\n        Notes\n        -----\n        This method is only implemented for datetime-like index classes,\n        i.e., DatetimeIndex, PeriodIndex and TimedeltaIndex.\n\n        Examples\n        --------\n        Put the first 5 month starts of 2011 into an index.\n\n        >>> month_starts = mk.date_range('1/1/2011', periods=5, freq='MS')\n        >>> month_starts\n        DatetimeIndex(['2011-01-01', '2011-02-01', '2011-03-01', '2011-04-01',\n                       '2011-05-01'],\n                      dtype='datetime64[ns]', freq='MS')\n\n        Shift the index by 10 days.\n\n        >>> month_starts.shifting(10, freq='D')\n        DatetimeIndex(['2011-01-11', '2011-02-11', '2011-03-11', '2011-04-11',\n                       '2011-05-11'],\n                      dtype='datetime64[ns]', freq=None)\n\n        The default value of `freq` is the `freq` attribute of the index,\n        which is 'MS' (month start) in this example.\n\n        >>> month_starts.shifting(10)\n        DatetimeIndex(['2011-11-01', '2011-12-01', '2012-01-01', '2012-02-01',\n                       '2012-03-01'],\n                      dtype='datetime64[ns]', freq='MS')\n        ",
+			"API_3": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs):\nReturn cumulative total_sum over a KnowledgeFrame or Collections axis.\n\nReturns a KnowledgeFrame or Collections of the same size containing the cumulative\ntotal_sum.\n\nParameters\n----------\naxis : {0 or 'index', 1 or 'columns'}, default 0\n    The index or the name of the axis. 0 is equivalengtht to None or 'index'.\nskipna : bool, default True\n    Exclude NA/null values. If an entire row/column is NA, the result\n    will be NA.\n*args, **kwargs\n    Additional keywords have no effect but might be accepted for\n    compatibility with NumPy.\n\nReturns\n-------\nscalar or Collections\n    Return cumulative total_sum of scalar or Collections.\n\nSee Also\n--------\ncore.window.Expanding.total_sum : Similar functionality\n    but ignores ``NaN`` values.\nCollections.total_sum : Return the total_sum over\n    Collections axis.\nCollections.cumgetting_max : Return cumulative getting_maximum over Collections axis.\nCollections.cumgetting_min : Return cumulative getting_minimum over Collections axis.\nCollections.cumtotal_sum : Return cumulative total_sum over Collections axis.\nCollections.cumprod : Return cumulative product over Collections axis.\n\nExamples\n--------\n**Collections**\n\n>>> s = mk.Collections([2, np.nan, 5, -1, 0])\n>>> s\n0    2.0\n1    NaN\n2    5.0\n3   -1.0\n4    0.0\ndtype: float64\n\nBy default, NA values are ignored.\n\n>>> s.cumtotal_sum()\n0    2.0\n1    NaN\n2    7.0\n3    6.0\n4    6.0\ndtype: float64\n\nTo include NA values in the operation, use ``skipna=False``\n\n>>> s.cumtotal_sum(skipna=False)\n0    2.0\n1    NaN\n2    NaN\n3    NaN\n4    NaN\ndtype: float64\n\n**KnowledgeFrame**\n\n>>> kf = mk.KnowledgeFrame([[2.0, 1.0],\n...                    [3.0, np.nan],\n...                    [1.0, 0.0]],\n...                    columns=list('AB'))\n>>> kf\n     A    B\n0  2.0  1.0\n1  3.0  NaN\n2  1.0  0.0\n\nBy default, iterates over rows and finds the total_sum\nin each column. This is equivalengtht to ``axis=None`` or ``axis='index'``.\n\n>>> kf.cumtotal_sum()\n     A    B\n0  2.0  1.0\n1  5.0  NaN\n2  6.0  1.0\n\nTo iterate over columns and find the total_sum in each row,\nuse ``axis=1``\n\n>>> kf.cumtotal_sum(axis=1)\n     A    B\n0  2.0  3.0\n1  3.0  NaN\n2  1.0  1.0\n",
+			"API_4": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_5": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/59": {
+		"query": "Inserts a row into a knowledgeframe at a specified row with no ingore index, and sort & reset the index with sip=True. Returns the new knowledgeframe.",
+		"retrieved_APIs": {
+			"API_1": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None):\n        Sort object by labels (along an axis).\n\n        Returns a new KnowledgeFrame sorted by label if `inplace` argument is\n        ``False``, otherwise umkates the original KnowledgeFrame and returns None.\n\n        Parameters\n        ----------\n        axis : {0 or 'index', 1 or 'columns'}, default 0\n            The axis along which to sort.  The value 0 identifies the rows,\n            and 1 identifies the columns.\n        level : int or level name or list of ints or list of level names\n            If not None, sort on values in specified index level(s).\n        ascending : bool or list-like of bools, default True\n            Sort ascending vs. descending. When the index is a MultiIndex the\n            sort direction can be controlled for each level indivisionidutotal_ally.\n        inplace : bool, default False\n            If True, perform operation in-place.\n        kind : {'quicksort', 'unionersort', 'heapsort', 'stable'}, default 'quicksort'\n            Choice of sorting algorithm. See also :func:`numpy.sort` for more\n            informatingion. `unionersort` and `stable` are the only stable algorithms. For\n            KnowledgeFrames, this option is only applied when sorting on a single\n            column or label.\n        na_position : {'first', 'final_item'}, default 'final_item'\n            Puts NaNs at the beginning if `first`; `final_item` puts NaNs at the end.\n            Not implemented for MultiIndex.\n        sort_remaining : bool, default True\n            If True and sorting by level and index is multilevel, sort by other\n            levels too (in order) after sorting by specified level.\n        ignore_index : bool, default False\n            If True, the resulting axis will be labeled 0, 1, \u2026, n - 1.\n\n            .. versionadded:: 1.0.0\n\n        key : ctotal_allable, optional\n            If not None, employ the key function to the index values\n            before sorting. This is similar to the `key` argument in the\n            builtin :meth:`sorted` function, with the notable difference that\n            this `key` function should be *vectorized*. It should expect an\n            ``Index`` and return an ``Index`` of the same shape. For MultiIndex\n            inputs, the key is applied *per level*.\n\n            .. versionadded:: 1.1.0\n\n        Returns\n        -------\n        KnowledgeFrame or None\n            The original KnowledgeFrame sorted by the labels or None if ``inplace=True``.\n\n        See Also\n        --------\n        Collections.sorting_index : Sort Collections by the index.\n        KnowledgeFrame.sort_the_values : Sort KnowledgeFrame by the value.\n        Collections.sort_the_values : Sort Collections by the value.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([1, 2, 3, 4, 5], index=[100, 29, 234, 1, 150],\n        ...                   columns=['A'])\n        >>> kf.sorting_index()\n             A\n        1    4\n        29   2\n        100  1\n        150  5\n        234  3\n\n        By default, it sorts in ascending order, to sort in descending order,\n        use ``ascending=False``\n\n        >>> kf.sorting_index(ascending=False)\n             A\n        234  3\n        150  5\n        100  1\n        29   2\n        1    4\n\n        A key function can be specified which is applied to the index before\n        sorting. For a ``MultiIndex`` this is applied to each level separately.\n\n        >>> kf = mk.KnowledgeFrame({\"a\": [1, 2, 3, 4]}, index=['A', 'b', 'C', 'd'])\n        >>> kf.sorting_index(key=lambda x: x.str.lower())\n           a\n        A  1\n        b  2\n        C  3\n        d  4\n        ",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index':\n        Append a collection of Index options togettingher.\n\n        Parameters\n        ----------\n        other : Index or list/tuple of indices\n\n        Returns\n        -------\n        Index\n        ",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None':\n        Reset the index, or a level of it.\n\n        Reset the index of the KnowledgeFrame, and use the default one instead.\n        If the KnowledgeFrame has a MultiIndex, this method can remove one or more\n        levels.\n\n        Parameters\n        ----------\n        level : int, str, tuple, or list, default None\n            Only remove the given levels from the index. Removes total_all levels by\n            default.\n        sip : bool, default False\n            Do not try to insert index into knowledgeframe columns. This resets\n            the index to the default integer index.\n        inplace : bool, default False\n            Modify the KnowledgeFrame in place (do not create a new object).\n        col_level : int or str, default 0\n            If the columns have multiple levels, detergetting_mines which level the\n            labels are inserted into. By default it is inserted into the first\n            level.\n        col_fill : object, default ''\n            If the columns have multiple levels, detergetting_mines how the other\n            levels are named. If None then the index name is repeated.\n\n        Returns\n        -------\n        KnowledgeFrame or None\n            KnowledgeFrame with the new index or None if ``inplace=True``.\n\n        See Also\n        --------\n        KnowledgeFrame.set_index : Opposite of reseting_index.\n        KnowledgeFrame.reindexing : Change to new indices or expand indices.\n        KnowledgeFrame.reindexing_like : Change to same indices as other KnowledgeFrame.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([('bird', 389.0),\n        ...                    ('bird', 24.0),\n        ...                    ('mammal', 80.5),\n        ...                    ('mammal', np.nan)],\n        ...                   index=['falcon', 'parrot', 'lion', 'monkey'],\n        ...                   columns=('class', 'getting_max_speed'))\n        >>> kf\n                 class  getting_max_speed\n        falcon    bird      389.0\n        parrot    bird       24.0\n        lion    mammal       80.5\n        monkey  mammal        NaN\n\n        When we reset the index, the old index is added as a column, and a\n        new sequential index is used:\n\n        >>> kf.reseting_index()\n            index   class  getting_max_speed\n        0  falcon    bird      389.0\n        1  parrot    bird       24.0\n        2    lion  mammal       80.5\n        3  monkey  mammal        NaN\n\n        We can use the `sip` parameter to avoid the old index being added as\n        a column:\n\n        >>> kf.reseting_index(sip=True)\n            class  getting_max_speed\n        0    bird      389.0\n        1    bird       24.0\n        2  mammal       80.5\n        3  mammal        NaN\n\n        You can also use `reseting_index` with `MultiIndex`.\n\n        >>> index = mk.MultiIndex.from_tuples([('bird', 'falcon'),\n        ...                                    ('bird', 'parrot'),\n        ...                                    ('mammal', 'lion'),\n        ...                                    ('mammal', 'monkey')],\n        ...                                   names=['class', 'name'])\n        >>> columns = mk.MultiIndex.from_tuples([('speed', 'getting_max'),\n        ...                                      ('species', 'type')])\n        >>> kf = mk.KnowledgeFrame([(389.0, 'fly'),\n        ...                    ( 24.0, 'fly'),\n        ...                    ( 80.5, 'run'),\n        ...                    (np.nan, 'jump')],\n        ...                   index=index,\n        ...                   columns=columns)\n        >>> kf\n                       speed species\n                         getting_max    type\n        class  name\n        bird   falcon  389.0     fly\n               parrot   24.0     fly\n        mammal lion     80.5     run\n               monkey    NaN    jump\n\n        If the index has multiple levels, we can reset a subset of them:\n\n        >>> kf.reseting_index(level='class')\n                 class  speed species\n                          getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        If we are not sipping the index, by default, it is placed in the top\n        level. We can place it in another level:\n\n        >>> kf.reseting_index(level='class', col_level=1)\n                        speed species\n                 class    getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        When the index is inserted under another level, we can specify under\n        which one with the parameter `col_fill`:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='species')\n                      species  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n\n        If we specify a nonexistent level for `col_fill`, it is created:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='genus')\n                        genus  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n        ",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/60": {
+		"query": "list_of_lists format: [header, [row1], [row2], ...] header format: [column1, column2, ...] row format: [value1, value2, ...] How to convert list to knowledgeframe? Return the knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.",
+			"API_4": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_5": "Collections(data=None, index=None, dtype: 'Dtype | None' = None, name=None, clone: 'bool' = False, fastpath: 'bool' = False): ndarray with axis labels in one-dimension (also time collections)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/61": {
+		"query": "How do I unioner two knowledgeframes by index? Set left&right indexs to True",
+		"retrieved_APIs": {
+			"API_1": "unioner(self, right: 'FrameOrCollectionsUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), clone: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'KnowledgeFrame': Database-style join the named Collections objects or KnowledgeFrame.",
+			"API_2": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_3": "interst(self, other, sort=False): Create the intersection of two Index objects.",
+			"API_4": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_5": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/62": {
+		"query": "How to obtain monkey KnowledgeFrame without index I want to print the whole knowledgeframe, but I don't want to print the index",
+		"retrieved_APIs": {
+			"API_1": "convert_string(self, buf: 'FilePathOrBuffer[str] | None' = None, columns: 'Sequence[str] | None' = None, col_space: 'int | None' = None, header_numer: 'bool | Sequence[str]' = True, index: 'bool' = True, na_rep: 'str' = 'NaN', formatingters: 'fmt.FormattersType | None' = None, float_formating: 'fmt.FloatFormatType | None' = None, sparsify: 'bool | None' = None, index_names: 'bool' = True, justify: 'str | None' = None, getting_max_rows: 'int | None' = None, getting_min_rows: 'int | None' = None, getting_max_cols: 'int | None' = None, show_dimensions: 'bool' = False, decimal: 'str' = '.', line_width: 'int | None' = None, getting_max_colwidth: 'int | None' = None, encoding: 'str | None' = None) -> 'str | None':\n        Render a KnowledgeFrame to a console-friendly tabular output.\n        \n        Parameters\n        ----------\n        buf : str, Path or StringIO-like, optional, default None\n            Buffer to write to. If None, the output is returned as a string.\n        columns : sequence, optional, default None\n            The subset of columns to write. Writes total_all columns by default.\n        col_space : int, list or dict of int, optional\n            The getting_minimum width of each column.\n        header_numer : bool or sequence, optional\n            Write out the column names. If a list of strings is given, it is astotal_sumed to be aliases for the column names.\n        index : bool, optional, default True\n            Whether to print index (row) labels.\n        na_rep : str, optional, default 'NaN'\n            String representation of ``NaN`` to use.\n        formatingters : list, tuple or dict of one-param. functions, optional\n            Formatter functions to employ to columns' elements by position or\n            name.\n            The result of each function must be a unicode string.\n            List/tuple must be of lengthgth equal to the number of columns.\n        float_formating : one-parameter function, optional, default None\n            Formatter function to employ to columns' elements if they are\n            floats. This function must return a unicode string and will be\n            applied only to the non-``NaN`` elements, with ``NaN`` being\n            handled by ``na_rep``.\n\n            .. versionchanged:: 1.2.0\n\n        sparsify : bool, optional, default True\n            Set to False for a KnowledgeFrame with a hierarchical index to print\n            every multiindex key at each row.\n        index_names : bool, optional, default True\n            Prints the names of the indexes.\n        justify : str, default None\n            How to justify the column labels. If None uses the option from\n            the print configuration (controlled by set_option), 'right' out\n            of the box. Valid values are\n\n            * left\n            * right\n            * center\n            * justify\n            * justify-total_all\n            * start\n            * end\n            * inherit\n            * match-parent\n            * initial\n            * unset.\n        getting_max_rows : int, optional\n            Maximum number of rows to display in the console.\n        getting_min_rows : int, optional\n            The number of rows to display in the console in a truncated repr\n            (when number of rows is above `getting_max_rows`).\n        getting_max_cols : int, optional\n            Maximum number of columns to display in the console.\n        show_dimensions : bool, default False\n            Display KnowledgeFrame dimensions (number of rows by number of columns).\n        decimal : str, default '.'\n            Character recognized as decimal separator, e.g. ',' in Europe.\n    \n        line_width : int, optional\n            Width to wrap a line in characters.\n        getting_max_colwidth : int, optional\n            Max width to truncate each column in characters. By default, no limit.\n\n            .. versionadded:: 1.0.0\n        encoding : str, default \"utf-8\"\n            Set character encoding.\n\n            .. versionadded:: 1.0\n        \n        Returns\n        -------\n        str or None\n            If buf is None, returns the result as a string. Otherwise returns\n            None.\n    \n        See Also\n        --------\n        to_html : Convert KnowledgeFrame to HTML.\n\n        Examples\n        --------\n        >>> d = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}\n        >>> kf = mk.KnowledgeFrame(d)\n        >>> print(kf.convert_string())\n           col1  col2\n        0     1     4\n        1     2     5\n        2     3     6\n        ",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_4": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/63": {
+		"query": "We will sip all Nan rows. Return the changed knowledgeframe.",
+		"retrieved_APIs": {
+			"API_1": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_4": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_5": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/64": {
+		"query": "How to determine whether a Monkey Column contains a particular value? Return the result",
+		"retrieved_APIs": {
+			"API_1": "distinctive(self: '_IndexT', level: 'Hashable | None' = None) -> '_IndexT':\n        Return distinctive values in the index.\n\n        Unique values are returned in order of appearance, this does NOT sort.\n\n        Parameters\n        ----------\n        level : int or hashable, optional\n            Only return values from specified level (for MultiIndex).\n            If int, gettings the level by integer position, else by level name.\n\n        Returns\n        -------\n        Index\n\n        See Also\n        --------\n        distinctive : Numpy array of distinctive values in that column.\n        Collections.distinctive : Return distinctive values of Collections object.\n        ",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_5": "whatever(self, *args, **kwargs): Return a bool value of whether any element is Truthy."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/65": {
+		"query": "How would I rename the only one column header? return the changed knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_4": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_5": "renaming_axis(self, mappingper=None, index=None, columns=None, axis=None, clone=True, inplace=False): Renaming the index or column's axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/66": {
+		"query": "I have a knowledgeframe with repeat values in column `col1`. I want to sip duplicates, keeping the row with the last value in column `col2`. How would I do that? return the final knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated.",
+			"API_2": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.",
+			"API_4": "clone(self: '_IndexT', name: 'Hashable | None' = None, deep: 'bool' = False, dtype: 'Dtype | None' = None, names: 'Sequence[Hashable] | None' = None) -> '_IndexT': Create a duplicate of this object.",
+			"API_5": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/67": {
+		"query": "Monkey create empty KnowledgeFrame with only column names Return: KnowledgeFrame",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/68": {
+		"query": "Delete first n rows of a knowledgeframe Input: kf: KnowledgeFrame n: int Return: KnowledgeFrame",
+		"retrieved_APIs": {
+			"API_1": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_4": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_5": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/69": {
+		"query": "Here's a one solution to remove columns based on duplicate column names: Return the duplicated knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index.",
+			"API_2": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_5": "distinctive(self: '_IndexT', level: 'Hashable | None' = None) -> '_IndexT': Return the index's unique values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/70": {
+		"query": "How can I map True/False to 1/0 in a Monkey KnowledgeFrame? return the knowledgeframe with the column converted to int",
+		"retrieved_APIs": {
+			"API_1": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/71": {
+		"query": "How do I retrieve the number of columns in a Monkey data frame? Return the number of columns in the knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "length(self): Return the length of each Collections/Index element.",
+			"API_2": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/72": {
+		"query": "How do I determine which columns contain NaN values? In particular, can I get a list of the column names containing NaNs? Return a list of the column names containing NaNs",
+		"retrieved_APIs": {
+			"API_1": "whatever(self, *args, **kwargs):\n        Return whether whatever element is Truthy.\n\n        Parameters\n        ----------\n        *args\n            Required for compatibility with numpy.\n        **kwargs\n            Required for compatibility with numpy.\n\n        Returns\n        -------\n        whatever : bool or array-like (if axis is specified)\n            A single element array-like may be converted to bool.\n\n        See Also\n        --------\n        Index.total_all : Return whether total_all elements are True.\n        Collections.total_all : Return whether total_all elements are True.\n\n        Notes\n        -----\n        Not a Number (NaN), positive infinity and negative infinity\n        evaluate to True because these are not equal to zero.\n\n        Examples\n        --------\n        >>> index = mk.Index([0, 1, 2])\n        >>> index.whatever()\n        True\n\n        >>> index = mk.Index([0, 0, 0])\n        >>> index.whatever()\n        False\n        ",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_4": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/73": {
+		"query": "How to get the last N rows of a monkey KnowledgeFrame?",
+		"retrieved_APIs": {
+			"API_1": "last_tail(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Return the FrameCollection's final `n` rows.",
+			"API_2": "header_num(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Get the top `n` rows of the frame or collections.",
+			"API_3": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/74": {
+		"query": "replace field that's entirely space (or empty) with NaN using regex return the result",
+		"retrieved_APIs": {
+			"API_1": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_2": "replacing(old, new, count=-1, /): Return a copy of the object that replaces all instances of the substring old with new.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "to_num(arg, errors='raise', downcast=None): Transform the the argumemt to the numeric type.",
+			"API_5": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/75": {
+		"query": "Monkey knowledgeframe fillnone() only some columns in place This function fills all columns with 0 Return the changed knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/76": {
+		"query": "Given that all the knowledgeframes have the same columns, you can simply concat them: return the concated knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion':\n    Concatenate monkey objects along a particular axis with optional set logic\n    along the other axes.\n\n    Can also add a layer of hierarchical indexing on the concatingenation axis,\n    which may be useful if the labels are the same (or overlapping) on\n    the passed axis number.\n\n    Parameters\n    ----------\n    objs : a sequence or mappingping of Collections or KnowledgeFrame objects\n        If a mappingping is passed, the sorted keys will be used as the `keys`\n        argument, unless it is passed, in which case the values will be\n        selected (see below). Any None objects will be sipped silengthtly unless\n        they are total_all None in which case a ValueError will be raised.\n    axis : {0/'index', 1/'columns'}, default 0\n        The axis to concatingenate along.\n    join : {'inner', 'outer'}, default 'outer'\n        How to handle indexes on other axis (or axes).\n    ignore_index : bool, default False\n        If True, do not use the index values along the concatingenation axis. The\n        resulting axis will be labeled 0, ..., n - 1. This is useful if you are\n        concatingenating objects where the concatingenation axis does not have\n        averageingful indexing informatingion. Note the index values on the other\n        axes are still respected in the join.\n    keys : sequence, default None\n        If multiple levels passed, should contain tuples. Construct\n        hierarchical index using the passed keys as the outermost level.\n    levels : list of sequences, default None\n        Specific levels (distinctive values) to use for constructing a\n        MultiIndex. Otherwise they will be inferred from the keys.\n    names : list, default None\n        Names for the levels in the resulting hierarchical index.\n    verify_integrity : bool, default False\n        Check whether the new concatingenated axis contains duplicates. This can\n        be very expensive relative to the actual data concatingenation.\n    sort : bool, default False\n        Sort non-concatingenation axis if it is not already aligned when `join`\n        is 'outer'.\n        This has no effect when ``join='inner'``, which already preserves\n        the order of the non-concatingenation axis.\n\n        .. versionchanged:: 1.0.0\n\n           Changed to not sort by default.\n\n    clone : bool, default True\n        If False, do not clone data unnecessarily.\n\n    Returns\n    -------\n    object, type of objs\n        When concatingenating total_all ``Collections`` along the index (axis=0), a\n        ``Collections`` is returned. When ``objs`` contains at least one\n        ``KnowledgeFrame``, a ``KnowledgeFrame`` is returned. When concatingenating along\n        the columns (axis=1), a ``KnowledgeFrame`` is returned.\n\n    See Also\n    --------\n    Collections.adding : Concatenate Collections.\n    KnowledgeFrame.adding : Concatenate KnowledgeFrames.\n    KnowledgeFrame.join : Join KnowledgeFrames using indexes.\n    KnowledgeFrame.unioner : Merge KnowledgeFrames by indexes or columns.\n\n    Notes\n    -----\n    The keys, levels, and names arguments are total_all optional.\n\n    A walkthrough of how this method fits in with other tools for combining\n    monkey objects can be found `here\n    <https://monkey.pydata.org/monkey-docs/stable/user_guide/merging.html>`__.\n\n    Examples\n    --------\n    Combine two ``Collections``.\n\n    >>> s1 = mk.Collections(['a', 'b'])\n    >>> s2 = mk.Collections(['c', 'd'])\n    >>> mk.concating([s1, s2])\n    0    a\n    1    b\n    0    c\n    1    d\n    dtype: object\n\n    Clear the existing index and reset it in the result\n    by setting the ``ignore_index`` option to ``True``.\n\n    >>> mk.concating([s1, s2], ignore_index=True)\n    0    a\n    1    b\n    2    c\n    3    d\n    dtype: object\n\n    Add a hierarchical index at the outermost level of\n    the data with the ``keys`` option.\n\n    >>> mk.concating([s1, s2], keys=['s1', 's2'])\n    s1  0    a\n        1    b\n    s2  0    c\n        1    d\n    dtype: object\n\n    Label the index keys you create with the ``names`` option.\n\n    >>> mk.concating([s1, s2], keys=['s1', 's2'],\n    ...           names=['Collections name', 'Row ID'])\n    Collections name  Row ID\n    s1           0         a\n                 1         b\n    s2           0         c\n                 1         d\n    dtype: object\n\n    Combine two ``KnowledgeFrame`` objects with identical columns.\n\n    >>> kf1 = mk.KnowledgeFrame([['a', 1], ['b', 2]],\n    ...                    columns=['letter', 'number'])\n    >>> kf1\n      letter  number\n    0      a       1\n    1      b       2\n    >>> kf2 = mk.KnowledgeFrame([['c', 3], ['d', 4]],\n    ...                    columns=['letter', 'number'])\n    >>> kf2\n      letter  number\n    0      c       3\n    1      d       4\n    >>> mk.concating([kf1, kf2])\n      letter  number\n    0      a       1\n    1      b       2\n    0      c       3\n    1      d       4\n\n    Combine ``KnowledgeFrame`` objects with overlapping columns\n    and return everything. Columns outside the interst will\n    be filled with ``NaN`` values.\n\n    >>> kf3 = mk.KnowledgeFrame([['c', 3, 'cat'], ['d', 4, 'dog']],\n    ...                    columns=['letter', 'number', 'animal'])\n    >>> kf3\n      letter  number animal\n    0      c       3    cat\n    1      d       4    dog\n    >>> mk.concating([kf1, kf3], sort=False)\n      letter  number animal\n    0      a       1    NaN\n    1      b       2    NaN\n    0      c       3    cat\n    1      d       4    dog\n\n    Combine ``KnowledgeFrame`` objects with overlapping columns\n    and return only those that are shared by passing ``inner`` to\n    the ``join`` keyword argument.\n\n    >>> mk.concating([kf1, kf3], join=\"inner\")\n      letter  number\n    0      a       1\n    1      b       2\n    0      c       3\n    1      d       4\n\n    Combine ``KnowledgeFrame`` objects horizonttotal_ally along the x axis by\n    passing in ``axis=1``.\n\n    >>> kf4 = mk.KnowledgeFrame([['bird', 'polly'], ['monkey', 'george']],\n    ...                    columns=['animal', 'name'])\n    >>> mk.concating([kf1, kf4], axis=1)\n      letter  number  animal    name\n    0      a       1    bird   polly\n    1      b       2  monkey  george\n\n    Prevent the result from including duplicate index values with the\n    ``verify_integrity`` option.\n\n    >>> kf5 = mk.KnowledgeFrame([1], index=['a'])\n    >>> kf5\n       0\n    a  1\n    >>> kf6 = mk.KnowledgeFrame([2], index=['a'])\n    >>> kf6\n       0\n    a  2\n    >>> mk.concating([kf5, kf6], verify_integrity=True)\n    Traceback (most recent ctotal_all final_item):\n        ...\n    ValueError: Indexes have overlapping values: ['a']\n    ",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_4": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_5": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/77": {
+		"query": "Extract first and last row of a knowledgeframe in monkey Return the knowledgeframe with the first and last row",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "length(self): Return the length of each Collections/Index element.",
+			"API_3": "getting(self, i): Return the element at specified position.",
+			"API_4": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_5": "choose_dtypes(self, include=None, exclude=None) -> 'KnowledgeFrame': Extract a collection of colums from the KnowledgeFrame based on their dtypes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/78": {
+		"query": "Return the knowledgeframe with the rows with one or more NaN values",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "whatever(self, *args, **kwargs):\n        Return whether whatever element is Truthy.\n\n        Parameters\n        ----------\n        *args\n            Required for compatibility with numpy.\n        **kwargs\n            Required for compatibility with numpy.\n\n        Returns\n        -------\n        whatever : bool or array-like (if axis is specified)\n            A single element array-like may be converted to bool.\n\n        See Also\n        --------\n        Index.total_all : Return whether total_all elements are True.\n        Collections.total_all : Return whether total_all elements are True.\n\n        Notes\n        -----\n        Not a Number (NaN), positive infinity and negative infinity\n        evaluate to True because these are not equal to zero.\n\n        Examples\n        --------\n        >>> index = mk.Index([0, 1, 2])\n        >>> index.whatever()\n        True\n\n        >>> index = mk.Index([0, 0, 0])\n        >>> index.whatever()\n        False\n        ",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_5": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/79": {
+		"query": "Return the row-index values of the knowledgeframe as a list",
+		"retrieved_APIs": {
+			"API_1": "convert_list(self, *args, **kwargs):\n        Return a list of the values.\n\n        These are each a scalar type, which is a Python scalar\n        (for str, int, float) or a monkey scalar\n        (for Timestamp/Timedelta/Interval/Period)\n        ",
+			"API_2": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_3": "length(self): Return the length of each Collections/Index element.",
+			"API_4": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/80": {
+		"query": "I find myself often having to check whether a column or row exists in a knowledgeframe before trying to reference it. Is there any way to do this more nicely? For example on an arbitrary object I can do x = getattr(anobject, 'id', default) - is there anything similar to this in monkey? Really any way to achieve what I'm doing more gracefully? Output the second row of data in `mycol` column if it exists, otherwise output NaN",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "getting(self, i): Return the element at specified position.",
+			"API_4": "mapping(self, mapper, na_action=None): Map the object's values according to an input mapping or function.",
+			"API_5": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/81": {
+		"query": "Count the number of occurrences of a value in a collections Return the count",
+		"retrieved_APIs": {
+			"API_1": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.",
+			"API_2": "length(self): Return the length of each Collections/Index element.",
+			"API_3": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_4": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values.",
+			"API_5": "sort_the_values(self, return_indexer: 'bool' = False, ascending: 'bool' = True, na_position: 'str_t' = 'final_item', key: 'Ctotal_allable | None' = None): Return the index as a sorted clone."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/82": {
+		"query": "Find rows in kf where col_a > col_b Return the rows",
+		"retrieved_APIs": {
+			"API_1": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_2": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_3": "traversal(self) -> 'Iterable[tuple[Hashable, Collections]]': Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.",
+			"API_4": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/83": {
+		"query": "Drop consecutive duplicates Return the result",
+		"retrieved_APIs": {
+			"API_1": "shifting(self, periods=1, freq=None): Increase the number of time frequency increments by the required number.",
+			"API_2": "remove_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Remove the duplicate values of the Index.",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.",
+			"API_4": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated.",
+			"API_5": "ceiling(self, *args, **kwargs): Apply a ceiling operation on the data at the specified frequency."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/84": {
+		"query": "Round a single column `A` Return the knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_3": "getting(self, i): Return the element at specified position.",
+			"API_4": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_5": "value_round(freq, ambiguous='raise', nonexistent='raise'): Return the rounded Timestamp to the chosen resolution."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/85": {
+		"query": "Add Leading Zeros to Strings at `col_name` in Monkey Dataframe The maximum length of the string is 15 Return the knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]':\n        Render a string representation of the Index.\n        ",
+			"API_3": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_4": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_5": "getting(self, i): Return the element at specified position."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/86": {
+		"query": "adding dictionary to data frame return the data frame",
+		"retrieved_APIs": {
+			"API_1": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_2": "renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.",
+			"API_3": "formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.",
+			"API_4": "convert_string(self, buf: 'FilePathOrBuffer[str] | None' = None, columns: 'Sequence[str] | None' = None, col_space: 'int | None' = None, header_numer: 'bool | Sequence[str]' = True, index: 'bool' = True, na_rep: 'str' = 'NaN', formatingters: 'fmt.FormattersType | None' = None, float_formating: 'fmt.FloatFormatType | None' = None, sparsify: 'bool | None' = None, index_names: 'bool' = True, justify: 'str | None' = None, getting_max_rows: 'int | None' = None, getting_min_rows: 'int | None' = None, getting_max_cols: 'int | None' = None, show_dimensions: 'bool' = False, decimal: 'str' = '.', line_width: 'int | None' = None, getting_max_colwidth: 'int | None' = None, encoding: 'str | None' = None) -> 'str | None': Display the output of the KnowledgeFrame as a console-friendly tablular.",
+			"API_5": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/87": {
+		"query": "transform timestamp to pydatetime object return pydatetime object",
+		"retrieved_APIs": {
+			"API_1": "convert_pydatetime(*args, **kwargs): Return the native datetime object in Python.",
+			"API_2": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_3": "convert_dict(self, into=<class 'dict'>): Return a dict-like object of the passed Collections.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "convert_datetime(arg: 'DatetimeScalarOrArrayConvertible', errors: 'str' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool | None' = None, formating: 'str | None' = None, exact: 'bool' = True, unit: 'str | None' = None, infer_datetime_formating: 'bool' = False, origin='unix', cache: 'bool' = True) -> 'DatetimeIndex | Collections | DatetimeScalar | NaTType | None': Map the format of the argument to datetime."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/88": {
+		"query": "Given a monkey collections that represents frequencies of a value, how can I turn those frequencies into percentages? Return the percentage of each gender.",
+		"retrieved_APIs": {
+			"API_1": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.",
+			"API_2": "total_all(self, *args, **kwargs): Return a bool value of whether all items are truthy.",
+			"API_3": "average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs): Return the average value along the specified axis.",
+			"API_4": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis.",
+			"API_5": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs): Return the cumulative total of an axis in the KnowledgeFrame or Collections."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/89": {
+		"query": "I need to divide all ['B','C'] columns but the first column 'A' in a KnowledgeFrame by the first column. Return the result.",
+		"retrieved_APIs": {
+			"API_1": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_2": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_3": "sort_the_values(self, return_indexer: 'bool' = False, ascending: 'bool' = True, na_position: 'str_t' = 'final_item', key: 'Ctotal_allable | None' = None): Return the index as a sorted clone.",
+			"API_4": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs): Return the cumulative total of an axis in the KnowledgeFrame or Collections.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/90": {
+		"query": "ceiling of a monkey collections Return the result.",
+		"retrieved_APIs": {
+			"API_1": "ceiling(self, *args, **kwargs): Apply a ceiling operation on the data at the specified frequency.",
+			"API_2": "total_all(self, *args, **kwargs): Return a bool value of whether all items are truthy.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values.",
+			"API_5": "getting(self, i): Return the element at specified position."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/91": {
+		"query": "Delete all columns that contain all NaN values Return the result.",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_3": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_4": "sipna(self): Return an ExtensionArray that is devoid of NA values.",
+			"API_5": "duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/92": {
+		"query": "add the row at top in kf resort the index by inplace",
+		"retrieved_APIs": {
+			"API_1": "adding(self, other: 'Index | Sequence[Index]') -> 'Index': Adding together a group of Index options.",
+			"API_2": "sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.",
+			"API_3": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed).",
+			"API_4": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_5": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/93": {
+		"query": "Set value to an entire column `B` of a monkey knowledgeframe Return the changed knowledgeframe.",
+		"retrieved_APIs": {
+			"API_1": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_2": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_3": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_4": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/94": {
+		"query": "Finding the intersection between two collections In detail, first we create two sets, one for each collections. Then we find the intersection of the two sets.",
+		"retrieved_APIs": {
+			"API_1": "interst(self, other, sort=False): Create the intersection of two Index objects.",
+			"API_2": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects.",
+			"API_3": "concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.",
+			"API_4": "Collections(data=None, index=None, dtype: 'Dtype | None' = None, name=None, clone: 'bool' = False, fastpath: 'bool' = False): ndarray with axis labels in one-dimension (also time collections).",
+			"API_5": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/95": {
+		"query": "I would simply like to slice the Data Frame and take the first n rows. Return the result",
+		"retrieved_APIs": {
+			"API_1": "last_tail(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Return the FrameCollection's final `n` rows.",
+			"API_2": "header_num(self: 'FrameOrCollections', n: 'int' = 5) -> 'FrameOrCollections': Get the top `n` rows of the frame or collections.",
+			"API_3": "final_item(self: 'FrameOrCollections', offset) -> 'FrameOrCollections': Using a date offset to get the last periods of time collections data.",
+			"API_4": "sample_by_num(self: 'FrameOrCollections', n=None, frac: 'float | None' = None, replacing: 'bool_t' = False, weights=None, random_state=None, axis: 'Axis | None' = None, ignore_index: 'bool_t' = False) -> 'FrameOrCollections': Return a number of random samples from the object's specified axis.",
+			"API_5": "getting(self, i): Return the element at specified position."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/96": {
+		"query": "Add a new column named 'Fruit Total' that sums the values of the other columns Note that igonring the NaN values",
+		"retrieved_APIs": {
+			"API_1": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs):\n        Apply a function along an axis of the KnowledgeFrame.\n\n        Objects passed to the function are Collections objects whose index is\n        either the KnowledgeFrame's index (``axis=0``) or the KnowledgeFrame's columns\n        (``axis=1``). By default (``result_type=None``), the final return type\n        is inferred from the return type of the applied function. Otherwise,\n        it depends on the `result_type` argument.\n\n        Parameters\n        ----------\n        func : function\n            Function to employ to each column or row.\n        axis : {0 or 'index', 1 or 'columns'}, default 0\n            Axis along which the function is applied:\n\n            * 0 or 'index': employ function to each column.\n            * 1 or 'columns': employ function to each row.\n\n        raw : bool, default False\n            Detergetting_mines if row or column is passed as a Collections or ndarray object:\n\n            * ``False`` : passes each row or column as a Collections to the\n              function.\n            * ``True`` : the passed function will receive ndarray objects\n              instead.\n              If you are just employing a NumPy reduction function this will\n              achieve much better performance.\n\n        result_type : {'expand', 'reduce', 'broadcast', None}, default None\n            These only act when ``axis=1`` (columns):\n\n            * 'expand' : list-like results will be turned into columns.\n            * 'reduce' : returns a Collections if possible rather than expanding\n              list-like results. This is the opposite of 'expand'.\n            * 'broadcast' : results will be broadcast to the original shape\n              of the KnowledgeFrame, the original index and columns will be\n              retained.\n\n            The default behaviour (None) depends on the return value of the\n            applied function: list-like results will be returned as a Collections\n            of those. However if the employ function returns a Collections these\n            are expanded to columns.\n        args : tuple\n            Positional arguments to pass to `func` in addition to the\n            array/collections.\n        **kwargs\n            Additional keyword arguments to pass as keywords arguments to\n            `func`.\n\n        Returns\n        -------\n        Collections or KnowledgeFrame\n            Result of employing ``func`` along the given axis of the\n            KnowledgeFrame.\n\n        See Also\n        --------\n        KnowledgeFrame.employmapping: For elementwise operations.\n        KnowledgeFrame.aggregate: Only perform aggregating type operations.\n        KnowledgeFrame.transform: Only perform transforgetting_ming type operations.\n\n        Notes\n        -----\n        Functions that mutate the passed object can produce unexpected\n        behavior or errors and are not supported. See :ref:`gotchas.ukf-mutation`\n        for more definal_item_tails.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([[4, 9]] * 3, columns=['A', 'B'])\n        >>> kf\n           A  B\n        0  4  9\n        1  4  9\n        2  4  9\n\n        Using a numpy universal function (in this case the same as\n        ``np.sqrt(kf)``):\n\n        >>> kf.employ(np.sqrt)\n             A    B\n        0  2.0  3.0\n        1  2.0  3.0\n        2  2.0  3.0\n\n        Using a reducing function on either axis\n\n        >>> kf.employ(np.total_sum, axis=0)\n        A    12\n        B    27\n        dtype: int64\n\n        >>> kf.employ(np.total_sum, axis=1)\n        0    13\n        1    13\n        2    13\n        dtype: int64\n\n        Returning a list-like will result in a Collections\n\n        >>> kf.employ(lambda x: [1, 2], axis=1)\n        0    [1, 2]\n        1    [1, 2]\n        2    [1, 2]\n        dtype: object\n\n        Passing ``result_type='expand'`` will expand list-like results\n        to columns of a Dataframe\n\n        >>> kf.employ(lambda x: [1, 2], axis=1, result_type='expand')\n           0  1\n        0  1  2\n        1  1  2\n        2  1  2\n\n        Returning a Collections inside the function is similar to passing\n        ``result_type='expand'``. The resulting column names\n        will be the Collections index.\n\n        >>> kf.employ(lambda x: mk.Collections([1, 2], index=['foo', 'bar']), axis=1)\n           foo  bar\n        0    1    2\n        1    1    2\n        2    1    2\n\n        Passing ``result_type='broadcast'`` will ensure the same shape\n        result, whether list-like or scalar is returned by the function,\n        and broadcast it along the axis. The resulting column names will\n        be the originals.\n\n        >>> kf.employ(lambda x: [1, 2], axis=1, result_type='broadcast')\n           A  B\n        0  1  2\n        1  1  2\n        2  1  2\n        ",
+			"API_3": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_4": "cumulative_sum(self, axis=None, skipna=True, *args, **kwargs): Return the cumulative total of an axis in the KnowledgeFrame or Collections.",
+			"API_5": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/97": {
+		"query": "Finding non-numeric rows in knowledgeframe in monkey Return the raws that contain non-numeric values So to get the subKnowledgeFrame of rouges, (Note: the negation, ~, of the above finds the ones which have at least one rogue non-numeric):",
+		"retrieved_APIs": {
+			"API_1": "total_all(self, *args, **kwargs):\n        Return whether total_all elements are Truthy.\n\n        Parameters\n        ----------\n        *args\n            Required for compatibility with numpy.\n        **kwargs\n            Required for compatibility with numpy.\n\n        Returns\n        -------\n        total_all : bool or array-like (if axis is specified)\n            A single element array-like may be converted to bool.\n\n        See Also\n        --------\n        Index.whatever : Return whether whatever element in an Index is True.\n        Collections.whatever : Return whether whatever element in a Collections is True.\n        Collections.total_all : Return whether total_all elements in a Collections are True.\n\n        Notes\n        -----\n        Not a Number (NaN), positive infinity and negative infinity\n        evaluate to True because these are not equal to zero.\n\n        Examples\n        --------\n        **total_all**\n\n        True, because nonzero integers are considered True.\n\n        >>> mk.Index([1, 2, 3]).total_all()\n        True\n\n        False, because ``0`` is considered False.\n\n        >>> mk.Index([0, 1, 2]).total_all()\n        False\n\n        **whatever**\n\n        True, because ``1`` is considered True.\n\n        >>> mk.Index([0, 0, 1]).whatever()\n        True\n\n        False, because ``0`` is considered False.\n\n        >>> mk.Index([0, 0, 0]).whatever()\n        False\n        ",
+			"API_2": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_3": "totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.",
+			"API_4": "KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/98": {
+		"query": "unioner the above two knowledgeframes on column 'company'",
+		"retrieved_APIs": {
+			"API_1": "allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.",
+			"API_2": "unioner(self, right: 'FrameOrCollectionsUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), clone: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'KnowledgeFrame': Database-style join the named Collections objects or KnowledgeFrame.",
+			"API_3": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_4": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_5": "division(self, other, axis='columns', level=None, fill_value=None): Get the element-wise floating division of knowledgeframe or other objects."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/99": {
+		"query": "counting the number of missing/NaN in each column Get a collections with the number of missing/NaN in each column",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "nbiggest(self, n=5, keep='first') -> 'Collections': Get the elements of the object with the n largest values.",
+			"API_3": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_4": "fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.",
+			"API_5": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/100": {
+		"query": "Any word from `targets` are present in sentence.",
+		"retrieved_APIs": {
+			"API_1": "ifna(self) -> 'np.ndarray': Indicate whether there are missing values.",
+			"API_2": "ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.",
+			"API_3": "incontain(self, values) -> 'np.ndarray': Return a boolean array where True if the value is contained in the passed values.",
+			"API_4": "whatever(self, *args, **kwargs): Return a bool value of whether any element is Truthy.",
+			"API_5": "reindexing(self, target, method=None, level=None, limit=None, tolerance=None) -> 'tuple[MultiIndex, np.ndarray | None]': Create an index conditioned on the values of target (move, add, or remove values as needed)."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/34": {
+		"query": "I need to calculate the difference between two rows groupwise using monkey. To calculate the total_sum I would use monkey.grouper('Group').total_sum(), but how do you calculate the difference between rows where the row ordering is important? I think we need custom function with employ which return KnowledgeFrame for each group, for select by position is used iat: Return the result",
+		"retrieved_APIs": {
+			"API_1": "grouper(self, by=None, axis: 'Axis' = 0, level: 'Level | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, squeeze: 'bool | lib.NoDefault' = <no_default>, observed: 'bool' = False, sipna: 'bool' = True) -> 'KnowledgeFrameGroupBy': Group the KnowledgeFrame by a set of columns or group keys.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None':\n        Reset the index, or a level of it.\n\n        Reset the index of the KnowledgeFrame, and use the default one instead.\n        If the KnowledgeFrame has a MultiIndex, this method can remove one or more\n        levels.\n\n        Parameters\n        ----------\n        level : int, str, tuple, or list, default None\n            Only remove the given levels from the index. Removes total_all levels by\n            default.\n        sip : bool, default False\n            Do not try to insert index into knowledgeframe columns. This resets\n            the index to the default integer index.\n        inplace : bool, default False\n            Modify the KnowledgeFrame in place (do not create a new object).\n        col_level : int or str, default 0\n            If the columns have multiple levels, detergetting_mines which level the\n            labels are inserted into. By default it is inserted into the first\n            level.\n        col_fill : object, default ''\n            If the columns have multiple levels, detergetting_mines how the other\n            levels are named. If None then the index name is repeated.\n\n        Returns\n        -------\n        KnowledgeFrame or None\n            KnowledgeFrame with the new index or None if ``inplace=True``.\n\n        See Also\n        --------\n        KnowledgeFrame.set_index : Opposite of reseting_index.\n        KnowledgeFrame.reindexing : Change to new indices or expand indices.\n        KnowledgeFrame.reindexing_like : Change to same indices as other KnowledgeFrame.\n\n        Examples\n        --------\n        >>> kf = mk.KnowledgeFrame([('bird', 389.0),\n        ...                    ('bird', 24.0),\n        ...                    ('mammal', 80.5),\n        ...                    ('mammal', np.nan)],\n        ...                   index=['falcon', 'parrot', 'lion', 'monkey'],\n        ...                   columns=('class', 'getting_max_speed'))\n        >>> kf\n                 class  getting_max_speed\n        falcon    bird      389.0\n        parrot    bird       24.0\n        lion    mammal       80.5\n        monkey  mammal        NaN\n\n        When we reset the index, the old index is added as a column, and a\n        new sequential index is used:\n\n        >>> kf.reseting_index()\n            index   class  getting_max_speed\n        0  falcon    bird      389.0\n        1  parrot    bird       24.0\n        2    lion  mammal       80.5\n        3  monkey  mammal        NaN\n\n        We can use the `sip` parameter to avoid the old index being added as\n        a column:\n\n        >>> kf.reseting_index(sip=True)\n            class  getting_max_speed\n        0    bird      389.0\n        1    bird       24.0\n        2  mammal       80.5\n        3  mammal        NaN\n\n        You can also use `reseting_index` with `MultiIndex`.\n\n        >>> index = mk.MultiIndex.from_tuples([('bird', 'falcon'),\n        ...                                    ('bird', 'parrot'),\n        ...                                    ('mammal', 'lion'),\n        ...                                    ('mammal', 'monkey')],\n        ...                                   names=['class', 'name'])\n        >>> columns = mk.MultiIndex.from_tuples([('speed', 'getting_max'),\n        ...                                      ('species', 'type')])\n        >>> kf = mk.KnowledgeFrame([(389.0, 'fly'),\n        ...                    ( 24.0, 'fly'),\n        ...                    ( 80.5, 'run'),\n        ...                    (np.nan, 'jump')],\n        ...                   index=index,\n        ...                   columns=columns)\n        >>> kf\n                       speed species\n                         getting_max    type\n        class  name\n        bird   falcon  389.0     fly\n               parrot   24.0     fly\n        mammal lion     80.5     run\n               monkey    NaN    jump\n\n        If the index has multiple levels, we can reset a subset of them:\n\n        >>> kf.reseting_index(level='class')\n                 class  speed species\n                          getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        If we are not sipping the index, by default, it is placed in the top\n        level. We can place it in another level:\n\n        >>> kf.reseting_index(level='class', col_level=1)\n                        speed species\n                 class    getting_max    type\n        name\n        falcon    bird  389.0     fly\n        parrot    bird   24.0     fly\n        lion    mammal   80.5     run\n        monkey  mammal    NaN    jump\n\n        When the index is inserted under another level, we can specify under\n        which one with the parameter `col_fill`:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='species')\n                      species  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n\n        If we specify a nonexistent level for `col_fill`, it is created:\n\n        >>> kf.reseting_index(level='class', col_level=1, col_fill='genus')\n                        genus  speed species\n                        class    getting_max    type\n        name\n        falcon           bird  389.0     fly\n        parrot           bird   24.0     fly\n        lion           mammal   80.5     run\n        monkey         mammal    NaN    jump\n        ",
+			"API_4": "counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.",
+			"API_5": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	},
+	"PandasEval/27": {
+		"query": "Normalization using monkey We simply subtract the average and divide by standard deviation on kf.iloc[:,0,-1] obj with axis is zero. Return the normalized knowledgeframe",
+		"retrieved_APIs": {
+			"API_1": "average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs): Return the average value along the specified axis.",
+			"API_2": "employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.",
+			"API_3": "standard(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs): Return the standard deviation across the requested axis.",
+			"API_4": "conduct_map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'KnowledgeFrame': Apply a function element by element to a KnowledgeFrame.",
+			"API_5": "total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis."
+		},
+		"annotation": {
+			"answerable": true,
+			"reason_for_unanswerable": "na"
+		}
+	}
+}
