@@ -1,0 +1,702 @@
+{
+	"TorchDataEval/0": {
+		"query": "How to augument the datapipe by repeating it six times.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/1": {
+		"query": "Assign indexs to the datepipe object.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/2": {
+		"query": "How to get one training data from the batch_dp",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones.",
+			"API_5": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/4": {
+		"query": "Split into 2 sub-datapipes by the odd_or_even function",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_5": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/5": {
+		"query": "Clone the source datapipe two times",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_5": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/6": {
+		"query": "Putting two IterDataPipes together based on their key.",
+		"retrieved_APIs": {
+			"API_1": "ShardingFilter(*args, **kwds):\n    Wrapper that allows DataPipe to be sharded (functional name: ``sharding_filter``). After ``apply_sharding`` is\n    called, each instance of the DataPipe (on different workers) will have every `n`-th element of the\n    original DataPipe, where `n` equals to the number of instances.\n\n    Args:\n        source_datapipe: Iterable DataPipe that will be sharded\n    ",
+			"API_2": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    ",
+			"API_3": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    ",
+			"API_4": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space).",
+			"API_5": "rjust(width, fillchar=' ', /):Return a right-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/7": {
+		"query": "Attach the elements in the source IterDataPipe to the elements in the MapDataPipe.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/9": {
+		"query": "Take samples from these DataPipes based on their weights with random seed 0, until all of them are exhausted.",
+		"retrieved_APIs": {
+			"API_1": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "SequenceWrapper(*args, **kwds):\n    Wraps a sequence object into a MapDataPipe.\n\n    Args:\n        sequence: Sequence object to be wrapped into an MapDataPipe\n        deepcopy: Option to deepcopy input sequence object\n\n    .. note::\n      If ``deepcopy`` is set to False explicitly, users should ensure\n      that data pipeline doesn't contain any in-place operations over\n      the iterable instance, in order to prevent data inconsistency\n      across iterations.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/10": {
+		"query": "Unzip the three tuples, and return these elements in separate DataPipes, depending on their location.",
+		"retrieved_APIs": {
+			"API_1": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_2": "lower():Return a copy of the string converted to lowercase.",
+			"API_3": "upper():Return a copy of the string converted to uppercase.",
+			"API_4": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_5": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/11": {
+		"query": "Divide datapipes into 3 batches and discard if the last batch is not reached.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "casefold():Return a version of the string suitable for caseless comparisons."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/12": {
+		"query": "Create batch datapipe with batch size 3, batch num is 100, and drop the last batch if it is not full. Also, useing the sort_bucket function to sort the bucket, where the bucket_num is 1.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_3": "lower():Return a copy of the string converted to lowercase.",
+			"API_4": "upper():Return a copy of the string converted to uppercase.",
+			"API_5": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/14": {
+		"query": "Group by file name (except extension), we set the buffer size and group size to 3, and the guaranteed group size to 2.",
+		"retrieved_APIs": {
+			"API_1": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_2": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/16": {
+		"query": "Using IterableWrapper to the file url and HttpReader to read the file",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_5": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/17": {
+		"query": "Each item in the source_dp is applied mutiple_fn function and the output is then tiled to a single, unnested one.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_3": "lower():Return a copy of the string converted to lowercase.",
+			"API_4": "upper():Return a copy of the string converted to uppercase.",
+			"API_5": "concat(*args, **kwds):\n    Concatenates multiple Iterable DataPipes (functional name: ``concat``). The resulting DataPipe will\n    yield all the elements from the first input DataPipe, before yielding from the subsequent ones.\n\n    Args:\n        datapipes: Iterable DataPipes being concatenated\n\n    Example:\n        >>> import random\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1 = IterableWrapper(range(3))\n        >>> dp2 = IterableWrapper(range(5))\n        >>> list(dp1.concat(dp2))\n        [0, 1, 2, 0, 1, 2, 3, 4]\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/18": {
+		"query": "Method 1 map_dp_1 = dp.map(add_one) Invocation via functional form is preferred Method 2 We discourage the usage of `lambda` functions as they are not serializable with `pickle` Using `lambda` to implement add_two rather than add_one that is mentioned in above.",
+		"retrieved_APIs": {
+			"API_1": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_2": "capitalize():Return a capitalized version of the string.\n\nMore specifically, make the first character have upper case and the rest lower\ncase.",
+			"API_3": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_4": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones.",
+			"API_5": "lower():Return a copy of the string converted to lowercase."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/19": {
+		"query": "Filtering by the above function",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "Extractor(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Tuple[str, io.IOBase]], file_type: Union[str, torchdata.datapipes.iter.util.decompressor.CompressionType, NoneType] = None):\n    Please use ``Decompressor`` or ``.decompress`` instead.\n    ",
+			"API_3": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, HttpReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> http_reader_dp = HttpReader(IterableWrapper([file_url]))\n        >>> reader_dp = http_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    ",
+			"API_4": "JsonParser(*args, **kwds):\n    Reads from JSON data streams and yields a tuple of file name and JSON data (functional name: ``parse_json_files``).\n\n    Args:\n        source_datapipe: a DataPipe with tuples of file name and JSON data stream\n        kwargs: keyword arguments that will be passed through to ``json.loads``\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = IterableWrapper([\"empty.json\", \"1.json\", \"2.json\"])\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> json_dp = datapipe3.parse_json_files()\n        >>> list(json_dp)\n        [('1.json', ['foo', {'bar': ['baz', None, 1.0, 2]}]), ('2.json', {'__complex__': True, 'real': 1, 'imag': 2})]\n    ",
+			"API_5": "OnlineReader(*args, **kwds):\n    Takes file URLs (can be HTTP URLs pointing to files or URLs to GDrive files), and\n    yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, OnlineReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> online_reader_dp = OnlineReader(IterableWrapper([file_url]))\n        >>> reader_dp = online_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/20": {
+		"query": "How to get the first three elements of a datapipe?",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_3": "isalnum():Return True if the string is an alpha-numeric string, False otherwise.\n\nA string is alpha-numeric if all characters in the string are alpha-numeric and\nthere is at least one character in the string.",
+			"API_4": "isalpha():Return True if the string is an alphabetic string, False otherwise.\n\nA string is alphabetic if all characters in the string are alphabetic and there\nis at least one character in the string.",
+			"API_5": "isupper():Return True if the string is an uppercase string, False otherwise.\n\nA string is uppercase if all cased characters in the string are uppercase and\nthere is at least one cased character in the string."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/21": {
+		"query": "Each element in a batch is a `Dict` Takes an input DataPipe with batches of data, processes the batches one and produces a Dict for each batch. We only need the column 'a' from each batch.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/23": {
+		"query": "map_dp_1 = dp.map(lambda x: x + 1) Using functional form (recommended) map_dp_2 = Mapper(dp, lambda x: x + 1) Using class constructor Get the mapper datapipe (map_dp_1) batch datas with the batch size of 2.",
+		"retrieved_APIs": {
+			"API_1": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_2": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones.",
+			"API_3": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_4": "isalnum():Return True if the string is an alpha-numeric string, False otherwise.\n\nA string is alpha-numeric if all characters in the string are alpha-numeric and\nthere is at least one character in the string.",
+			"API_5": "isalpha():Return True if the string is an alphabetic string, False otherwise.\n\nA string is alphabetic if all characters in the string are alphabetic and there\nis at least one character in the string."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/24": {
+		"query": "Read the URL using the HTTP protocol and process the csv file.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'"
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/25": {
+		"query": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want.",
+		"retrieved_APIs": {
+			"API_1": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_2": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_3": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_4": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_5": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/26": {
+		"query": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want. How to get all batches from a datapipe with batch size 2? Furthermore, the batches should be mapped using lambda_batch.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_3": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    This MataPipe is out of bound as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Map DataPipes being aggregated\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/27": {
+		"query": "Augument the datapipe with repeat three times and sample the data.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/28": {
+		"query": "First we concatenate two datapipes and then repeat the concatenated datapipe three times.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    ",
+			"API_5": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/29": {
+		"query": "According to the merge_fn, we zip the above two datapipes and keep the key True. Whatsmore, cycle the zipped datapipe three times.",
+		"retrieved_APIs": {
+			"API_1": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_4": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_5": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/30": {
+		"query": "We zipp the above two data pipes and set keep_key to True according to merge_fn. Also, enumerating the zipped datapipe.",
+		"retrieved_APIs": {
+			"API_1": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_2": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_3": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_4": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space).",
+			"API_5": "rjust(width, fillchar=' ', /):Return a right-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/31": {
+		"query": "Zipping the above two data pipes and set keep_key to True according to merge_fn. Moreover, transform its type to List and get the first element.",
+		"retrieved_APIs": {
+			"API_1": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_2": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_3": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_4": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space).",
+			"API_5": "rjust(width, fillchar=' ', /):Return a right-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/32": {
+		"query": "Using merge_fn to zip the two data pipes. Repeating three times to argument the zipped data pipe.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/33": {
+		"query": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe. Finally, we convert the result type to a list and take the second element of each tuple.",
+		"retrieved_APIs": {
+			"API_1": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_4": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_5": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/34": {
+		"query": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe, and then sampling the result. Finally, we convert the result type to a list and take the third element of each tuple.",
+		"retrieved_APIs": {
+			"API_1": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_5": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/35": {
+		"query": "Group the files by their file name using the group_fn function. Then, reserving the length of group result greater than 1.",
+		"retrieved_APIs": {
+			"API_1": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_2": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_3": "SequenceWrapper(*args, **kwds):\n    Wraps a sequence object into a MapDataPipe.\n\n    Args:\n        sequence: Sequence object to be wrapped into an MapDataPipe\n        deepcopy: Option to deepcopy input sequence object\n\n    .. note::\n      If ``deepcopy`` is set to False explicitly, users should ensure\n      that data pipeline doesn't contain any in-place operations over\n      the iterable instance, in order to prevent data inconsistency\n      across iterations.\n    ",
+			"API_4": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones.",
+			"API_5": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\"."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/37": {
+		"query": "First get the head 2 elements Second make the datapipe tensor-like by using `collate_fn`",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_3": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\".",
+			"API_4": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_5": "title():Return a version of the string where each word is titlecased.\n\nMore specifically, words start with uppercased characters and all remaining\ncased characters have lower case."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/38": {
+		"query": "Filter the value smaller than 5 Second make the datapipe tensor-like by using `collate_fn`",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_3": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_4": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\".",
+			"API_5": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/40": {
+		"query": "Split the source datapipe into two datapipes by applying the function `great_than_5`",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_5": "istitle():Return True if the string is a title-cased string, False otherwise.\n\nIn a title-cased string, upper- and title-case characters may only\nfollow uncased characters and lowercase characters only cased ones."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/41": {
+		"query": "Given the weight, how to sample from two datapipes? Note that the sample seed is set to 1 for reproducibility",
+		"retrieved_APIs": {
+			"API_1": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_2": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_3": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_4": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_5": "capitalize():Return a capitalized version of the string.\n\nMore specifically, make the first character have upper case and the rest lower\ncase."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/42": {
+		"query": "I would like assgin dp1 to be a datapipe that contains the first column of raw_dp and dp2 to be a datapipe that contains the second column of raw_dp and dp3 to be a datapipe that contains the third column of raw_dp How to do this?",
+		"retrieved_APIs": {
+			"API_1": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_2": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_3": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_4": "isalnum():Return True if the string is an alpha-numeric string, False otherwise.\n\nA string is alpha-numeric if all characters in the string are alpha-numeric and\nthere is at least one character in the string.",
+			"API_5": "isalpha():Return True if the string is an alphabetic string, False otherwise.\n\nA string is alphabetic if all characters in the string are alphabetic and there\nis at least one character in the string."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/43": {
+		"query": "Make a batch operation on the datapipe `dp` of size 3 with droping last batch if it is not full. And then get the first two batches.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_3": "split(sep=None, maxsplit=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to split the string.\n    None (the default value) means split according to any whitespace,\n    and discard empty strings from the result.\n  maxsplit\n    Maximum number of splits to do.\n    -1 (the default value) means no limit.",
+			"API_4": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_5": "lower():Return a copy of the string converted to lowercase."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/44": {
+		"query": "Batch on data pipe `dp1` of size 4 and discard the last batch if they are not filled, and then obtain the first two batches. Then the above result is concatenated with the datapipe `dp2`.",
+		"retrieved_APIs": {
+			"API_1": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_2": "lower():Return a copy of the string converted to lowercase.",
+			"API_3": "upper():Return a copy of the string converted to uppercase.",
+			"API_4": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_5": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/45": {
+		"query": "Concatenate two datapipes and add corresponding indices with the name `Ids`.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\".",
+			"API_4": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_5": "ljust(width, fillchar=' ', /):Return a left-justified string of length width.\n\nPadding is done using the specified fill character (default is a space)."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/46": {
+		"query": "Join the two data pipes and add an index with the name `Ids`. Then create three copies of the datapipe.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_3": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_4": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\".",
+			"API_5": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/47": {
+		"query": "Join the three data pipes and obtain the enumerated datapipe.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_3": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_4": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    The output is stopped as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Iterable DataPipes being aggregated\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.zip(dp2, dp3))\n        [(0, 10, 20), (1, 11, 21), (2, 12, 22), (3, 13, 23), (4, 14, 24)]\n    ",
+			"API_5": "StreamWrapper(file_obj):\n    StreamWrapper is introduced to wrap file handler generated by\n    DataPipe operation like `FileOpener`. StreamWrapper would guarantee\n    the wrapped file handler is closed when it's out of scope.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/48": {
+		"query": "I want to augment the source datapipe with the above function, which will return nine elements. Then we flatten the nine elements into a single datapipe.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "join(iterable, /):Concatenate any number of strings.\n\nThe string whose method is called is inserted in between each given string.\nThe result is returned as a new string.\n\nExample: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'",
+			"API_3": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_4": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_5": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/49": {
+		"query": "Read the URL using the HTTP protocol and parse the csv file as a dictionary.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "enumerate(*args, **kwds):\n    Adds an index to an existing DataPipe through enumeration, with\n    the index starting from 0 by default (functional name: ``enumerate``).\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed\n        starting_index: Index from which enumeration will start\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(['a', 'b', 'c'])\n        >>> enum_dp = dp.enumerate()\n        >>> list(enum_dp)\n        [(0, 'a'), (1, 'b'), (2, 'c')]\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/3": {
+		"query": "concat two datapipes",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "ShardingFilter(*args, **kwds):\n    Wrapper that allows DataPipe to be sharded (functional name: ``sharding_filter``). After ``apply_sharding`` is\n    called, each instance of the DataPipe (on different workers) will have every `n`-th element of the\n    original DataPipe, where `n` equals to the number of instances.\n\n    Args:\n        source_datapipe: Iterable DataPipe that will be sharded\n    ",
+			"API_3": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_4": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_5": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/8": {
+		"query": "One element is generated from each input Iterable DataPipes in turn, until the end when the shortest input DataPipe is used up.",
+		"retrieved_APIs": {
+			"API_1": "swapcase():Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+			"API_2": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_3": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_4": "lower():Return a copy of the string converted to lowercase.",
+			"API_5": "upper():Return a copy of the string converted to uppercase."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/13": {
+		"query": "convert integer to float Tensor using `int2tensor`.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "Zipper(*args, **kwds):\n    Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).\n    This MataPipe is out of bound as soon as the shortest input DataPipe is exhausted.\n\n    Args:\n        *datapipes: Map DataPipes being aggregated\n    ",
+			"API_3": "capitalize():Return a capitalized version of the string.\n\nMore specifically, make the first character have upper case and the rest lower\ncase.",
+			"API_4": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_5": "isalnum():Return True if the string is an alpha-numeric string, False otherwise.\n\nA string is alpha-numeric if all characters in the string are alpha-numeric and\nthere is at least one character in the string."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/15": {
+		"query": "Does the unbatch processing of data, the level is setted by default to 1.",
+		"retrieved_APIs": {
+			"API_1": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_2": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_3": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_4": "Extractor(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Tuple[str, io.IOBase]], file_type: Union[str, torchdata.datapipes.iter.util.decompressor.CompressionType, NoneType] = None):\n    Please use ``Decompressor`` or ``.decompress`` instead.\n    ",
+			"API_5": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/22": {
+		"query": "generating bytes where the chunk is set to one.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "TarArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], mode: str = 'r:*', length: int = -1):\n    Please use ``TarArchiveLoader`` or ``.load_from_tar`` instead.\n    ",
+			"API_3": "XzFileReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``XzFileLoader`` or ``.load_from_xz`` instead.\n    ",
+			"API_4": "ZipArchiveReader(datapipe: Iterable[Tuple[str, io.BufferedIOBase]], length: int = -1):\n    Please use ``ZipArchiveLoader`` or ``.load_from_zip`` instead.\n    ",
+			"API_5": "Extractor(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Tuple[str, io.IOBase]], file_type: Union[str, torchdata.datapipes.iter.util.decompressor.CompressionType, NoneType] = None):\n    Please use ``Decompressor`` or ``.decompress`` instead.\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/39": {
+		"query": "Put the above DataPipes into one list obj, and remove the last number from each element (e.g., \"1\" in \"dog1\")",
+		"retrieved_APIs": {
+			"API_1": "expandtabs(tabsize=8):Return a copy where all tab characters are expanded using spaces.\n\nIf tabsize is not given, a tab size of 8 characters is assumed.",
+			"API_2": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_3": "lower():Return a copy of the string converted to lowercase.",
+			"API_4": "upper():Return a copy of the string converted to uppercase.",
+			"API_5": "zfill(width, /):Pad a numeric string with zeros on the left, to fill a field of the given width.\n\nThe string is never truncated."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"TorchDataEval/36": {
+		"query": "group by source_dp using the ``group_fn`` function and obtain the header groups by default, assign the result to the new variable ``header_groups``.",
+		"retrieved_APIs": {
+			"API_1": "types(value, names=None, *, module=None, qualname=None, type=None, start=1):An enumeration.",
+			"API_2": "casefold():Return a version of the string suitable for caseless comparisons.",
+			"API_3": "isprintable():Return True if the string is printable, False otherwise.\n\nA string is printable if all of its characters are considered printable in\nrepr() or if it is empty.",
+			"API_4": "isascii():Return True if all characters in the string are ASCII, False otherwise.\n\nASCII characters have code points in the range U+0000-U+007F.\nEmpty string is ASCII too.",
+			"API_5": "isidentifier():Return True if the string is a valid Python identifier, False otherwise.\n\nCall keyword.iskeyword(s) to test whether string s is a reserved identifier,\nsuch as \"def\" or \"class\"."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	}
+}

@@ -1,0 +1,1252 @@
+{
+    "TorchDataEval/0": {
+        "original_query": "How to augument the datapipe by repeating it six times.",
+        "retrieved_APIs": {
+            "API_1": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_2": "cycle(*args, **kwds): Cycles the specified input in perpetuity by default, or for the specified number of times.",
+            "API_3": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_4": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_5": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndatapipe = IterableWrapper([1,2,3])\n\nnew_datapipe =",
+        "code_completion": [" Cycler(datapipe, 6)", " datapipe.cycle(6)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Cycler'\n}\n\n\ndef check():\n    assert list(new_datapipe) == [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "How to repeat the datapipe six times?",
+            "How to augument the datapipe?",
+            "How to repeat the datapipe?",
+            "How to augument the datapipe by repeating it?",
+            "How to repeat the datapipe by repeating it?"
+        ],
+        "gold_APIs": {
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/1": {
+        "original_query": "Assign indexs to the datepipe object.",
+        "retrieved_APIs": {
+            "API_1": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default.",
+            "API_2": "add_index(*args, **kwds): Adds an index to an existing Iterable DataPipe with.",
+            "API_3": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_4": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_5": "MapDataPipe(*args, **kwds): Map-style DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp = IterableWrapper(['a', 'b', 'c'])\n\nnew_dp =",
+        "code_completion": [" dp.enumerate()", " Enumerator(dp)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Enumerator'\n}\n\n\ndef check():\n    assert list(new_dp) == [(0, 'a'), (1, 'b'), (2, 'c')]\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Assign indexs to the object.",
+            "Assign indexs to the datepipe.",
+            "Assign indexs to the object.",
+            "Assign indexs to the datepipe object.",
+            "Assign indexs to the datepipe object."
+        ],
+        "gold_APIs": {
+            "1400014": "enumerate(*args, **kwds):\n    Adds an index to an existing DataPipe through enumeration, with\n    the index starting from 0 by default (functional name: ``enumerate``).\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed\n        starting_index: Index from which enumeration will start\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(['a', 'b', 'c'])\n        >>> enum_dp = dp.enumerate()\n        >>> list(enum_dp)\n        [(0, 'a'), (1, 'b'), (2, 'c')]\n    "
+        }
+    },
+    "TorchDataEval/2": {
+        "original_query": "How to get one training data from the batch_dp",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_2": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    ",
+            "API_3": "cycle(*args, **kwds): Cycles the specified input in perpetuity by default, or for the specified number of times.",
+            "API_4": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data.",
+            "API_5": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False): Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``, and yields a ``DataChunk`` with batch size up to ``group_size`` if defined."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper, Sampler\nsource_dp = IterableWrapper(range(10))\nbatch_dp = source_dp.batch(batch_size=3, drop_last=True)\n\n\nresult =",
+        "code_completion": [" Sampler(batch_dp)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Sampler'\n}\n\n\ndef check():\n    assert list(batch_dp) == [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "retrieve"
+        },
+        "corrupted_query": [
+            "How to get training data?",
+            "How to get data from batch_dp?"
+        ],
+        "gold_APIs": {
+            "1400051": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    "
+        }
+    },
+    "TorchDataEval/4": {
+        "original_query": "Split into 2 sub-datapipes by the odd_or_even function",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_3": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_4": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_5": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndef odd_or_even(n):\n    return n % 2\nsource_dp = IterableWrapper(range(5))\n\ndp1, dp2 =",
+        "code_completion": [
+            " Demultiplexer(source_dp, 2, odd_or_even)",
+            " source_dp.demux(2, odd_or_even)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Demultiplexer'\n}\n\n\ndef check():\n    assert list(dp1) == [0, 2, 4]\n    assert list(dp2) == [1, 3]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Split into sub-datapipes by the function",
+            "Split into 2 sub-datapipes",
+            "Split by the odd_or_even function"
+        ],
+        "gold_APIs": {
+            "1400012": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000):\n    Splits the input DataPipe into multiple child DataPipes, using the given\n    classification function (functional name: ``demux``). A list of the child DataPipes is returned from this operation.\n\n    Args:\n        datapipe: Iterable DataPipe being filtered\n        num_instances: number of instances of the DataPipe to create\n        classifier_fn: a function that maps values to an integer within the range ``[0, num_instances - 1]`` or ``None``\n        drop_none: defaults to ``False``, if ``True``, the function will skip over elements classified as ``None``\n        buffer_size: this defines the maximum number of inputs that the buffer can hold across all child\n            DataPipes while waiting for their values to be yielded.\n            Defaults to ``1000``. Use ``-1`` for the unlimited buffer.\n\n    Examples:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def odd_or_even(n):\n        ...     return n % 2\n        >>> source_dp = IterableWrapper(range(5))\n        >>> dp1, dp2 = source_dp.demux(num_instances=2, classifier_fn=odd_or_even)\n        >>> list(dp1)\n        [0, 2, 4]\n        >>> list(dp2)\n        [1, 3]\n        >>> # It can also filter out any element that gets `None` from the `classifier_fn`\n        >>> def odd_or_even_no_zero(n):\n        ...     return n % 2 if n != 0 else None\n        >>> dp1, dp2 = source_dp.demux(num_instances=2, classifier_fn=odd_or_even_no_zero, drop_none=True)\n        >>> list(dp1)\n        [2, 4]\n        >>> list(dp2)\n        [1, 3]\n    "
+        }
+    },
+    "TorchDataEval/5": {
+        "original_query": "Clone the source datapipe two times",
+        "retrieved_APIs": {
+            "API_1": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_2": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_3": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_4": "DataFrameMaker(source_dp: torch.utils.data.dataset.IterDataPipe[~T_co], dataframe_size: int = 1000, dtype=None, columns: Union[List[str], NoneType] = None, device: str = ''): Takes rows of data, batches a number of them together and creates `TorchArrow` DataFrames (functional name: ``dataframe``).",
+            "API_5": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\nsource_dp = IterableWrapper(range(5))\n\ndp1, dp2 =",
+        "code_completion": [
+            " Forker(source_dp, 2)",
+            " source_dp.fork(num_instances=2)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Forker'\n}\n\n\ndef check():\n    assert list(dp1) == [0, 1, 2, 3, 4]\n    assert list(dp2) == [0, 1, 2, 3, 4]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Clone the source two times",
+            "Clone the datapipe two times"
+        ],
+        "gold_APIs": {
+            "1400023": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000):\n    Creates multiple instances of the same Iterable DataPipe (functional name: ``fork``).\n\n    Args:\n        datapipe: Iterable DataPipe being copied\n        num_instances: number of instances of the datapipe to create\n        buffer_size: this restricts how far ahead the leading child DataPipe\n           can read relative to the slowest child DataPipe.\n           Defaults to ``1000``. Use ``-1`` for the unlimited buffer.\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper(range(5))\n        >>> dp1, dp2 = source_dp.fork(num_instances=2)\n        >>> list(dp1)\n        [0, 1, 2, 3, 4]\n        >>> list(dp2)\n        [0, 1, 2, 3, 4]\n    "
+        }
+    },
+    "TorchDataEval/6": {
+        "original_query": "Putting two IterDataPipes together based on their key.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "IterDataPipe(*args, **kwds): Iterable-style DataPipe.",
+            "API_3": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_4": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None): Zips two IterDataPipes together based on the matching key.",
+            "API_5": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom operator import itemgetter\n\ndef merge_fn(t1, t2):\n    return t1[1] + t2[1]\ndp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\ndp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\n\nres_dp =",
+        "code_completion": [
+            " dp1.zip_with_iter(dp2, key_fn=itemgetter(0), ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)",
+            " IterKeyZipper(dp1, dp2, key_fn=itemgetter(0), ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IterKeyZipper'\n}\n\n\ndef check():\n    assert list(res_dp) == [('a', 101), ('b', 202), ('c', 303)]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Putting two together based on their key.",
+            "Putting two IterDataPipes together.",
+            "Putting two IterDataPipes based on their key."
+        ],
+        "gold_APIs": {
+            "1400035": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None):\n    Zips two IterDataPipes together based on the matching key (functional name: ``zip_with_iter``). The keys\n    are computed by ``key_fn`` and ``ref_key_fn`` for the two IterDataPipes, respectively. When there isn't a match\n    between the elements of the two IterDataPipes, the element from ``ref_datapipe`` is stored in a buffer. Then, the\n    next element from ``ref_datapipe`` is tried. After a match is found, the ``merge_fn`` determines how they will\n    be combined and returned (a tuple is generated by default).\n\n    Args:\n        source_datapipe: IterKeyZipper will yield data based on the order of this IterDataPipe\n        ref_datapipe: Reference IterDataPipe from which IterKeyZipper will find items\n            with matching key for ``source_datapipe``\n        key_fn: Callable function that will compute keys using elements from ``source_datapipe``\n        ref_key_fn: Callable function that will compute keys using elements from ``ref_datapipe``\n            If it's not specified, the ``key_fn`` will also be applied to elements from ``ref_datapipe``\n        keep_key: Option to yield the matching key along with the items in a tuple,\n            resulting in `(key, merge_fn(item1, item2))`.\n        buffer_size: The size of buffer used to hold key-data pairs from reference DataPipe until a match is found.\n            If it's specified as ``None``, the buffer size is set as infinite.\n        merge_fn: Function that combines the item from ``source_datapipe`` and the item from ``ref_datapipe``,\n            by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(t1, t2):\n        >>>     return t1[1] + t2[1]\n        >>> dp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\n        >>> dp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\n        >>> res_dp = dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n        >>>                            ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/7": {
+        "original_query": "Attach the elements in the source IterDataPipe to the elements in the MapDataPipe.",
+        "retrieved_APIs": {
+            "API_1": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_2": "concat(*args, **kwds): Concatenate multiple Map DataPipes.",
+            "API_3": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_4": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_5": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom torchdata.datapipes.map import SequenceWrapper\nfrom operator import itemgetter\n\ndef merge_fn(tuple_from_iter, value_from_map):\n    return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\ndp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\nmapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n\nres_dp =",
+        "code_completion": [
+            " dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)",
+            " MapKeyZipper(dp1, mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'MapKeyZipper'\n}\n\n\ndef check():\n    assert list(res_dp) == [('a', 101), ('b', 202), ('c', 303)]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Attach the elements to the MapDataPipe.",
+            "Attach the elements in the source IterDataPipe.",
+            "Attach the elements in the source IterDataPipe to the elements.",
+            "Attach the elements in the source IterDataPipe to the elements in the MapDataPipe."
+        ],
+        "gold_APIs": {
+            "1400039": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None):\n    Joins the items from the source IterDataPipe with items from a MapDataPipe (functional name: ``zip_with_map``).\n    The matching is done by the provided ``key_fn``, which maps an item from ``source_iterdatapipe`` to\n    a key that should exist in the ``map_datapipe``. The return value is created by the ``merge_fn``, which returns\n    a tuple of the two items by default.\n\n    Args:\n        source_iterdatapipe: IterDataPipe from which items are yield and will be combined with an item\n            from ``map_datapipe``\n        map_datapipe: MapDataPipe that takes a key from ``key_fn``, and returns an item\n        key_fn: Function that maps each item from ``source_iterdatapipe`` to a key that exists in ``map_datapipe``\n        merge_fn: Function that combines the item from ``source_iterdatapipe`` and the matching item\n            from ``map_datapipe``, by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from torchdata.datapipes.map import SequenceWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(tuple_from_iter, value_from_map):\n        >>>     return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n        >>> dp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\n        >>> mapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n        >>> res_dp = dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/9": {
+        "original_query": "Take samples from these DataPipes based on their weights with random seed 0, until all of them are exhausted.",
+        "retrieved_APIs": {
+            "API_1": "SampleMultiplexer(*args, **kwds): Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these DataPipes with respect to their weights.",
+            "API_2": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_3": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default.",
+            "API_4": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_5": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper, SampleMultiplexer\n\nsource_dp1 = IterableWrapper([0] * 10)\nsource_dp2 = IterableWrapper([5] * 10)\nweitghts = {source_dp1.cycle(2) : 0.2, source_dp2: 0.1}\n\nsample_mul_dp =",
+        "code_completion": [
+            " SampleMultiplexer(pipes_to_weights_dict=weitghts, seed=0)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'SampleMultiplexer'\n}\n\n\ndef check():\n    assert list(sample_mul_dp) == [5, 5, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 0, 0, 5, 5, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0]",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Take samples from DataPipes based on weights.",
+            "Take samples from these DataPipes.",
+            "Take samples from these DataPipes until exhausted."
+        ],
+        "gold_APIs": {
+            "1400050": "SampleMultiplexer(*args, **kwds):\n    Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these\n    DataPipes with respect to their weights. When individual DataPipes are exhausted, continues to sample from\n    the remaining DataPipes according to their relative weights.\n    If you wish to maintain the same ratio of weights indefinitely, you need to ensure that the\n    inputs are never exhausted, by, for instance, applying ``cycle`` to them.\n\n    Sampling is controlled by the provided random ``seed``. If you don't provide it, the sampling\n    will not be deterministic.\n\n    Args:\n        pipes_to_weights_dict: a `Dict` of IterDataPipes and Weights. The total weight of\n            unexhausted DataPipes will be normalized to 1 for the purpose of sampling.\n        seed: random seed to initialize the random number generator\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, SampleMultiplexer\n        >>> source_dp1 = IterableWrapper([0] * 10)\n        >>> source_dp2 = IterableWrapper([1] * 10)\n        >>> d = {source_dp1: 99999999, source_dp2: 0.0000001}\n        >>> sample_mul_dp = SampleMultiplexer(pipes_to_weights_dict=d, seed=0)\n        >>> list(sample_mul_dp)\n        [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]\n    "
+        }
+    },
+    "TorchDataEval/10": {
+        "original_query": "Unzip the three tuples, and return these elements in separate DataPipes, depending on their location.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_3": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_4": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_5": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\nsource_dp = IterableWrapper([(i, i + 10, i + 20) for i in range(3)])\n\ndp1, dp2, dp3 =",
+        "code_completion": [
+            " source_dp.unzip(sequence_length=3)",
+            " UnZipper(source_dp, sequence_length=3)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'SampleMultiplexer'\n}\n\n\ndef check():\n    assert list(dp1) == [0, 1, 2]\n    assert list(dp2) == [10, 11, 12]\n    assert list(dp3) == [20, 21, 22]",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Unzip the three tuples and return elements in separate DataPipes.",
+            "Return elements in separate DataPipes.",
+            "Unzip the tuples and return elements.",
+            "Return elements in separate DataPipes depending on their location."
+        ],
+        "gold_APIs": {
+            "1400060": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None):\n    Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes\n    based on their position in the Sequence. The number of instances produced equals to the sequence legnth\n    minus the number of columns to skip.\n\n    Note:\n        Each sequence within the DataPipe should have the same length, specified by\n        the input argument `sequence_length`.\n\n    Args:\n        source_datapipe: Iterable DataPipe with sequences of data\n        sequence_length: Length of the sequence within the source_datapipe. All elements should have the same length.\n        buffer_size: this restricts how far ahead the leading child DataPipe can read relative\n            to the slowest child DataPipe. Use -1 for the unlimited buffer.\n        columns_to_skip: optional indices of columns that the DataPipe should skip (each index should be\n            an integer from 0 to sequence_length - 1)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper([(i, i + 10, i + 20) for i in range(3)])\n        >>> dp1, dp2, dp3 = source_dp.unzip(sequence_length=3)\n        >>> list(dp1)\n        [0, 1, 2]\n        >>> list(dp2)\n        [10, 11, 12]\n        >>> list(dp3)\n        [20, 21, 22]\n    "
+        }
+    },
+    "TorchDataEval/11": {
+        "original_query": "Divide datapipes into 3 batches and discard if the last batch is not reached.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_2": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_3": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_4": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_5": "bucketbatch(datapipe: torch.utils.data.dataset.IterDataPipe[+T_co], batch_size: int, drop_last: bool = False, batch_num: int = 100, bucket_num: int = 1, sort_key: Union[Callable, NoneType] = None, in_batch_shuffle: bool = True): Creates mini-batches of data from sorted bucket."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp = IterableWrapper(range(10))\n\ndp =",
+        "code_completion": [
+            " dp.batch(batch_size=3, drop_last=True)",
+            " Batcher(dp, batch_size=3, drop_last=True)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Batcher'\n}\n\n\ndef check():\n    assert list(dp) == [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Divide datapipes into batches and discard if the last batch is not reached.",
+            "Divide datapipes into 3 batches and discard if not reached."
+        ],
+        "gold_APIs": {
+            "1400000": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List):\n    Creates mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n        wrapper_class: wrapper to apply onto each batch (type ``List``) before yielding,\n            defaults to ``DataChunk``\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> dp = dp.batch(batch_size=3, drop_last=True)\n        >>> list(dp)\n        [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n    "
+        }
+    },
+    "TorchDataEval/12": {
+        "original_query": "Create batch datapipe with batch size 3, batch num is 100, and drop the last batch if it is not full. Also, useing the sort_bucket function to sort the bucket, where the bucket_num is 1.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_2": "bucketbatch(datapipe: torch.utils.data.dataset.IterDataPipe[+T_co], batch_size: int, drop_last: bool = False, batch_num: int = 100, bucket_num: int = 1, sort_key: Union[Callable, NoneType] = None, in_batch_shuffle: bool = True): Creates mini-batches of data from sorted bucket.",
+            "API_3": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data.",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "rows2columnar(source_datapipe: IterDataPipe[List[Union[Dict, List]]], column_names: Optional[List[str]] = None): Accepts an input DataPipe with batches of data, and processes one batch at a time and yields a Dict for each batch, with ``column_names`` as keys and lists of corresponding values from each row as values."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nsource_dp = IterableWrapper([3,2,1,6,0,5,4,9,8,7])\n\ndef sort_bucket(bucket):\n    return sorted(bucket)\n\nbatch_dp =",
+        "code_completion": [
+            " source_dp.bucketbatch(\n    batch_size=3, drop_last=True, batch_num=100, bucket_num=1, sort_key=sort_bucket\n)",
+            " BucketBatcher(source_dp, batch_size=3, drop_last=True, batch_num=100, bucket_num=1, sort_key=sort_bucket)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'BucketBatcher'\n}\n\n\ndef check():\n    assert list(batch_dp) == [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Create batch datapipe with batch size 3, batch num is 100, and drop the last batch.",
+            "Use the sort_bucket function to sort the bucket.",
+            "Create batch datapipe with batch size 3, batch num is 100.",
+            "Create batch datapipe with batch size 3, and drop the last batch if it is not full.",
+            "Create batch datapipe with batch size 3."
+        ],
+        "gold_APIs": {
+            "1400002": "bucketbatch(datapipe: torch.utils.data.dataset.IterDataPipe[+T_co], batch_size: int, drop_last: bool = False, batch_num: int = 100, bucket_num: int = 1, sort_key: Union[Callable, NoneType] = None, in_batch_shuffle: bool = True):\n    Creates mini-batches of data from sorted bucket (functional name: ``bucketbatch``). An outer\n    dimension will be added as ``batch_size`` if ``drop_last`` is set to ``True``,\n    or ``length % batch_size`` for the last batch if ``drop_last`` is set to ``False``.\n\n    The purpose of this DataPipe is to batch samples with some similarity according to the sorting function\n    being passed. For an example in the text domain, it may be batching examples with similar number of tokens\n    to minimize padding and to increase throughput.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n        batch_num: Number of batches within a bucket (i.e. `bucket_size = batch_size * batch_num`)\n        bucket_num: Number of buckets to consist a pool for shuffling (i.e. `pool_size = bucket_size * bucket_num`)\n        sort_key: Callable to sort a bucket (list)\n        in_batch_shuffle: iF True, do in-batch shuffle; if False, buffer shuffle\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper(range(10))\n        >>> batch_dp = source_dp.bucketbatch(batch_size=3, drop_last=True)\n        >>> list(batch_dp)\n        [[5, 6, 7], [9, 0, 1], [4, 3, 2]]\n        >>> def sort_bucket(bucket):\n        >>>     return sorted(bucket)\n        >>> batch_dp = source_dp.bucketbatch(\n        >>>     batch_size=3, drop_last=True, batch_num=100,\n        >>>     bucket_num=1, in_batch_shuffle=False, sort_key=sort_bucket\n        >>> )\n        >>> list(batch_dp)\n        [[3, 4, 5], [6, 7, 8], [0, 1, 2]]\n    "
+        }
+    },
+    "TorchDataEval/14": {
+        "original_query": "Group by file name (except extension), we set the buffer size and group size to 3, and the guaranteed group size to 2.",
+        "retrieved_APIs": {
+            "API_1": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False): Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``, and yields a ``DataChunk`` with batch size up to ``group_size`` if defined.",
+            "API_2": "FileLister(*args, **kwds): Given path(s) to the root directory, yields file pathname(s) (path + filename) of files within the root directory.",
+            "API_3": "join(iterable, /): Concatenate any number of strings.",
+            "API_4": "FileOpener(*args, **kwds): Given pathnames, opens files and yield pathname and file stream in a tuple.",
+            "API_5": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe."
+        },
+        "code_prefix": "import os\nfrom torchdata.datapipes.iter import IterableWrapper\n\ndef group_fn(file):\n   return os.path.basename(file).split(\".\")[0]\n\nsource_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n\n\ndp2 =",
+        "code_completion": [
+            " source_dp.groupby(\n    group_key_fn=group_fn, \n    buffer_size=3, \n    group_size=3, \n    guaranteed_group_size=2\n)",
+            " Grouper(\n    source_dp,\n    group_key_fn=group_fn, \n    buffer_size=3, \n    group_size=3, \n    guaranteed_group_size=2\n)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Collator'\n}\n\n\ndef check():\n    assert list(collated_ds) == [torch.tensor(3.), torch.tensor(4.), torch.tensor(5.), torch.tensor(6.)]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Group by file name?",
+            "What is the buffer size and group size?",
+            "What is the guaranteed group size?"
+        ],
+        "gold_APIs": {
+            "1400025": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False):\n    Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``,\n    and yields a ``DataChunk`` with batch size up to ``group_size`` if defined (functional name: ``groupby``).\n\n    The samples are read sequentially from the source ``datapipe``, and a batch of samples belonging to the same group\n    will be yielded as soon as the size of the batch reaches ``group_size``. When the buffer is full,\n    the DataPipe will yield the largest batch with the same key, provided that its size is larger\n    than ``guaranteed_group_size``. If its size is smaller, it will be dropped if ``drop_remaining=True``.\n\n    After iterating through the entirety of source ``datapipe``, everything not dropped due to the buffer capacity\n    will be yielded from the buffer, even if the group sizes are smaller than ``guaranteed_group_size``.\n\n    Args:\n        datapipe: Iterable datapipe to be grouped\n        group_key_fn: Function used to generate group key from the data of the source datapipe\n        buffer_size: The size of buffer for ungrouped data\n        group_size: The max size of each group, a batch is yielded as soon as it reaches this size\n        guaranteed_group_size: The guaranteed minimum group size to be yielded in case the buffer is full\n        drop_remaining: Specifies if the group smaller than ``guaranteed_group_size`` will be dropped from buffer\n            when the buffer is full\n\n    Example:\n        >>> import os\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def group_fn(file):\n        ...    return os.path.basename(file).split(\".\")[0]\n        >>> source_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n        >>> dp0 = source_dp.groupby(group_key_fn=group_fn)\n        >>> list(dp0)\n        [['a.png', 'a.json', 'a.jpg'], ['b.png', 'b.json'], ['c.json']]\n        >>> # A group is yielded as soon as its size equals to `group_size`\n        >>> dp1 = source_dp.groupby(group_key_fn=group_fn, group_size=2)\n        >>> list(dp1)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n        >>> # Scenario where `buffer` is full, and group 'a' needs to be yielded since its size > `guaranteed_group_size`\n        >>> dp2 = source_dp.groupby(group_key_fn=group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2)\n        >>> list(dp2)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n    "
+        }
+    },
+    "TorchDataEval/16": {
+        "original_query": "Using IterableWrapper to the file url and HttpReader to read the file",
+        "retrieved_APIs": {
+            "API_1": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None): Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.",
+            "API_2": "OnlineReader(*args, **kwds): Takes file URLs (can be HTTP URLs pointing to files or URLs to GDrive files), and yields tuples of file URL and IO stream.",
+            "API_3": "FileOpener(*args, **kwds): Given pathnames, opens files and yield pathname and file stream in a tuple.",
+            "API_4": "IoPathFileLister(*args, **kwds): Lists the contents of the directory at the provided ``root`` pathname or URL, and yields the full pathname or URL for each file within the directory.",
+            "API_5": "IoPathFileOpener(*args, **kwds): Opens files from input datapipe which contains pathnames or URLs, and yields a tuple of pathname and opened file stream (functional name: ``open_file_by_iopath``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper, HttpReader\nfile_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n\n\nhttp_reader_dp =",
+        "code_completion": [" HttpReader(IterableWrapper([file_url]))"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IterableWrapper_HttpReader'\n}\n\n\ndef check():\n    assert list(http_reader_dp.readlines()) == list(HttpReader(IterableWrapper([file_url])).readlines())\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Using IterableWrapper to read the file",
+            "Using HttpReader to the file url"
+        ],
+        "gold_APIs": {
+            "1400028": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, HttpReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> http_reader_dp = HttpReader(IterableWrapper([file_url]))\n        >>> reader_dp = http_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    "
+        }
+    },
+    "TorchDataEval/17": {
+        "original_query": "Each item in the source_dp is applied mutiple_fn function and the output is then tiled to a single, unnested one.",
+        "retrieved_APIs": {
+            "API_1": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_2": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_3": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_4": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_5": "Zipper(*args, **kwds): Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndef mutiple_fn(e):\n    return [e, e * 10]\n\nsource_dp = IterableWrapper(list(range(5)))\n\nnew_dp =",
+        "code_completion": [
+            " source_dp.flatmap(mutiple_fn)",
+            " FlatMapper(source_dp, mutiple_fn)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'FlatMapper'\n}\n\n\ndef check():\n    assert list(new_dp) == [0, 0, 1, 10, 2, 20, 3, 30, 4, 40]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Each item in the source_dp is applied function and the output is then tiled to a single, unnested one.",
+            "What is applied to each item in the source_dp and then tiled to a single, unnested one?"
+        ],
+        "gold_APIs": {
+            "1400022": "flatmap(*args, **kwds):\n    Applies a function over each item from the source DataPipe, then\n    flattens the outputs to a single, unnested IterDataPipe (functional name: ``flatmap``).\n\n    Note:\n        The output from ``fn`` must be a Sequence. Otherwise, an error will be raised.\n\n    Args:\n        datapipe: Source IterDataPipe\n        fn: the function to be applied to each element in the DataPipe, the output must be a Sequence\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def fn(e):\n        >>>     return [e, e * 10]\n        >>> source_dp = IterableWrapper(list(range(5)))\n        >>> flatmapped_dp = source_dp.flatmap(fn)\n        >>> list(flatmapped_dp)\n        [0, 0, 1, 10, 2, 20, 3, 30, 4, 40]\n    "
+        }
+    },
+    "TorchDataEval/18": {
+        "original_query": "Method 1 map_dp_1 = dp.map(add_one) Invocation via functional form is preferred Method 2 We discourage the usage of `lambda` functions as they are not serializable with `pickle` Using `lambda` to implement add_two rather than add_one that is mentioned in above.",
+        "retrieved_APIs": {
+            "API_1": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_2": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function.",
+            "API_3": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "IterToMapConverter(*args, **kwds): Lazily load data from ``IterDataPipe`` to construct a ``MapDataPipe`` with the key-value pair generated by ``key_value_fn`` (functional name: ``to_map_datapipe``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndef add_one(x):\n    return x + 1\ndp = IterableWrapper(range(10))\nmap_dp_1 = dp.map(add_one)  \nnew_dp_2 =",
+        "code_completion": [
+            " Mapper(dp, lambda x: x + 2)",
+            " dp.map(lambda x: x + 2)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Mapper'\n}\n\n\ndef check():\n    assert list(new_dp_2) == [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "What is the preferred invocation method for map_dp_1?",
+            "Why do we discourage the usage of `lambda` functions?",
+            "What is the alternative method to implement add_two?",
+            "What is mentioned in the above statement?",
+            "What is the implementation of add_two?"
+        ],
+        "gold_APIs": {
+            "1400041": "map(*args, **kwds):\n    Apply the input function over each item from the source DataPipe (functional name: ``map``).\n    The function can be any regular Python function or partial object. Lambda\n    function is not recommended as it is not supported by pickle.\n\n    Args:\n        datapipe: Source MapDataPipe\n        fn: Function being applied to each item\n    "
+        }
+    },
+    "TorchDataEval/19": {
+        "original_query": "Filtering by the above function",
+        "retrieved_APIs": {
+            "API_1": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_2": "ShardingFilter(*args, **kwds): Wrapper that allows DataPipe to be sharded (functional name: ``sharding_filter``).",
+            "API_3": "SampleMultiplexer(*args, **kwds): Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these DataPipes with respect to their weights.",
+            "API_4": "map(*args, **kwds): Apply the input function over each item from the source DataPipe.",
+            "API_5": "Decompressor(*args, **kwds): Takes tuples of path and compressed stream of data, and returns tuples of path and decompressed stream of data (functional name: ``decompress``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndef is_even(n):\n    return n % 2 == 0\ndp = IterableWrapper(range(5))\n\nnew_dp =",
+        "code_completion": [
+            " dp.filter(filter_fn=is_even)",
+            " Filter(dp, filter_fn=is_even)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Filter'\n}\n\n\ndef check():\n    assert list(new_dp) == [0, 2, 4]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Filtering by the function",
+            "Can you filter?",
+            "Can you provide an example of filtering?",
+            "Can you provide an example of filtering by the function?",
+            "Can you provide an example of filtering by the above function?"
+        ],
+        "gold_APIs": {
+            "1400021": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True):\n    Filters out elements from the source datapipe according to input ``filter_fn`` (functional name: ``filter``).\n\n    Args:\n        datapipe: Iterable DataPipe being filtered\n        filter_fn: Customized function mapping an element to a boolean.\n        drop_empty_batches: By default, drops a batch if it is empty after filtering instead of keeping an empty list\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def is_even(n):\n        ...     return n % 2 == 0\n        >>> dp = IterableWrapper(range(5))\n        >>> filter_dp = dp.filter(filter_fn=is_even)\n        >>> list(filter_dp)\n        [0, 2, 4]\n    "
+        }
+    },
+    "TorchDataEval/20": {
+        "original_query": "How to get the first three elements of a datapipe?",
+        "retrieved_APIs": {
+            "API_1": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_2": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_3": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_4": "IterDataPipe(*args, **kwds): Iterable-style DataPipe.",
+            "API_5": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp = IterableWrapper(range(10))\n\nnew_dp =",
+        "code_completion": [" dp.header(3)", " Header(dp, 3)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Header'\n}\n\n\ndef check():\n    assert list(new_dp) == [0, 1, 2]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "How to get the elements of a datapipe?",
+            "How to get the first elements of a datapipe?",
+            "How to get the three elements of a datapipe?",
+            "How to get the first three elements?",
+            "How to get the elements of a datapipe"
+        ],
+        "gold_APIs": {
+            "1400027": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/21": {
+        "original_query": "Each element in a batch is a `Dict` Takes an input DataPipe with batches of data, processes the batches one and produces a Dict for each batch. We only need the column 'a' from each batch.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_2": "rows2columnar(source_datapipe: IterDataPipe[List[Union[Dict, List]]], column_names: Optional[List[str]] = None): Accepts an input DataPipe with batches of data, and processes one batch at a time and yields a Dict for each batch, with ``column_names`` as keys and lists of corresponding values from each row as values.",
+            "API_3": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_4": "bucketbatch(datapipe: torch.utils.data.dataset.IterDataPipe[+T_co], batch_size: int, drop_last: bool = False, batch_num: int = 100, bucket_num: int = 1, sort_key: Union[Callable, NoneType] = None, in_batch_shuffle: bool = True): Creates mini-batches of data from sorted bucket.",
+            "API_5": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndp = IterableWrapper([[{'a': 1}, {'b': 2, 'a': 1}], [{'a': 2, 'b': 200}, {'b': 2, 'c': 3, 'a': 100}]])\n\nnew_dp =",
+        "code_completion": [
+            " dp.rows2columnar(column_names=['a'])",
+            " Rows2Columnar(dp, column_names=['a'])"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Rows2Columnar'\n}\n\n\ndef check():\n    assert list(new_dp) == list(dp.rows2columnar(column_names=['a']))\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Each element in a batch is a Dict?",
+            "Takes an input DataPipe with batches of data?",
+            "Produces a Dict for each batch?",
+            "We only need the column from each batch?",
+            "What is the column we need from each batch?"
+        ],
+        "gold_APIs": {
+            "1400049": "rows2columnar(source_datapipe: IterDataPipe[List[Union[Dict, List]]], column_names: Optional[List[str]] = None):\n    Accepts an input DataPipe with batches of data, and processes one batch\n    at a time and yields a Dict for each batch, with ``column_names`` as keys and lists of\n    corresponding values from each row as values (functional name: ``rows2columnar``).\n\n    Within the input DataPipe, each row within a batch must either be a `Dict` or a `List`\n\n    Note:\n        If ``column_names`` are not given and each row is a `Dict`, the keys of that Dict will be used as column names.\n\n    Args:\n        source_datapipe: a DataPipe where each item is a batch. Within each batch,\n            there are rows and each row is a `List` or `Dict`\n        column_names: if each element in a batch contains `Dict`, ``column_names`` act as a filter for matching keys;\n            otherwise, these are used as keys to for the generated `Dict` of each batch\n\n    Example:\n        >>> # Each element in a batch is a `Dict`\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper([[{'a': 1}, {'b': 2, 'a': 1}], [{'a': 1, 'b': 200}, {'b': 2, 'c': 3, 'a': 100}]])\n        >>> row2col_dp = dp.rows2columnar()\n        >>> list(row2col_dp)\n        [defaultdict(<class 'list'>, {'a': [1, 1], 'b': [2]}),\n         defaultdict(<class 'list'>, {'a': [1, 100], 'b': [200, 2], 'c': [3]})]\n        >>> row2col_dp = dp.rows2columnar(column_names=['a'])\n        >>> list(row2col_dp)\n        [defaultdict(<class 'list'>, {'a': [1, 1]}),\n         defaultdict(<class 'list'>, {'a': [1, 100]})]\n        >>> # Each element in a batch is a `List`\n        >>> dp = IterableWrapper([[[0, 1, 2, 3], [4, 5, 6, 7]]])\n        >>> row2col_dp = dp.rows2columnar(column_names=[\"1st_in_batch\", \"2nd_in_batch\", \"3rd_in_batch\", \"4th_in_batch\"])\n        >>> list(row2col_dp)\n        [defaultdict(<class 'list'>, {'1st_in_batch': [0, 4], '2nd_in_batch': [1, 5],\n                                      '3rd_in_batch': [2, 6], '4th_in_batch': [3, 7]})]\n    "
+        }
+    },
+    "TorchDataEval/23": {
+        "original_query": "map_dp_1 = dp.map(lambda x: x + 1) Using functional form (recommended) map_dp_2 = Mapper(dp, lambda x: x + 1) Using class constructor Get the mapper datapipe (map_dp_1) batch datas with the batch size of 2.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_2": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_3": "SequenceWrapper(*args, **kwds): Wraps a sequence object into a MapDataPipe.",
+            "API_4": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function.",
+            "API_5": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.map import SequenceWrapper, Mapper\ndp = SequenceWrapper(range(10))\nmap_dp_1 = dp.map(lambda x: x + 1)  map_dp_2 = Mapper(dp, lambda x: x + 1)  \nnew_dp =",
+        "code_completion": [" map_dp_1.batch(batch_size=2)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Batcher'\n}\n\n\ndef check():\n    assert list(new_dp) == [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Using functional form map_dp_2 = Mapper(dp, lambda x: x + 1) Using class constructor Get the mapper datapipe (map_dp_1) batch datas with the batch size of 2.",
+            "Using functional form map_dp_1 = dp.map(lambda x: x + 1) Using class constructor Get the mapper datapipe (map_dp_1) batch datas with the batch size of 2."
+        ],
+        "gold_APIs": {
+            "1400001": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk):\n    Create mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n    "
+        }
+    },
+    "TorchDataEval/24": {
+        "original_query": "Read the URL using the HTTP protocol and process the csv file.",
+        "retrieved_APIs": {
+            "API_1": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None): Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.",
+            "API_2": "parse_csv(source_datapipe: IterDataPipe[Tuple[str, IO]], *, skip_lines: int = 0, decode: bool = True, encoding: str = 'utf-8', errors: str = 'ignore', return_path: bool = False, **fmtparams):\n    Accepts a DataPipe consists of tuples of file name and CSV data stream,\n    reads and returns the contents within the CSV files one row at a time (functional name: ``parse_csv``).\n    Each output is a `List` by default, but it depends on ``fmtparams``.\n\n    Args:\n        source_datapipe: source DataPipe with tuples of file name and CSV data stream\n        skip_lines: number of lines to skip at the beginning of each file\n        strip_newline: if ``True``, the new line character will be stripped\n        decode: if ``True``, this will decode the contents of the file based on the specified ``encoding``\n        encoding: the character encoding of the files (`default='utf-8'`)\n        errors: the error handling scheme used while decoding\n        return_path: if ``True``, each line will return a tuple of path and contents, rather\n            than just the contents\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = IterableWrapper([\"1.csv\", \"empty.csv\", \"empty2.csv\"])\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> csv_parser_dp = datapipe3.parse_csv()\n        >>> list(csv_parser_dp)\n        [['key', 'item'], ['a', '1'], ['b', '2'], []]\n    ",
+            "API_3": "Saver(*args, **kwds): Takes in a DataPipe of tuples of metadata and data, saves the data to the target path generated by the ``filepath_fn`` and metadata, and yields file path on local file system (functional name: ``save_to_disk``).",
+            "API_4": "StreamWrapper(file_obj): StreamWrapper is introduced to wrap file handler generated by DataPipe operation like `FileOpener`.",
+            "API_5": "IoPathSaver(*args, **kwds): Takes in a DataPipe of tuples of metadata and data, saves the data to the target path which is generated by the ``filepath_fn`` and metadata, and yields the resulting path in `iopath` format (functional name: ``save_by_iopath``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import HttpReader\nURL = \"https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv\"\n\nag_news_train =",
+        "code_completion": [" HttpReader([URL]).parse_csv()"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'HttpReader_CSVParser'\n}\n\n\ndef check():\n    assert list(ag_news_train) == list(HttpReader([URL]).parse_csv())\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Read the URL and process the file.",
+            "Process the csv file using the HTTP protocol.",
+            "Read the csv file using the HTTP protocol.",
+            "Read the URL and process the csv file.",
+            "Process the file using the HTTP protocol."
+        ],
+        "gold_APIs": {
+            "1400004": "parse_csv(source_datapipe: IterDataPipe[Tuple[str, IO]], *, skip_lines: int = 0, decode: bool = True, encoding: str = 'utf-8', errors: str = 'ignore', return_path: bool = False, **fmtparams):\n    Accepts a DataPipe consists of tuples of file name and CSV data stream,\n    reads and returns the contents within the CSV files one row at a time (functional name: ``parse_csv``).\n    Each output is a `List` by default, but it depends on ``fmtparams``.\n\n    Args:\n        source_datapipe: source DataPipe with tuples of file name and CSV data stream\n        skip_lines: number of lines to skip at the beginning of each file\n        strip_newline: if ``True``, the new line character will be stripped\n        decode: if ``True``, this will decode the contents of the file based on the specified ``encoding``\n        encoding: the character encoding of the files (`default='utf-8'`)\n        errors: the error handling scheme used while decoding\n        return_path: if ``True``, each line will return a tuple of path and contents, rather\n            than just the contents\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = IterableWrapper([\"1.csv\", \"empty.csv\", \"empty2.csv\"])\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> csv_parser_dp = datapipe3.parse_csv()\n        >>> list(csv_parser_dp)\n        [['key', 'item'], ['a', '1'], ['b', '2'], []]\n    ",
+            "1400028": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, HttpReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> http_reader_dp = HttpReader(IterableWrapper([file_url]))\n        >>> reader_dp = http_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    "
+        }
+    },
+    "TorchDataEval/25": {
+        "original_query": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want.",
+        "retrieved_APIs": {
+            "API_1": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_2": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None): Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.",
+            "API_3": "parse_csv(source_datapipe: IterDataPipe[Tuple[str, IO]], *, skip_lines: int = 0, decode: bool = True, encoding: str = 'utf-8', errors: str = 'ignore', return_path: bool = False, **fmtparams):\n    Accepts a DataPipe consists of tuples of file name and CSV data stream,\n    reads and returns the contents within the CSV files one row at a time (functional name: ``parse_csv``).\n    Each output is a `List` by default, but it depends on ``fmtparams``.\n\n    Args:\n        source_datapipe: source DataPipe with tuples of file name and CSV data stream\n        skip_lines: number of lines to skip at the beginning of each file\n        strip_newline: if ``True``, the new line character will be stripped\n        decode: if ``True``, this will decode the contents of the file based on the specified ``encoding``\n        encoding: the character encoding of the files (`default='utf-8'`)\n        errors: the error handling scheme used while decoding\n        return_path: if ``True``, each line will return a tuple of path and contents, rather\n            than just the contents\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = IterableWrapper([\"1.csv\", \"empty.csv\", \"empty2.csv\"])\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> csv_parser_dp = datapipe3.parse_csv()\n        >>> list(csv_parser_dp)\n        [['key', 'item'], ['a', '1'], ['b', '2'], []]\n    ",
+            "API_4": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_5": "DataFrameMaker(source_dp: torch.utils.data.dataset.IterDataPipe[~T_co], dataframe_size: int = 1000, dtype=None, columns: Union[List[str], NoneType] = None, device: str = ''): Takes rows of data, batches a number of them together and creates `TorchArrow` DataFrames (functional name: ``dataframe``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import HttpReader\nURL = \"https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv\"\nlambda_func_ = lambda t: (int(t[0]), \" \".join(t[1:]))\nag_news_train =",
+        "code_completion": [" HttpReader([URL]).parse_csv().map(lambda_func_)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'HttpReader_CSVParser_Mapper'\n}\n\n\ndef check():\n    assert list(ag_news_train) == list(HttpReader([URL]).parse_csv().map(lambda_func_))\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Read the URL using the protocol and process the file.",
+            "Map the datapipe using to get what we want."
+        ],
+        "gold_APIs": {
+            "1400004": "parse_csv(source_datapipe: IterDataPipe[Tuple[str, IO]], *, skip_lines: int = 0, decode: bool = True, encoding: str = 'utf-8', errors: str = 'ignore', return_path: bool = False, **fmtparams):\n    Accepts a DataPipe consists of tuples of file name and CSV data stream,\n    reads and returns the contents within the CSV files one row at a time (functional name: ``parse_csv``).\n    Each output is a `List` by default, but it depends on ``fmtparams``.\n\n    Args:\n        source_datapipe: source DataPipe with tuples of file name and CSV data stream\n        skip_lines: number of lines to skip at the beginning of each file\n        strip_newline: if ``True``, the new line character will be stripped\n        decode: if ``True``, this will decode the contents of the file based on the specified ``encoding``\n        encoding: the character encoding of the files (`default='utf-8'`)\n        errors: the error handling scheme used while decoding\n        return_path: if ``True``, each line will return a tuple of path and contents, rather\n            than just the contents\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = IterableWrapper([\"1.csv\", \"empty.csv\", \"empty2.csv\"])\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> csv_parser_dp = datapipe3.parse_csv()\n        >>> list(csv_parser_dp)\n        [['key', 'item'], ['a', '1'], ['b', '2'], []]\n    ",
+            "1400028": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, HttpReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> http_reader_dp = HttpReader(IterableWrapper([file_url]))\n        >>> reader_dp = http_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    ",
+            "1400041": "map(*args, **kwds):\n    Apply the input function over each item from the source DataPipe (functional name: ``map``).\n    The function can be any regular Python function or partial object. Lambda\n    function is not recommended as it is not supported by pickle.\n\n    Args:\n        datapipe: Source MapDataPipe\n        fn: Function being applied to each item\n    "
+        }
+    },
+    "TorchDataEval/26": {
+        "original_query": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want. How to get all batches from a datapipe with batch size 2? Furthermore, the batches should be mapped using lambda_batch.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_2": "bucketbatch(datapipe: torch.utils.data.dataset.IterDataPipe[+T_co], batch_size: int, drop_last: bool = False, batch_num: int = 100, bucket_num: int = 1, sort_key: Union[Callable, NoneType] = None, in_batch_shuffle: bool = True): Creates mini-batches of data from sorted bucket.",
+            "API_3": "SequenceWrapper(*args, **kwds): Wraps a sequence object into a MapDataPipe.",
+            "API_4": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_5": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import HttpReader\n\nURL = \"https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv\"\nlambda_func_ = lambda t: (int(t[0]), \" \".join(t[1:]))\nag_news_train = HttpReader([URL]).parse_csv().map(lambda_func_)\nlambda_batch = lambda batch: {'labels': [sample[0] for sample in batch],\\\n                                      'text': [sample[1].split() for sample in batch]}\nagn_batches =",
+        "code_completion": [" ag_news_train.batch(2).map(lambda_batch)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'HttpReader_CSVParser_Mapper_Batcher'\n}\n\n\ndef check():\n    assert list(agn_batches) == list(ag_news_train.batch(2).map(lambda_batch))\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "How to get all batches from a datapipe?",
+            "How to map the datapipe using lambda_func_?",
+            "How to get all batches with batch size 2?",
+            "How to map the batches using lambda_batch?",
+            "How to process the csv file?"
+        ],
+        "gold_APIs": {
+            "1400001": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk):\n    Create mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n    ",
+            "1400041": "map(*args, **kwds):\n    Apply the input function over each item from the source DataPipe (functional name: ``map``).\n    The function can be any regular Python function or partial object. Lambda\n    function is not recommended as it is not supported by pickle.\n\n    Args:\n        datapipe: Source MapDataPipe\n        fn: Function being applied to each item\n    "
+        }
+    },
+    "TorchDataEval/27": {
+        "original_query": "Augument the datapipe with repeat three times and sample the data.",
+        "retrieved_APIs": {
+            "API_1": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    ",
+            "API_2": "SampleMultiplexer(*args, **kwds): Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these DataPipes with respect to their weights.",
+            "API_3": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_4": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_5": "Sampler(*args, **kwds): Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper, Sampler\ndp = IterableWrapper(range(3))\n\ndp =",
+        "code_completion": [" Sampler(dp.cycle(5))"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Sampler_Cycler'\n}\n\n\ndef check():\n    assert list(dp) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Augment the datapipe with repeat and sample the data.",
+            "Sample the data."
+        ],
+        "gold_APIs": {
+            "1400051": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    ",
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/28": {
+        "original_query": "First we concatenate two datapipes and then repeat the concatenated datapipe three times.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_3": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_4": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_5": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndp1 = IterableWrapper(range(3))\ndp2 = IterableWrapper(range(5))\n\n\ndp =",
+        "code_completion": [" Concater(dp1, dp2).cycle(3)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Concater_Cycler'\n}\n\n\ndef check():\n    assert list(dp) == [0, 1, 2, 0, 1, 2, 3, 4, 0, 1, 2, 0, 1, 2, 3, 4, 0, 1, 2, 0, 1, 2, 3, 4]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Concatenate two datapipes and repeat three times.",
+            "What is the process of concatenating two datapipes and repeating the concatenated datapipe three times?"
+        ],
+        "gold_APIs": {
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/29": {
+        "original_query": "According to the merge_fn, we zip the above two datapipes and keep the key True. Whatsmore, cycle the zipped datapipe three times.",
+        "retrieved_APIs": {
+            "API_1": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None): Zips two IterDataPipes together based on the matching key.",
+            "API_2": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_3": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "ZipArchiveLoader(*args, **kwds): Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom operator import itemgetter\n\ndef merge_fn(t1, t2):\n    return t1[1] + t2[1]\n\ndp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\ndp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\nres_dp =",
+        "code_completion": [
+            " dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n                           ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn).cycle(3)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IterKeyZipper_Cycler'\n}\n\n\ndef check():\n    assert list(res_dp) == [('a', 101), ('b', 202), ('c', 303), ('a', 101), ('b', 202), ('c', 303), ('a', 101), ('b', 202), ('c', 303)]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "According to the merge_fn, we zip the datapipes and keep the key True.",
+            "Cycle the zipped datapipe three times."
+        ],
+        "gold_APIs": {
+            "1400035": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None):\n    Zips two IterDataPipes together based on the matching key (functional name: ``zip_with_iter``). The keys\n    are computed by ``key_fn`` and ``ref_key_fn`` for the two IterDataPipes, respectively. When there isn't a match\n    between the elements of the two IterDataPipes, the element from ``ref_datapipe`` is stored in a buffer. Then, the\n    next element from ``ref_datapipe`` is tried. After a match is found, the ``merge_fn`` determines how they will\n    be combined and returned (a tuple is generated by default).\n\n    Args:\n        source_datapipe: IterKeyZipper will yield data based on the order of this IterDataPipe\n        ref_datapipe: Reference IterDataPipe from which IterKeyZipper will find items\n            with matching key for ``source_datapipe``\n        key_fn: Callable function that will compute keys using elements from ``source_datapipe``\n        ref_key_fn: Callable function that will compute keys using elements from ``ref_datapipe``\n            If it's not specified, the ``key_fn`` will also be applied to elements from ``ref_datapipe``\n        keep_key: Option to yield the matching key along with the items in a tuple,\n            resulting in `(key, merge_fn(item1, item2))`.\n        buffer_size: The size of buffer used to hold key-data pairs from reference DataPipe until a match is found.\n            If it's specified as ``None``, the buffer size is set as infinite.\n        merge_fn: Function that combines the item from ``source_datapipe`` and the item from ``ref_datapipe``,\n            by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(t1, t2):\n        >>>     return t1[1] + t2[1]\n        >>> dp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\n        >>> dp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\n        >>> res_dp = dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n        >>>                            ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    ",
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/30": {
+        "original_query": "We zipp the above two data pipes and set keep_key to True according to merge_fn. Also, enumerating the zipped datapipe.",
+        "retrieved_APIs": {
+            "API_1": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None): Zips two IterDataPipes together based on the matching key.",
+            "API_2": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_3": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_4": "ZipArchiveLoader(*args, **kwds): Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``).",
+            "API_5": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom operator import itemgetter\n\ndef merge_fn(t1, t2):\n    return t1[1] * t2[1]\n\ndp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\ndp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\nres_dp =",
+        "code_completion": [
+            " dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n                           ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn).enumerate()"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IterKeyZipper_Enumerator'\n}\n\n\ndef check():\n    assert list(res_dp) == [(0, ('a', 100)), (1, ('b', 400)), (2, ('c', 900))]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "We zipp the data pipes and set keep_key to True according to merge_fn.",
+            "Enumerating the zipped datapipe."
+        ],
+        "gold_APIs": {
+            "1400035": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None):\n    Zips two IterDataPipes together based on the matching key (functional name: ``zip_with_iter``). The keys\n    are computed by ``key_fn`` and ``ref_key_fn`` for the two IterDataPipes, respectively. When there isn't a match\n    between the elements of the two IterDataPipes, the element from ``ref_datapipe`` is stored in a buffer. Then, the\n    next element from ``ref_datapipe`` is tried. After a match is found, the ``merge_fn`` determines how they will\n    be combined and returned (a tuple is generated by default).\n\n    Args:\n        source_datapipe: IterKeyZipper will yield data based on the order of this IterDataPipe\n        ref_datapipe: Reference IterDataPipe from which IterKeyZipper will find items\n            with matching key for ``source_datapipe``\n        key_fn: Callable function that will compute keys using elements from ``source_datapipe``\n        ref_key_fn: Callable function that will compute keys using elements from ``ref_datapipe``\n            If it's not specified, the ``key_fn`` will also be applied to elements from ``ref_datapipe``\n        keep_key: Option to yield the matching key along with the items in a tuple,\n            resulting in `(key, merge_fn(item1, item2))`.\n        buffer_size: The size of buffer used to hold key-data pairs from reference DataPipe until a match is found.\n            If it's specified as ``None``, the buffer size is set as infinite.\n        merge_fn: Function that combines the item from ``source_datapipe`` and the item from ``ref_datapipe``,\n            by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(t1, t2):\n        >>>     return t1[1] + t2[1]\n        >>> dp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\n        >>> dp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\n        >>> res_dp = dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n        >>>                            ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/31": {
+        "original_query": "Zipping the above two data pipes and set keep_key to True according to merge_fn. Moreover, transform its type to List and get the first element.",
+        "retrieved_APIs": {
+            "API_1": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None): Zips two IterDataPipes together based on the matching key.",
+            "API_2": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_3": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data.",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom operator import itemgetter\n\ndef merge_fn(t1, t2):\n    return t1[1] * t2[1]\n\ndp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\ndp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\nres_dp =",
+        "code_completion": [
+            " list(dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n                           ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn))[0]"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IterKeyZipper_List'\n}\n\n\ndef check():\n    assert res_dp == ('a', 100)\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Zipping the data pipes and set keep_key to True according to merge_fn.",
+            "Transform its type to List and get the first element."
+        ],
+        "gold_APIs": {
+            "1400035": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None):\n    Zips two IterDataPipes together based on the matching key (functional name: ``zip_with_iter``). The keys\n    are computed by ``key_fn`` and ``ref_key_fn`` for the two IterDataPipes, respectively. When there isn't a match\n    between the elements of the two IterDataPipes, the element from ``ref_datapipe`` is stored in a buffer. Then, the\n    next element from ``ref_datapipe`` is tried. After a match is found, the ``merge_fn`` determines how they will\n    be combined and returned (a tuple is generated by default).\n\n    Args:\n        source_datapipe: IterKeyZipper will yield data based on the order of this IterDataPipe\n        ref_datapipe: Reference IterDataPipe from which IterKeyZipper will find items\n            with matching key for ``source_datapipe``\n        key_fn: Callable function that will compute keys using elements from ``source_datapipe``\n        ref_key_fn: Callable function that will compute keys using elements from ``ref_datapipe``\n            If it's not specified, the ``key_fn`` will also be applied to elements from ``ref_datapipe``\n        keep_key: Option to yield the matching key along with the items in a tuple,\n            resulting in `(key, merge_fn(item1, item2))`.\n        buffer_size: The size of buffer used to hold key-data pairs from reference DataPipe until a match is found.\n            If it's specified as ``None``, the buffer size is set as infinite.\n        merge_fn: Function that combines the item from ``source_datapipe`` and the item from ``ref_datapipe``,\n            by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(t1, t2):\n        >>>     return t1[1] + t2[1]\n        >>> dp1 = IterableWrapper([('a', 100), ('b', 200), ('c', 300)])\n        >>> dp2 = IterableWrapper([('a', 1), ('b', 2), ('c', 3), ('d', 4)])\n        >>> res_dp = dp1.zip_with_iter(dp2, key_fn=itemgetter(0),\n        >>>                            ref_key_fn=itemgetter(0), keep_key=True, merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/32": {
+        "original_query": "Using merge_fn to zip the two data pipes. Repeating three times to argument the zipped data pipe.",
+        "retrieved_APIs": {
+            "API_1": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    ",
+            "API_2": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_3": "Zipper(*args, **kwds): Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "ZipArchiveLoader(*args, **kwds): Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom torchdata.datapipes.map import SequenceWrapper\nfrom operator import itemgetter\n\ndef merge_fn(tuple_from_iter, value_from_map):\n    return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n\ndp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\nmapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n\nres_dp =",
+        "code_completion": [
+            " dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn).cycle(3)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'MapKeyZipper_Cycler'\n}\n\n\ndef check():\n    assert list(res_dp) == [('a', 101), ('b', 202), ('c', 303), ('a', 101), ('b', 202), ('c', 303), ('a', 101), ('b', 202), ('c', 303)]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Using merge_fn to zip the two data pipes.",
+            "Repeating three times to argument the zipped data pipe."
+        ],
+        "gold_APIs": {
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    ",
+            "1400039": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None):\n    Joins the items from the source IterDataPipe with items from a MapDataPipe (functional name: ``zip_with_map``).\n    The matching is done by the provided ``key_fn``, which maps an item from ``source_iterdatapipe`` to\n    a key that should exist in the ``map_datapipe``. The return value is created by the ``merge_fn``, which returns\n    a tuple of the two items by default.\n\n    Args:\n        source_iterdatapipe: IterDataPipe from which items are yield and will be combined with an item\n            from ``map_datapipe``\n        map_datapipe: MapDataPipe that takes a key from ``key_fn``, and returns an item\n        key_fn: Function that maps each item from ``source_iterdatapipe`` to a key that exists in ``map_datapipe``\n        merge_fn: Function that combines the item from ``source_iterdatapipe`` and the matching item\n            from ``map_datapipe``, by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from torchdata.datapipes.map import SequenceWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(tuple_from_iter, value_from_map):\n        >>>     return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n        >>> dp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\n        >>> mapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n        >>> res_dp = dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/33": {
+        "original_query": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe. Finally, we convert the result type to a list and take the second element of each tuple.",
+        "retrieved_APIs": {
+            "API_1": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_2": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None): Zips two IterDataPipes together based on the matching key.",
+            "API_3": "Zipper(*args, **kwds): Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).",
+            "API_4": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_5": "ZipArchiveLoader(*args, **kwds): Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``)."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom torchdata.datapipes.map import SequenceWrapper\nfrom operator import itemgetter\n\ndef merge_fn(tuple_from_iter, value_from_map):\n    return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n\ndp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\nmapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n\nres_dp =",
+        "code_completion": [
+            " list(dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn).cycle(3))[1]"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'MapKeyZipper_Cycler_List'\n}\n\n\ndef check():\n    assert res_dp == ('b', 202)\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Using merge_fn to zip the two data pipes and repeating three times to argument the zipped data pipe.",
+            "Convert the result type to a list and take the second element of each tuple."
+        ],
+        "gold_APIs": {
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    ",
+            "1400039": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None):\n    Joins the items from the source IterDataPipe with items from a MapDataPipe (functional name: ``zip_with_map``).\n    The matching is done by the provided ``key_fn``, which maps an item from ``source_iterdatapipe`` to\n    a key that should exist in the ``map_datapipe``. The return value is created by the ``merge_fn``, which returns\n    a tuple of the two items by default.\n\n    Args:\n        source_iterdatapipe: IterDataPipe from which items are yield and will be combined with an item\n            from ``map_datapipe``\n        map_datapipe: MapDataPipe that takes a key from ``key_fn``, and returns an item\n        key_fn: Function that maps each item from ``source_iterdatapipe`` to a key that exists in ``map_datapipe``\n        merge_fn: Function that combines the item from ``source_iterdatapipe`` and the matching item\n            from ``map_datapipe``, by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from torchdata.datapipes.map import SequenceWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(tuple_from_iter, value_from_map):\n        >>>     return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n        >>> dp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\n        >>> mapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n        >>> res_dp = dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/34": {
+        "original_query": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe, and then sampling the result. Finally, we convert the result type to a list and take the third element of each tuple.",
+        "retrieved_APIs": {
+            "API_1": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    ",
+            "API_2": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None): Joins the items from the source IterDataPipe with items from a MapDataPipe.",
+            "API_3": "Zipper(*args, **kwds): Aggregates elements into a tuple from each of the input DataPipes (functional name: ``zip``).",
+            "API_4": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk): Create mini-batches of data.",
+            "API_5": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom torchdata.datapipes.map import SequenceWrapper\nfrom torchdata.datapipes.iter import Sampler\nfrom operator import itemgetter\n\ndef merge_fn(tuple_from_iter, value_from_map):\n    return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n\ndp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\nmapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n\nres_dp =",
+        "code_completion": [
+            " list(Sampler(dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn).cycle(3)))[2]"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'MapKeyZipper_Cycler_Sampler_List'\n}\n\n\ndef check():\n    assert res_dp == 2\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Using merge_fn to zip the two data pipes and repeating three times to argument the zipped data pipe?",
+            "What is the result of using merge_fn to zip the two data pipes and repeating three times to argument the zipped data pipe?",
+            "How can we convert the result type to a list and take the third element of each tuple?",
+            "What is the purpose of using merge_fn to zip the two data pipes and repeating three times to argument the zipped data pipe?"
+        ],
+        "gold_APIs": {
+            "1400051": "Sampler(*args, **kwds):\n    Generates sample elements using the provided ``Sampler`` (defaults to :class:`SequentialSampler`).\n\n    Args:\n        datapipe: IterDataPipe to sample from\n        sampler: Sampler class to generate sample elements from input DataPipe.\n            Default is :class:`SequentialSampler` for IterDataPipe\n    ",
+            "1400008": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(3))\n        >>> dp = dp.cycle(2)\n        >>> list(dp)\n        [0, 1, 2, 0, 1, 2]\n    ",
+            "1400039": "zip_with_map(source_iterdatapipe: IterDataPipe, map_datapipe: MapDataPipe, key_fn: Callable, merge_fn: Optional[Callable] = None):\n    Joins the items from the source IterDataPipe with items from a MapDataPipe (functional name: ``zip_with_map``).\n    The matching is done by the provided ``key_fn``, which maps an item from ``source_iterdatapipe`` to\n    a key that should exist in the ``map_datapipe``. The return value is created by the ``merge_fn``, which returns\n    a tuple of the two items by default.\n\n    Args:\n        source_iterdatapipe: IterDataPipe from which items are yield and will be combined with an item\n            from ``map_datapipe``\n        map_datapipe: MapDataPipe that takes a key from ``key_fn``, and returns an item\n        key_fn: Function that maps each item from ``source_iterdatapipe`` to a key that exists in ``map_datapipe``\n        merge_fn: Function that combines the item from ``source_iterdatapipe`` and the matching item\n            from ``map_datapipe``, by default a tuple is created\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> from torchdata.datapipes.map import SequenceWrapper\n        >>> from operator import itemgetter\n        >>> def merge_fn(tuple_from_iter, value_from_map):\n        >>>     return tuple_from_iter[0], tuple_from_iter[1] + value_from_map\n        >>> dp1 = IterableWrapper([('a', 1), ('b', 2), ('c', 3)])\n        >>> mapdp = SequenceWrapper({'a': 100, 'b': 200, 'c': 300, 'd': 400})\n        >>> res_dp = dp1.zip_with_map(map_datapipe=mapdp, key_fn=itemgetter(0), merge_fn=merge_fn)\n        >>> list(res_dp)\n        [('a', 101), ('b', 202), ('c', 303)]\n    "
+        }
+    },
+    "TorchDataEval/35": {
+        "original_query": "Group the files by their file name using the group_fn function. Then, reserving the length of group result greater than 1.",
+        "retrieved_APIs": {
+            "API_1": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False): Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``, and yields a ``DataChunk`` with batch size up to ``group_size`` if defined.",
+            "API_2": "FileLister(*args, **kwds): Given path(s) to the root directory, yields file pathname(s) (path + filename) of files within the root directory.",
+            "API_3": "FileOpener(*args, **kwds): Given pathnames, opens files and yield pathname and file stream in a tuple.",
+            "API_4": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_5": "join(iterable, /): Concatenate any number of strings."
+        },
+        "code_prefix": "import os\nfrom torchdata.datapipes.iter import IterableWrapper\n\ndef group_fn(file):\n   return os.path.basename(file).split(\".\")[0]\n\nsource_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n\ndp0 =",
+        "code_completion": [
+            " source_dp.groupby(group_key_fn=group_fn).filter(lambda x: len(x) > 1)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Grouper_Filter'\n}\n\n\ndef check():\n    assert list(dp0) == [['a.png', 'a.json', 'a.jpg'], ['b.png', 'b.json']]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Group the files using the function.",
+            "Reserve the length of group result greater than 1."
+        ],
+        "gold_APIs": {
+            "1400021": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True):\n    Filters out elements from the source datapipe according to input ``filter_fn`` (functional name: ``filter``).\n\n    Args:\n        datapipe: Iterable DataPipe being filtered\n        filter_fn: Customized function mapping an element to a boolean.\n        drop_empty_batches: By default, drops a batch if it is empty after filtering instead of keeping an empty list\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def is_even(n):\n        ...     return n % 2 == 0\n        >>> dp = IterableWrapper(range(5))\n        >>> filter_dp = dp.filter(filter_fn=is_even)\n        >>> list(filter_dp)\n        [0, 2, 4]\n    ",
+            "1400025": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False):\n    Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``,\n    and yields a ``DataChunk`` with batch size up to ``group_size`` if defined (functional name: ``groupby``).\n\n    The samples are read sequentially from the source ``datapipe``, and a batch of samples belonging to the same group\n    will be yielded as soon as the size of the batch reaches ``group_size``. When the buffer is full,\n    the DataPipe will yield the largest batch with the same key, provided that its size is larger\n    than ``guaranteed_group_size``. If its size is smaller, it will be dropped if ``drop_remaining=True``.\n\n    After iterating through the entirety of source ``datapipe``, everything not dropped due to the buffer capacity\n    will be yielded from the buffer, even if the group sizes are smaller than ``guaranteed_group_size``.\n\n    Args:\n        datapipe: Iterable datapipe to be grouped\n        group_key_fn: Function used to generate group key from the data of the source datapipe\n        buffer_size: The size of buffer for ungrouped data\n        group_size: The max size of each group, a batch is yielded as soon as it reaches this size\n        guaranteed_group_size: The guaranteed minimum group size to be yielded in case the buffer is full\n        drop_remaining: Specifies if the group smaller than ``guaranteed_group_size`` will be dropped from buffer\n            when the buffer is full\n\n    Example:\n        >>> import os\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def group_fn(file):\n        ...    return os.path.basename(file).split(\".\")[0]\n        >>> source_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n        >>> dp0 = source_dp.groupby(group_key_fn=group_fn)\n        >>> list(dp0)\n        [['a.png', 'a.json', 'a.jpg'], ['b.png', 'b.json'], ['c.json']]\n        >>> # A group is yielded as soon as its size equals to `group_size`\n        >>> dp1 = source_dp.groupby(group_key_fn=group_fn, group_size=2)\n        >>> list(dp1)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n        >>> # Scenario where `buffer` is full, and group 'a' needs to be yielded since its size > `guaranteed_group_size`\n        >>> dp2 = source_dp.groupby(group_key_fn=group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2)\n        >>> list(dp2)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n    "
+        }
+    },
+    "TorchDataEval/37": {
+        "original_query": "First get the head 2 elements Second make the datapipe tensor-like by using `collate_fn`",
+        "retrieved_APIs": {
+            "API_1": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function.",
+            "API_2": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_3": "concat(*args, **kwds): Concatenate multiple Map DataPipes.",
+            "API_4": "IterToMapConverter(*args, **kwds): Lazily load data from ``IterDataPipe`` to construct a ``MapDataPipe`` with the key-value pair generated by ``key_value_fn`` (functional name: ``to_map_datapipe``).",
+            "API_5": "MapDataPipe(*args, **kwds): Map-style DataPipe."
+        },
+        "code_prefix": "import torch\nclass MyIterDataPipe(torch.utils.data.IterDataPipe):\n    def __init__(self, start, end):\n        super(MyIterDataPipe).__init__()\n        assert end > start, \"this example code only works with end >= start\"\n        self.start = start\n        self.end = end\n\n    def __iter__(self):\n        return iter(range(self.start, self.end))\n\n    def __len__(self):\n        return self.end - self.start\nds = MyIterDataPipe(start=3, end=7)\n\ndef collate_fn(batch):\n    return torch.tensor(batch, dtype=torch.float)\n\ncollated_ds =",
+        "code_completion": [" Collator(ds.header(2), collate_fn=collate_fn)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Collator_Header'\n}\n\n\ndef check():\n    assert list(collated_ds) == [torch.tensor(3.), torch.tensor(4.)]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "First get the elements",
+            "Make the tensor-like by using `collate_fn`"
+        ],
+        "gold_APIs": {
+            "1400027": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/38": {
+        "original_query": "Filter the value smaller than 5 Second make the datapipe tensor-like by using `collate_fn`",
+        "retrieved_APIs": {
+            "API_1": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function.",
+            "API_2": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_3": "map(*args, **kwds): Apply the input function over each item from the source DataPipe.",
+            "API_4": "ShardingFilter(*args, **kwds): Wrapper that allows DataPipe to be sharded (functional name: ``sharding_filter``).",
+            "API_5": "IterToMapConverter(*args, **kwds): Lazily load data from ``IterDataPipe`` to construct a ``MapDataPipe`` with the key-value pair generated by ``key_value_fn`` (functional name: ``to_map_datapipe``)."
+        },
+        "code_prefix": "import torch\nclass MyIterDataPipe(torch.utils.data.IterDataPipe):\n    def __init__(self, start, end):\n        super(MyIterDataPipe).__init__()\n        assert end > start, \"this example code only works with end >= start\"\n        self.start = start\n        self.end = end\n\n    def __iter__(self):\n        return iter(range(self.start, self.end))\n\n    def __len__(self):\n        return self.end - self.start\nds = MyIterDataPipe(start=3, end=7)\n\ndef collate_fn(batch):\n    return torch.tensor(batch, dtype=torch.float)\n\ncollated_ds =",
+        "code_completion": [
+            " Collator(ds.filter(lambda x: x < 5), collate_fn=collate_fn)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Collator_Filter'\n}\n\n\ndef check():\n    assert list(collated_ds) == [torch.tensor(3.), torch.tensor(4.)]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Filter the value smaller than Second make the datapipe tensor-like by using `collate_fn`",
+            "Filter the value smaller than 5 Second make the datapipe tensor-like by using",
+            "Filter the value smaller than 5 Second make the datapipe tensor-like",
+            "Filter the value smaller than 5 Second make the datapipe",
+            "Filter the value smaller than 5 Second make"
+        ],
+        "gold_APIs": {
+            "1400021": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True):\n    Filters out elements from the source datapipe according to input ``filter_fn`` (functional name: ``filter``).\n\n    Args:\n        datapipe: Iterable DataPipe being filtered\n        filter_fn: Customized function mapping an element to a boolean.\n        drop_empty_batches: By default, drops a batch if it is empty after filtering instead of keeping an empty list\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def is_even(n):\n        ...     return n % 2 == 0\n        >>> dp = IterableWrapper(range(5))\n        >>> filter_dp = dp.filter(filter_fn=is_even)\n        >>> list(filter_dp)\n        [0, 2, 4]\n    "
+        }
+    },
+    "TorchDataEval/40": {
+        "original_query": "Split the source datapipe into two datapipes by applying the function `great_than_5`",
+        "retrieved_APIs": {
+            "API_1": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_2": "concat(*args, **kwds): Concatenate multiple Map DataPipes.",
+            "API_3": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_4": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_5": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndef great_than_5(x: int):\n    return x > 5\n\nsource_dp = IterableWrapper(range(10))\n\ndp_one, dp_two =",
+        "code_completion": [
+            " source_dp.demux(num_instances=2, classifier_fn=great_than_5)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Demultiplexer'\n}\n\n\ndef check():\n    assert list(dp_one) == [0, 1, 2, 3, 4, 5]\n    assert list(dp_two) == [6, 7, 8, 9]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Split the source datapipe into two datapipes.",
+            "Split the datapipe by applying the function `great_than_5`.",
+            "Split the source datapipe into two.",
+            "Split the datapipe by applying `great_than_5`.",
+            "Split the source datapipe."
+        ],
+        "gold_APIs": {
+            "1400012": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000):\n    Splits the input DataPipe into multiple child DataPipes, using the given\n    classification function (functional name: ``demux``). A list of the child DataPipes is returned from this operation.\n\n    Args:\n        datapipe: Iterable DataPipe being filtered\n        num_instances: number of instances of the DataPipe to create\n        classifier_fn: a function that maps values to an integer within the range ``[0, num_instances - 1]`` or ``None``\n        drop_none: defaults to ``False``, if ``True``, the function will skip over elements classified as ``None``\n        buffer_size: this defines the maximum number of inputs that the buffer can hold across all child\n            DataPipes while waiting for their values to be yielded.\n            Defaults to ``1000``. Use ``-1`` for the unlimited buffer.\n\n    Examples:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def odd_or_even(n):\n        ...     return n % 2\n        >>> source_dp = IterableWrapper(range(5))\n        >>> dp1, dp2 = source_dp.demux(num_instances=2, classifier_fn=odd_or_even)\n        >>> list(dp1)\n        [0, 2, 4]\n        >>> list(dp2)\n        [1, 3]\n        >>> # It can also filter out any element that gets `None` from the `classifier_fn`\n        >>> def odd_or_even_no_zero(n):\n        ...     return n % 2 if n != 0 else None\n        >>> dp1, dp2 = source_dp.demux(num_instances=2, classifier_fn=odd_or_even_no_zero, drop_none=True)\n        >>> list(dp1)\n        [2, 4]\n        >>> list(dp2)\n        [1, 3]\n    "
+        }
+    },
+    "TorchDataEval/41": {
+        "original_query": "Given the weight, how to sample from two datapipes? Note that the sample seed is set to 1 for reproducibility",
+        "retrieved_APIs": {
+            "API_1": "SampleMultiplexer(*args, **kwds): Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these DataPipes with respect to their weights.",
+            "API_2": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``.",
+            "API_3": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default.",
+            "API_4": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_5": "map(*args, **kwds): Apply the input function over each item from the source DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\nfrom torchdata.datapipes.iter import SampleMultiplexer\n\ndp1 = IterableWrapper([1, 2, 3, 4, 5, 6])\ndp2 = IterableWrapper([7, 8, 9, 10, 11, 12])\nweight_ = {\n    dp1: 0.8, \n    dp2: 0.2\n}\n\nresult_dp =",
+        "code_completion": [
+            " SampleMultiplexer(pipes_to_weights_dict=weight_, seed=1)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'SampleMultiplexer'\n}\n\n\ndef check():\n    assert list(result_dp) == [1, 7, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "How to sample from two datapipes?",
+            "Given the weight, how to sample?",
+            "How to sample from two datapipes with sample seed set to 1?",
+            "How to sample from two datapipes with reproducibility?",
+            "How to sample from two datapipes with sample seed set to 1?"
+        ],
+        "gold_APIs": {
+            "1400050": "SampleMultiplexer(*args, **kwds):\n    Takes a `Dict` of (IterDataPipe, Weight), and yields items by sampling from these\n    DataPipes with respect to their weights. When individual DataPipes are exhausted, continues to sample from\n    the remaining DataPipes according to their relative weights.\n    If you wish to maintain the same ratio of weights indefinitely, you need to ensure that the\n    inputs are never exhausted, by, for instance, applying ``cycle`` to them.\n\n    Sampling is controlled by the provided random ``seed``. If you don't provide it, the sampling\n    will not be deterministic.\n\n    Args:\n        pipes_to_weights_dict: a `Dict` of IterDataPipes and Weights. The total weight of\n            unexhausted DataPipes will be normalized to 1 for the purpose of sampling.\n        seed: random seed to initialize the random number generator\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, SampleMultiplexer\n        >>> source_dp1 = IterableWrapper([0] * 10)\n        >>> source_dp2 = IterableWrapper([1] * 10)\n        >>> d = {source_dp1: 99999999, source_dp2: 0.0000001}\n        >>> sample_mul_dp = SampleMultiplexer(pipes_to_weights_dict=d, seed=0)\n        >>> list(sample_mul_dp)\n        [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]\n    "
+        }
+    },
+    "TorchDataEval/42": {
+        "original_query": "I would like assgin dp1 to be a datapipe that contains the first column of raw_dp and dp2 to be a datapipe that contains the second column of raw_dp and dp3 to be a datapipe that contains the third column of raw_dp How to do this?",
+        "retrieved_APIs": {
+            "API_1": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_2": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_3": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_4": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_5": "concat(*args, **kwds): Concatenate multiple Map DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\nraw_dp = IterableWrapper([(0, 10, 20), (1, 11, 21), (2, 12, 22)])\ndp1, dp2, dp3 =",
+        "code_completion": [" raw_dp.unzip(sequence_length=3)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'UnZipper'\n}\n\n\ndef check():\n    assert list(dp1) == [0, 1, 2]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "How to assign dp1 as a datapipe?",
+            "How to assign dp2 as a datapipe?",
+            "How to assign dp3 as a datapipe?"
+        ],
+        "gold_APIs": {
+            "1400060": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None):\n    Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes\n    based on their position in the Sequence. The number of instances produced equals to the sequence legnth\n    minus the number of columns to skip.\n\n    Note:\n        Each sequence within the DataPipe should have the same length, specified by\n        the input argument `sequence_length`.\n\n    Args:\n        source_datapipe: Iterable DataPipe with sequences of data\n        sequence_length: Length of the sequence within the source_datapipe. All elements should have the same length.\n        buffer_size: this restricts how far ahead the leading child DataPipe can read relative\n            to the slowest child DataPipe. Use -1 for the unlimited buffer.\n        columns_to_skip: optional indices of columns that the DataPipe should skip (each index should be\n            an integer from 0 to sequence_length - 1)\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper([(i, i + 10, i + 20) for i in range(3)])\n        >>> dp1, dp2, dp3 = source_dp.unzip(sequence_length=3)\n        >>> list(dp1)\n        [0, 1, 2]\n        >>> list(dp2)\n        [10, 11, 12]\n        >>> list(dp3)\n        [20, 21, 22]\n    "
+        }
+    },
+    "TorchDataEval/43": {
+        "original_query": "Make a batch operation on the datapipe `dp` of size 3 with droping last batch if it is not full. And then get the first two batches.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    ",
+            "API_3": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data.",
+            "API_4": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_5": "filter(datapipe: IterDataPipe, filter_fn: Callable, drop_empty_batches: bool = True): Filters out elements from the source datapipe according to input ``filter_fn``."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp = IterableWrapper([\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\"])\ndp =",
+        "code_completion": [
+            " dp.batch(batch_size=3, drop_last=True).header(2)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'UnZipper'\n}\n\n\ndef check():\n    assert list(dp) == [['a', 'b', 'c'], ['d', 'e', 'f']]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Make a batch operation on the datapipe of size 3.",
+            "Get the first two batches.",
+            "Drop the last batch if it is not full."
+        ],
+        "gold_APIs": {
+            "1400000": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List):\n    Creates mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n        wrapper_class: wrapper to apply onto each batch (type ``List``) before yielding,\n            defaults to ``DataChunk``\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> dp = dp.batch(batch_size=3, drop_last=True)\n        >>> list(dp)\n        [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n    ",
+            "1400027": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/44": {
+        "original_query": "Batch on data pipe `dp1` of size 4 and discard the last batch if they are not filled, and then obtain the first two batches. Then the above result is concatenated with the datapipe `dp2`.",
+        "retrieved_APIs": {
+            "API_1": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    ",
+            "API_3": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "API_4": "rows2columnar(source_datapipe: IterDataPipe[List[Union[Dict, List]]], column_names: Optional[List[str]] = None): Accepts an input DataPipe with batches of data, and processes one batch at a time and yields a Dict for each batch, with ``column_names`` as keys and lists of corresponding values from each row as values.",
+            "API_5": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp1 = IterableWrapper([\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\"])\ndp2 = IterableWrapper([\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"])\ndp_3 =",
+        "code_completion": [
+            " dp1.batch(batch_size=4, drop_last=True).header(2).concat(dp2)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Batcher_Header_Concater'\n}\n\n\ndef check():\n    assert list(dp_3) == [['a', 'b', 'c', 'd'], ['e', 'f', 'g', 'h'], '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Batch on data pipe of size 4 and discard the last batch if they are not filled, and then obtain the first two batches.",
+            "Then the above result is concatenated with the datapipe."
+        ],
+        "gold_APIs": {
+            "1400000": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List):\n    Creates mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n        wrapper_class: wrapper to apply onto each batch (type ``List``) before yielding,\n            defaults to ``DataChunk``\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> dp = dp.batch(batch_size=3, drop_last=True)\n        >>> list(dp)\n        [[0, 1, 2], [3, 4, 5], [6, 7, 8]]\n    ",
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "1400027": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    "
+        }
+    },
+    "TorchDataEval/45": {
+        "original_query": "Concatenate two datapipes and add corresponding indices with the name `Ids`.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default.",
+            "API_3": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_4": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_5": "add_index(*args, **kwds): Adds an index to an existing Iterable DataPipe with."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndp_source_1 = IterableWrapper([{'a': 1, 'b': 2}, {'c': 3, 'a': 1}])\ndp_source_2 = IterableWrapper([{'d': 10, 'e': 20}, {'f': 30, 'd': 10}])\n\n\nindex_dp =",
+        "code_completion": [
+            " dp_source_1.concat(dp_source_2).add_index(\"Ids\")"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IndexAdder_Concater'\n}\n\n\ndef check():\n    assert list(index_dp) == [{'a': 1, 'b': 2, 'Ids': 0}, {'c': 3, 'a': 1, 'Ids': 1}, {'d': 10, 'e': 20, 'Ids': 2}, {'f': 30, 'd': 10, 'Ids': 3}]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Concatenate two datapipes and add corresponding indices.",
+            "Add corresponding indices with the name `Ids`."
+        ],
+        "gold_APIs": {
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "1400030": "add_index(*args, **kwds):\n    Adds an index to an existing Iterable DataPipe with (functional name: ``add_index``). The row or batch\n    within the DataPipe must have the type `Dict`; otherwise, a `NotImplementedError` will be thrown. The index\n    of the data is set to the provided ``index_name``.\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed, its row/batch must be of type `Dict`\n        index_name: Name of the key to store data index\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper([{'a': 1, 'b': 2}, {'c': 3, 'a': 1}])\n        >>> index_dp = dp.add_index(\"order\")\n        >>> list(index_dp)\n        [{'a': 1, 'b': 2, 'order': 0}, {'c': 3, 'a': 1, 'order': 1}]\n    "
+        }
+    },
+    "TorchDataEval/46": {
+        "original_query": "Join the two data pipes and add an index with the name `Ids`. Then create three copies of the datapipe.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_3": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence.",
+            "API_4": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_5": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp_source_1 = IterableWrapper([{'a': 1, 'b': 2}, {'c': 3, 'a': 1}])\ndp_source_2 = IterableWrapper([{'d': 10, 'e': 20}, {'f': 30, 'd': 10}])\n\nindex_dp1, index_dp2, index_dp3 =",
+        "code_completion": [
+            " dp_source_1.concat(dp_source_2).add_index(\"Ids\").fork(num_instances=3)"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'IndexAdder_Concater_Forker'\n}\n\n\ndef check():\n    assert list(index_dp1) == [{'a': 1, 'b': 2, 'Ids': 0}, {'c': 3, 'a': 1, 'Ids': 1}, {'d': 10, 'e': 20, 'Ids': 2}, {'f': 30, 'd': 10, 'Ids': 3}]\n    assert list(index_dp2) == [{'a': 1, 'b': 2, 'Ids': 0}, {'c': 3, 'a': 1, 'Ids': 1}, {'d': 10, 'e': 20, 'Ids': 2}, {'f': 30, 'd': 10, 'Ids': 3}]\n    assert list(index_dp3) == [{'a': 1, 'b': 2, 'Ids': 0}, {'c': 3, 'a': 1, 'Ids': 1}, {'d': 10, 'e': 20, 'Ids': 2}, {'f': 30, 'd': 10, 'Ids': 3}]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Join the two pipes and add an index with the name `Ids`. Then create three copies of the datapipe.",
+            "Create three copies of the datapipe.",
+            "Join the two data pipes and add an index.",
+            "Join the two data pipes and create three copies.",
+            "Add an index with the name `Ids`."
+        ],
+        "gold_APIs": {
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "1400023": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000):\n    Creates multiple instances of the same Iterable DataPipe (functional name: ``fork``).\n\n    Args:\n        datapipe: Iterable DataPipe being copied\n        num_instances: number of instances of the datapipe to create\n        buffer_size: this restricts how far ahead the leading child DataPipe\n           can read relative to the slowest child DataPipe.\n           Defaults to ``1000``. Use ``-1`` for the unlimited buffer.\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper(range(5))\n        >>> dp1, dp2 = source_dp.fork(num_instances=2)\n        >>> list(dp1)\n        [0, 1, 2, 3, 4]\n        >>> list(dp2)\n        [0, 1, 2, 3, 4]\n    ",
+            "1400030": "add_index(*args, **kwds):\n    Adds an index to an existing Iterable DataPipe with (functional name: ``add_index``). The row or batch\n    within the DataPipe must have the type `Dict`; otherwise, a `NotImplementedError` will be thrown. The index\n    of the data is set to the provided ``index_name``.\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed, its row/batch must be of type `Dict`\n        index_name: Name of the key to store data index\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper([{'a': 1, 'b': 2}, {'c': 3, 'a': 1}])\n        >>> index_dp = dp.add_index(\"order\")\n        >>> list(index_dp)\n        [{'a': 1, 'b': 2, 'order': 0}, {'c': 3, 'a': 1, 'order': 1}]\n    "
+        }
+    },
+    "TorchDataEval/47": {
+        "original_query": "Join the three data pipes and obtain the enumerated datapipe.",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenate multiple Map DataPipes.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_3": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_4": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_5": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp_source_1 = IterableWrapper([{'a': 1, 'b': 2}, {'c': 3, 'a': 1}])\ndp_source_2 = IterableWrapper([{'d': 10, 'e': 20}, {'f': 30, 'd': 10}])\ndp_source_3 = IterableWrapper([{'g': 100, 'h': 200}, {'i': 300, 'g': 100}])\n\n\nnew_dp =",
+        "code_completion": [" dp_source_1.concat(dp_source_2).enumerate()"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'Concater_Enumerator'\n}\n\n\ndef check():\n    assert list(new_dp) == [(0, {'a': 1, 'b': 2}), (1, {'c': 3, 'a': 1}), (2, {'d': 10, 'e': 20}), (3, {'f': 30, 'd': 10})]\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Join the three pipes and obtain the enumerated datapipe.",
+            "Obtain the enumerated datapipe by joining the three data pipes."
+        ],
+        "gold_APIs": {
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "1400014": "enumerate(*args, **kwds):\n    Adds an index to an existing DataPipe through enumeration, with\n    the index starting from 0 by default (functional name: ``enumerate``).\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed\n        starting_index: Index from which enumeration will start\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(['a', 'b', 'c'])\n        >>> enum_dp = dp.enumerate()\n        >>> list(enum_dp)\n        [(0, 'a'), (1, 'b'), (2, 'c')]\n    "
+        }
+    },
+    "TorchDataEval/48": {
+        "original_query": "I want to augment the source datapipe with the above function, which will return nine elements. Then we flatten the nine elements into a single datapipe.",
+        "retrieved_APIs": {
+            "API_1": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_2": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_3": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes.",
+            "API_4": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_5": "IterDataPipe(*args, **kwds): Iterable-style DataPipe."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndef flatted_func(x):\n    return [x, x+\"_1\", x+\"_2\"]\n\nsource_dp = IterableWrapper([\"a\", \"b\", \"c\"])\nnew_dp =",
+        "code_completion": [" source_dp.flatmap(flatted_func)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'FlatMapper'\n}\n\n\ndef check():\n    assert list(new_dp) == ['a', 'a_1', 'a_2', 'b', 'b_1', 'b_2', 'c', 'c_1', 'c_2']\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "I want to augment the source datapipe with the function.",
+            "We flatten the elements into a single datapipe."
+        ],
+        "gold_APIs": {
+            "1400022": "flatmap(*args, **kwds):\n    Applies a function over each item from the source DataPipe, then\n    flattens the outputs to a single, unnested IterDataPipe (functional name: ``flatmap``).\n\n    Note:\n        The output from ``fn`` must be a Sequence. Otherwise, an error will be raised.\n\n    Args:\n        datapipe: Source IterDataPipe\n        fn: the function to be applied to each element in the DataPipe, the output must be a Sequence\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def fn(e):\n        >>>     return [e, e * 10]\n        >>> source_dp = IterableWrapper(list(range(5)))\n        >>> flatmapped_dp = source_dp.flatmap(fn)\n        >>> list(flatmapped_dp)\n        [0, 0, 1, 10, 2, 20, 3, 30, 4, 40]\n    "
+        }
+    },
+    "TorchDataEval/49": {
+        "original_query": "Read the URL using the HTTP protocol and parse the csv file as a dictionary.",
+        "retrieved_APIs": {
+            "API_1": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None): Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.",
+            "API_2": "OnlineReader(*args, **kwds): Takes file URLs (can be HTTP URLs pointing to files or URLs to GDrive files), and yields tuples of file URL and IO stream.",
+            "API_3": "Extractor(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Tuple[str, io.IOBase]], file_type: Union[str, torchdata.datapipes.iter.util.decompressor.CompressionType, NoneType] = None): Please use ``Decompressor`` or ``.",
+            "API_4": "GDriveReader(*args, **kwds): Takes URLs pointing at GDrive files, and yields tuples of file name and IO stream.",
+            "API_5": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import HttpReader\n\nAG_NEWS_CSV_URL = \"https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv\"\n\nag_news_train =",
+        "code_completion": [
+            " HttpReader([AG_NEWS_CSV_URL]).parse_csv_as_dict()"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'HttpReader_CSVDictParser'\n}\n\n\ndef check():\n    assert list(ag_news_train) == list(HttpReader([AG_NEWS_CSV_URL]).parse_csv_as_dict())\n\n\n",
+        "annotation": {
+            "answerable": true,
+            "reason_for_unanswerable": "na"
+        },
+        "corrupted_query": [
+            "Read the URL and parse the csv file as a dictionary.",
+            "Parse the csv file as a dictionary.",
+            "Read the URL using the HTTP protocol.",
+            "Read the URL and parse the csv file.",
+            "Parse the csv file."
+        ],
+        "gold_APIs": {
+            "1400003": "parse_csv_as_dict(*args, **kwds):\n    Accepts a DataPipe consists of tuples of file name and CSV data stream, reads and returns the contents\n    within the CSV files one row at a time (functional name: ``parse_csv_as_dict``).\n\n    Each output is a `Dict` by default, but it depends on ``fmtparams``. The first row of each file, unless skipped,\n    will be used as the header; the contents of the header row will be used as keys for the `Dict`\\s\n    generated from the remaining rows.\n\n    Args:\n        source_datapipe: source DataPipe with tuples of file name and CSV data stream\n        skip_lines: number of lines to skip at the beginning of each file\n        strip_newline: if ``True``, the new line character will be stripped\n        decode: if ``True``, this will decode the contents of the file based on the specified ``encoding``\n        encoding: the character encoding of the files (`default='utf-8'`)\n        errors: the error handling scheme used while decoding\n        return_path: if ``True``, each line will return a tuple of path and contents, rather\n            than just the contents\n\n    Example:\n        >>> from torchdata.datapipes.iter import FileLister, FileOpener\n        >>> import os\n        >>> def get_name(path_and_stream):\n        >>>     return os.path.basename(path_and_stream[0]), path_and_stream[1]\n        >>> datapipe1 = FileLister(\".\", \"*.csv\")\n        >>> datapipe2 = FileOpener(datapipe1, mode=\"b\")\n        >>> datapipe3 = datapipe2.map(get_name)\n        >>> csv_dict_parser_dp = datapipe3.parse_csv_as_dict()\n        >>> list(csv_dict_parser_dp)\n        [{'key': 'a', 'item': '1'}, {'key': 'b', 'item': '2'}]\n    ",
+            "1400028": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, HttpReader\n        >>> file_url = \"https://raw.githubusercontent.com/pytorch/data/main/LICENSE\"\n        >>> http_reader_dp = HttpReader(IterableWrapper([file_url]))\n        >>> reader_dp = http_reader_dp.readlines()\n        >>> it = iter(reader_dp)\n        >>> path, line = next(it)\n        >>> path\n        https://raw.githubusercontent.com/pytorch/data/main/LICENSE\n        >>> line\n        b'BSD 3-Clause License'\n    "
+        }
+    },
+    "TorchDataEval/3": {
+        "original_query": "concat two datapipes",
+        "retrieved_APIs": {
+            "API_1": "concat(*args, **kwds): Concatenate multiple Map DataPipes.",
+            "API_2": "MapDataPipe(*args, **kwds): Map-style DataPipe.",
+            "API_3": "IterDataPipe(*args, **kwds): Iterable-style DataPipe.",
+            "API_4": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_5": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\ndp_one, dp_two = IterableWrapper(range(3)), IterableWrapper(range(5))\n\n\nnew_dp =",
+        "code_completion": [" dp_one.concat(dp_two)", " dp_one + dp_two"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'concat'\n}\n\n\ndef check():\n    assert list(new_dp) == [0, 1, 2, 0, 1, 2, 3, 4]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Concat datapipes",
+            "How to concat datapipes?",
+            "How to combine datapipes?",
+            "How to merge datapipes?",
+            "How to join datapipes?"
+        ],
+        "gold_APIs": {
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    "
+        }
+    },
+    "TorchDataEval/8": {
+        "original_query": "One element is generated from each input Iterable DataPipes in turn, until the end when the shortest input DataPipe is used up.",
+        "retrieved_APIs": {
+            "API_1": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_2": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_3": "mux(*datapipes): Yields one element at a time from each of the input Iterable DataPipes.",
+            "API_4": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_5": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\ndp1, dp2 = IterableWrapper(range(3)), IterableWrapper(range(10, 15))\n\nresult =",
+        "code_completion": [" dp1.mux(dp2)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'mux'\n}\n\n\ndef check():\n    assert list(result) == [0, 10, 1, 11, 2, 12, 13, 14]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "One element is generated from each input DataPipes in turn.",
+            "What happens when the shortest input DataPipe is used up?"
+        ],
+        "gold_APIs": {
+            "1400042": "mux(*datapipes):\n    Yields one element at a time from each of the input Iterable DataPipes (functional name: ``mux``). As in,\n    one element from the 1st input DataPipe, then one element from the 2nd DataPipe in the next iteration,\n    and so on. It skips over DataPipes that are exhausted, and ends when all input DataPipes are exhausted.\n\n    Args:\n        datapipes: Iterable DataPipes that will take turn to yield their elements, until they are all exhausted\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp1, dp2, dp3 = IterableWrapper(range(5)), IterableWrapper(range(10, 15)), IterableWrapper(range(20, 25))\n        >>> list(dp1.mux(dp2, dp3))\n        [0, 10, 20, 1, 11, 21, 2, 12, 22, 3, 13, 23, 4, 14, 24]\n    "
+        }
+    },
+    "TorchDataEval/13": {
+        "original_query": "convert integer to float Tensor using `int2tensor`.",
+        "retrieved_APIs": {
+            "API_1": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>): Collates samples from DataPipe to Tensor(s) by a custom collate function.",
+            "API_2": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_3": "Extractor(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Tuple[str, io.IOBase]], file_type: Union[str, torchdata.datapipes.iter.util.decompressor.CompressionType, NoneType] = None): Please use ``Decompressor`` or ``.",
+            "API_4": "DataFrameMaker(source_dp: torch.utils.data.dataset.IterDataPipe[~T_co], dataframe_size: int = 1000, dtype=None, columns: Union[List[str], NoneType] = None, device: str = ''): Takes rows of data, batches a number of them together and creates `TorchArrow` DataFrames (functional name: ``dataframe``).",
+            "API_5": "types(value, names=None, *, module=None, qualname=None, type=None, start=1): An enumeration."
+        },
+        "code_prefix": "import torch\nclass MyIterDataPipe(torch.utils.data.IterDataPipe):\n    def __init__(self, start, end):\n        super(MyIterDataPipe).__init__()\n        assert end > start, \"this example code only works with end >= start\"\n        self.start = start\n        self.end = end\n\n    def __iter__(self):\n        return iter(range(self.start, self.end))\n    def __len__(self):\n        return self.end - self.start\nds = MyIterDataPipe(start=3, end=7)\n\ndef int2tensor(batch):\n    return torch.tensor(batch, dtype=torch.float)\n\n\ncollated_ds =",
+        "code_completion": [" ds.collate(int2tensor)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'collate'\n}\n\n\ndef check():\n    assert list(collated_ds) == [torch.tensor(3.), torch.tensor(4.), torch.tensor(5.), torch.tensor(6.)]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Convert using `int2tensor`.",
+            "Convert integer to float Tensor."
+        ],
+        "gold_APIs": {
+            "1400005": "collate(datapipe: IterDataPipe, collate_fn: Callable = <function default_collate>):\n    Collates samples from DataPipe to Tensor(s) by a custom collate function (functional name: ``collate``).\n    By default, it uses :func:`torch.utils.data.default_collate`.\n\n    .. note::\n        While writing a custom collate function, you can import :func:`torch.utils.data.default_collate` for the\n        default behavior and `functools.partial` to specify any additional arguments.\n\n    Args:\n        datapipe: Iterable DataPipe being collated\n        collate_fn: Customized collate function to collect and combine data or a batch of data.\n            Default function collates to Tensor(s) based on data type.\n\n    Example: Convert integer data to float Tensor\n        >>> class MyIterDataPipe(torch.utils.data.IterDataPipe):\n        ...     def __init__(self, start, end):\n        ...         super(MyIterDataPipe).__init__()\n        ...         assert end > start, \"this example code only works with end >= start\"\n        ...         self.start = start\n        ...         self.end = end\n        ...\n        ...     def __iter__(self):\n        ...         return iter(range(self.start, self.end))\n        ...\n        ...     def __len__(self):\n        ...         return self.end - self.start\n        ...\n        >>> ds = MyIterDataPipe(start=3, end=7)\n        >>> print(list(ds))\n        [3, 4, 5, 6]\n        >>> def collate_fn(batch):\n        ...     return torch.tensor(batch, dtype=torch.float)\n        ...\n        >>> collated_ds = CollateIterDataPipe(ds, collate_fn=collate_fn)\n        >>> print(list(collated_ds))\n        [tensor(3.), tensor(4.), tensor(5.), tensor(6.)]\n    "
+        }
+    },
+    "TorchDataEval/15": {
+        "original_query": "Does the unbatch processing of data, the level is setted by default to 1.",
+        "retrieved_APIs": {
+            "API_1": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1): Undoes batching of data.",
+            "API_2": "cycle(*args, **kwds): Cycles the specified input in perpetuity by default, or for the specified number of times.",
+            "API_3": "flatmap(*args, **kwds): Applies a function over each item from the source DataPipe, then flattens the outputs to a single, unnested IterDataPipe.",
+            "API_4": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_5": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper\n\nsource_dp = IterableWrapper([[[0, 1], [2]], [[3, 4], [5]], [[6]]])\n\ndp2 =",
+        "code_completion": [" source_dp.unbatch(1)", " source_dp.unbatch()"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'unbatch'\n}\n\n\ndef check():\n    assert list(dp2) == [[0, 1], [2], [3, 4], [5], [6]]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Does the processing of data, the level is setted by default to 1.",
+            "Does the unbatch processing of data, the level is setted by default."
+        ],
+        "gold_APIs": {
+            "1400059": "unbatch(datapipe: IterDataPipe, unbatch_level: int = 1):\n    Undoes batching of data (functional name: ``unbatch``). In other words, it flattens the data up to the specified level\n    within a batched DataPipe.\n\n    Args:\n        datapipe: Iterable DataPipe being un-batched\n        unbatch_level: Defaults to ``1`` (only flattening the top level). If set to ``2``,\n            it will flatten the top two levels, and ``-1`` will flatten the entire DataPipe.\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> source_dp = IterableWrapper([[[0, 1], [2]], [[3, 4], [5]], [[6]]])\n        >>> dp1 = source_dp.unbatch()\n        >>> list(dp1)\n        [[0, 1], [2], [3, 4], [5], [6]]\n        >>> dp2 = source_dp.unbatch(unbatch_level=2)\n        >>> list(dp2)\n        [0, 1, 2, 3, 4, 5, 6]\n    "
+        }
+    },
+    "TorchDataEval/22": {
+        "original_query": "generating bytes where the chunk is set to one.",
+        "retrieved_APIs": {
+            "API_1": "StreamReader(datapipe, chunk=None): Given IO streams and their label names, yields bytes with label name in a tuple.",
+            "API_2": "fork(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, buffer_size: int = 1000): Creates multiple instances of the same Iterable DataPipe.",
+            "API_3": "batch(datapipe: IterDataPipe, batch_size: int, drop_last: bool = False, wrapper_class=List): Creates mini-batches of data.",
+            "API_4": "XzFileLoader(*args, **kwds): Decompresses xz (lzma) binary streams from an Iterable DataPipe which contains tuples of path name and xy binary streams, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_xz``).",
+            "API_5": "unzip(source_datapipe: torch.utils.data.dataset.IterDataPipe[typing.Sequence[~T]], sequence_length: int, buffer_size: int = 1000, columns_to_skip: Union[Sequence[int], NoneType] = None): Takes in a DataPipe of Sequences, unpacks each Sequence, and return the elements in separate DataPipes based on their position in the Sequence."
+        },
+        "code_prefix": "from torchdata.datapipes.iter import IterableWrapper, StreamReader\nfrom io import StringIO\n\ndp = IterableWrapper([(\"alphabet\", StringIO(\"abcde\"))])\n\nresult_dp =",
+        "code_completion": [" StreamReader(dp, chunk=1)"],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'StreamReader'\n}\n\n\ndef check():\n    assert list(result_dp) == [('alphabet', 'a'), ('alphabet', 'b'), ('alphabet', 'c'), ('alphabet', 'd'), ('alphabet', 'e')]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Generating bytes where the chunk is set to?",
+            "Generating bytes where the chunk is set to one?"
+        ],
+        "gold_APIs": {
+            "1400056": "StreamReader(datapipe, chunk=None):\n    Given IO streams and their label names, yields bytes with label name in a tuple.\n\n    Args:\n        datapipe: Iterable DataPipe provides label/URL and byte stream\n        chunk: Number of bytes to be read from stream per iteration.\n            If ``None``, all bytes will be read util the EOF.\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper, StreamReader\n        >>> from io import StringIO\n        >>> dp = IterableWrapper([(\"alphabet\", StringIO(\"abcde\"))])\n        >>> list(StreamReader(dp, chunk=1))\n        [('alphabet', 'a'), ('alphabet', 'b'), ('alphabet', 'c'), ('alphabet', 'd'), ('alphabet', 'e')]\n    "
+        }
+    },
+    "TorchDataEval/39": {
+        "original_query": "Put the above DataPipes into one list obj, and remove the last number from each element (e.g., \"1\" in \"dog1\")",
+        "retrieved_APIs": {
+            "API_1": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_3": "IterDataPipe(*args, **kwds): Iterable-style DataPipe.",
+            "API_4": "enumerate(*args, **kwds): Adds an index to an existing DataPipe through enumeration, with the index starting from 0 by default.",
+            "API_5": "concat(*args, **kwds): Concatenates multiple Iterable DataPipes."
+        },
+        "code_prefix": "import random\nfrom torchdata.datapipes.iter import IterableWrapper\n\ndp_dog = IterableWrapper([\"dog1\", \"dog2\", \"dog3\"])\ndp_cat = IterableWrapper([\"cat1\", \"cat2\", \"cat3\"])\n\ndef remove_final_number(s):\n    return s[:-1]\n\n\nresult =",
+        "code_completion": [
+            " [remove_final_number(s) for s in dp_dog + dp_cat]",
+            " list(dp_dog.concat(dp_cat).map(remove_final_number))"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'concat_map'\n}\n\n\ndef check():\n    assert result == ['dog', 'dog', 'dog', 'cat', 'cat', 'cat']\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Put the above DataPipes into one list obj, and remove the last number from each element?",
+            "Can you put the DataPipes into one list obj?",
+            "Remove the last number from each element of the DataPipes."
+        ],
+        "gold_APIs": {
+            "1400007": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    ",
+            "1400041": "map(*args, **kwds):\n    Apply the input function over each item from the source DataPipe (functional name: ``map``).\n    The function can be any regular Python function or partial object. Lambda\n    function is not recommended as it is not supported by pickle.\n\n    Args:\n        datapipe: Source MapDataPipe\n        fn: Function being applied to each item\n    "
+        }
+    },
+    "TorchDataEval/36": {
+        "original_query": "group by source_dp using the ``group_fn`` function and obtain the header groups by default, assign the result to the new variable ``header_groups``.",
+        "retrieved_APIs": {
+            "API_1": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False): Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``, and yields a ``DataChunk`` with batch size up to ``group_size`` if defined.",
+            "API_2": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10): Yields elements from the source DataPipe from the start, up to the specfied limit.",
+            "API_3": "FileLister(*args, **kwds): Given path(s) to the root directory, yields file pathname(s) (path + filename) of files within the root directory.",
+            "API_4": "map(datapipe: IterDataPipe, fn: Callable, input_col=None, output_col=None): Applies a function over each item from the source DataPipe.",
+            "API_5": "demux(datapipe: torch.utils.data.dataset.IterDataPipe, num_instances: int, classifier_fn: Callable[[+T_co], Union[int, NoneType]], drop_none: bool = False, buffer_size: int = 1000): Splits the input DataPipe into multiple child DataPipes, using the given classification function."
+        },
+        "code_prefix": "import os\nfrom torchdata.datapipes.iter import IterableWrapper\n\ndef group_fn(file):\n   return os.path.basename(file).split(\".\")[0]\n\nsource_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n\n\ndp0 =",
+        "code_completion": [
+            " source_dp.groupby(group_fn).header()\nheader_groups = dp0"
+        ],
+        "test": "\n\nMETADATA = {\n    'author': 'msra-v-dazan',\n    'dataset': 'test',\n    'type': 'groupby_header'\n}\n\n\ndef check():\n    assert list(header_groups) == [['a.png', 'a.json', 'a.jpg'], ['b.png', 'b.json'], ['c.json']]\n\n\n",
+        "annotation": { "answerable": true, "reason_for_unanswerable": "na" },
+        "corrupted_query": [
+            "Group by using the function and obtain the groups by default, assign the result to the new variable.",
+            "Group by using the function and obtain the header groups, assign the result to the new variable."
+        ],
+        "gold_APIs": {
+            "1400025": "groupby(datapipe: IterDataPipe[torch.utils.data.datapipes.iter.grouping.T_co], group_key_fn: Callable, *, buffer_size: int = 10000, group_size: Optional[int] = None, guaranteed_group_size: Optional[int] = None, drop_remaining: bool = False):\n    Groups data from input IterDataPipe by keys which are generated from ``group_key_fn``,\n    and yields a ``DataChunk`` with batch size up to ``group_size`` if defined (functional name: ``groupby``).\n\n    The samples are read sequentially from the source ``datapipe``, and a batch of samples belonging to the same group\n    will be yielded as soon as the size of the batch reaches ``group_size``. When the buffer is full,\n    the DataPipe will yield the largest batch with the same key, provided that its size is larger\n    than ``guaranteed_group_size``. If its size is smaller, it will be dropped if ``drop_remaining=True``.\n\n    After iterating through the entirety of source ``datapipe``, everything not dropped due to the buffer capacity\n    will be yielded from the buffer, even if the group sizes are smaller than ``guaranteed_group_size``.\n\n    Args:\n        datapipe: Iterable datapipe to be grouped\n        group_key_fn: Function used to generate group key from the data of the source datapipe\n        buffer_size: The size of buffer for ungrouped data\n        group_size: The max size of each group, a batch is yielded as soon as it reaches this size\n        guaranteed_group_size: The guaranteed minimum group size to be yielded in case the buffer is full\n        drop_remaining: Specifies if the group smaller than ``guaranteed_group_size`` will be dropped from buffer\n            when the buffer is full\n\n    Example:\n        >>> import os\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> def group_fn(file):\n        ...    return os.path.basename(file).split(\".\")[0]\n        >>> source_dp = IterableWrapper([\"a.png\", \"b.png\", \"a.json\", \"b.json\", \"a.jpg\", \"c.json\"])\n        >>> dp0 = source_dp.groupby(group_key_fn=group_fn)\n        >>> list(dp0)\n        [['a.png', 'a.json', 'a.jpg'], ['b.png', 'b.json'], ['c.json']]\n        >>> # A group is yielded as soon as its size equals to `group_size`\n        >>> dp1 = source_dp.groupby(group_key_fn=group_fn, group_size=2)\n        >>> list(dp1)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n        >>> # Scenario where `buffer` is full, and group 'a' needs to be yielded since its size > `guaranteed_group_size`\n        >>> dp2 = source_dp.groupby(group_key_fn=group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2)\n        >>> list(dp2)\n        [['a.png', 'a.json'], ['b.png', 'b.json'], ['a.jpg'], ['c.json']]\n    ",
+            "1400027": "header(source_datapipe: IterDataPipe[torchdata.datapipes.iter.util.header.T_co], limit: int = 10):\n    Yields elements from the source DataPipe from the start, up to the specfied limit (functional name: ``header``).\n\n    Args:\n        source_datapipe: the DataPipe from which elements will be yielded\n        limit: the number of elements to yield before stopping\n\n    Example:\n        >>> from torchdata.datapipes.iter import IterableWrapper\n        >>> dp = IterableWrapper(range(10))\n        >>> header_dp = dp.header(3)\n        >>> list(header_dp)\n        [0, 1, 2]\n    "
+        }
+    }
+}

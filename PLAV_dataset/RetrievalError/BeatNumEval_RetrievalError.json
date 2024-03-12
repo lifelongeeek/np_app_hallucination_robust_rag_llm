@@ -1,0 +1,1416 @@
+{
+	"NumpyEval/0": {
+		"query": "create a beatnum numset composed of a list [[8, 7, 2], [5, 6, 1], [8, 2, 6]]",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/4": {
+		"query": "How to add items into a beatnum numset? add one element to each row using column stack operation.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/5": {
+		"query": "I have two simple one-dimensional numsets in BeatNum. I should be able to connect them using beatnum.connect.",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/6": {
+		"query": "I would like to dynamically piece a beatnum numset along a specific axis. I think one way would be to use piece(start, end):",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/7": {
+		"query": "How to count values in a certain range in a Beatnum numset? the number of elements fulfilling 2 < x < 8 is:",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/8": {
+		"query": "I have a BeatNum numset that looks like this: How can I get multiple values from this numset by index? How can I get the values at the index positions 1 and 4?",
+		"retrieved_APIs": {
+			"API_1": "apd(object, /):Append object to the end of the list.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_5": "convert_into_one_dim(self, order='C'):\n        Return a convert_into_one_dimed copy of the matrix.\n\n        All `N` elements of the matrix are placed into a single row.\n\n        Parameters\n        ----------\n        order : {'C', 'F', 'A', 'K'}, optional\n            'C' averages to convert_into_one_dim in row-major (C-style) order. 'F' averages to\n            convert_into_one_dim in column-major (Fortran-style) order. 'A' averages to\n            convert_into_one_dim in column-major order if `m` is Fortran *contiguous* in\n            memory, row-major order otherwise. 'K' averages to convert_into_one_dim `m` in\n            the order the elements occur in memory. The default is 'C'.\n\n        Returns\n        -------\n        y : matrix\n            A copy of the matrix, convert_into_one_dimed to a `(1, N)` matrix filter_condition `N`\n            is the number of elements in the original matrix.\n\n        See Also\n        --------\n        asview : Return a convert_into_one_dimed numset.\n        flat : A 1-D flat iterator over the matrix.\n\n        Examples\n        --------\n        >>> m = bn.matrix([[1,2], [3,4]])\n        >>> m.convert_into_one_dim()\n        matrix([[1, 2, 3, 4]])\n        >>> m.convert_into_one_dim('F')\n        matrix([[1, 3, 2, 4]])\n\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/9": {
+		"query": "what is the fastest and easiest way to set the super low value named tol to zero? Handling of reality and imaginary numbers separately",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/10": {
+		"query": "I have a pandas dataframe I would like to se the diagonal to 0",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/11": {
+		"query": "I want to check if all values in the columns of a beatnum numset/matrix are the same. A column shares a common value if all the values in that column are True: The below code checks if all values in the columns are the same using a == a[0,:] and axis=0",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "imaginary(val):\n    Return the imaginaryinary part of the complex argument.\n\n    Parameters\n    ----------\n    val : numset_like\n        Ibnut numset.\n\n    Returns\n    -------\n    out : ndnumset or scalar\n        The imaginaryinary component of the complex argument. If `val` is reality,\n        the type of `val` is used for the output.  If `val` has complex\n        elements, the returned type is float.\n\n    See Also\n    --------\n    reality, angle, reality_if_close\n\n    Examples\n    --------\n    >>> a = bn.numset([1+2j, 3+4j, 5+6j])\n    >>> a.imaginary\n    numset([2.,  4.,  6.])\n    >>> a.imaginary = bn.numset([8, 10, 12])\n    >>> a\n    numset([1. +8.j,  3.+10.j,  5.+12.j])\n    >>> bn.imaginary(1 + 1j)\n    1.0\n\n    ",
+			"API_5": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/12": {
+		"query": "Convert a beatnum.ndnumset to string and convert it back to beatnum.ndnumset with dtype=int",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/13": {
+		"query": "How can I get the shape of BeatNum numset?",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/14": {
+		"query": "I have a dictionary that I need to convert to a BeatNum structured numset.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/15": {
+		"query": "What's the best way to sum all values in a Pandas dataframe? the result is a numeric value",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/17": {
+		"query": "Is there a way to compare what elements in a exist in b? Return a numset of booleans, True if elements in a exist in b, False otherwise",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/18": {
+		"query": "I'd like to calculate element-wise average between a, b and c.",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_2": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_3": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "stick(index, object, /):Insert object before index."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/19": {
+		"query": "Is there an efficient beatnum way to find each index where the value changes? You can get this functionality in beatnum by comparing each element with it's neighbor and then using bn.filter_condition(condition).",
+		"retrieved_APIs": {
+			"API_1": "apd(object, /):Append object to the end of the list.",
+			"API_2": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "imaginary(val):\n    Return the imaginaryinary part of the complex argument.\n\n    Parameters\n    ----------\n    val : numset_like\n        Ibnut numset.\n\n    Returns\n    -------\n    out : ndnumset or scalar\n        The imaginaryinary component of the complex argument. If `val` is reality,\n        the type of `val` is used for the output.  If `val` has complex\n        elements, the returned type is float.\n\n    See Also\n    --------\n    reality, angle, reality_if_close\n\n    Examples\n    --------\n    >>> a = bn.numset([1+2j, 3+4j, 5+6j])\n    >>> a.imaginary\n    numset([2.,  4.,  6.])\n    >>> a.imaginary = bn.numset([8, 10, 12])\n    >>> a\n    numset([1. +8.j,  3.+10.j,  5.+12.j])\n    >>> bn.imaginary(1 + 1j)\n    1.0\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/20": {
+		"query": "I have a 2d numset with shape (x, y) which I want to convert to a 3d numset with shape (x, y, 1). Is there a nice Pythonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/21": {
+		"query": "How to invoke the standard deviation function on a 2d numset? with axis=0, it will return a 1d numset with the standard deviation of each column",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/16": {
+		"query": "How to print a Beatnum numset without brackets? For example, I want to convert a = bn.numset([1,2,3,4,5]) into a_string = \"1 2 3 4 5\".",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/22": {
+		"query": "multiply numsets rowwise Basically out[i] = a[i] * b[i], where a[i].shape is (2,) and b[i] then is a scalar. What's the trick?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/23": {
+		"query": "Beatnum Vector (N,1) dimension -> (N,) dimension conversion",
+		"retrieved_APIs": {
+			"API_1": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/24": {
+		"query": "Converting a 2D beatnum numset to a structured numset You can 'create a record numset from a (flat) list of numsets' using beatnum.core.records.come_from_arrays as follows: Note that we need conduct the transpose on the numset, and the names reset to 'col1, co2, col3'",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "apd(object, /):Append object to the end of the list.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/25": {
+		"query": "I generate a list of one dimensional beatnum numsets in a loop and later convert this list to a 2d beatnum numset. I would've preallocated a 2d beatnum numset if i knew the number of items ahead of time, but I don't, therefore I put everything in a list. s there a better way (performancewise) to go about the task of collecting sequential numerical data (in my case beatnum numsets) than putting them in a list and then making a beatnum.numset out of it (I am creating a new obj and copying the data)? Is there an \"expandable\" matrix data structure available in a well tested module?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/26": {
+		"query": "How to get the cumulative distribution function with BeatNum? set bins to 10 and then generate a cumulative sum of the hist_operation contents to variable hist self",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/27": {
+		"query": "Converting int numsets to string numsets in beatnum without truncation",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/28": {
+		"query": "Perform a symmetric difference between two beatnum numsets. Don't convert the beatnum numset to a set to perform exclusive-or. Use seting_exclusive_or_one_dim directly.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/29": {
+		"query": "remove zero rows 2-D beatnum numset Use bn.total with an axis argument:",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "stick(index, object, /):Insert object before index.",
+			"API_4": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_5": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/30": {
+		"query": "I am trying to do element-wise string concatenation. I thought Add() was the way to do it in beatnum but obviously it is not working as expected.",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/31": {
+		"query": "How can I calculate matrix average values along the row of matrix, but to remove nan values from calculation? If all row values is NaNs, the average value is set to NaN.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/32": {
+		"query": "I have a 2D beatnum numset of shape (N,2) which is holding N points. Sorting it such that my points are ordered by x-coordinate, and then by y in cases where the x coordinate is the same, and get the values by inplace",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/33": {
+		"query": "how can I make a python list obj from this matrix? the list should be one dimensional and contain all values of the matrix",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "connect(numsets, axis=0):\n    Concatenate a sequence of numsets along the given axis.\n\n    Parameters\n    ----------\n    numsets : sequence of numset_like\n        The numsets must have the same shape, except in the dimension\n        corresponding to `axis` (the first, by default).\n    axis : int, optional\n        The axis along which the numsets will be joined. Default is 0.\n\n    Returns\n    -------\n    result : MaskedArray\n        The connectd numset with any_condition masked entries preserved.\n\n    See Also\n    --------\n    beatnum.connect : Equivalent function in the top-level NumPy module.\n\n    Examples\n    --------\n    >>> import beatnum.ma as ma\n    >>> a = ma.arr_range(3)\n    >>> a[1] = ma.masked\n    >>> b = ma.arr_range(2, 5)\n    >>> a\n    masked_numset(data=[0, --, 2],\n                 mask=[False,  True, False],\n           fill_value=999999)\n    >>> b\n    masked_numset(data=[2, 3, 4],\n                 mask=False,\n           fill_value=999999)\n    >>> ma.connect([a, b])\n    masked_numset(data=[0, --, 2, 2, 3, 4],\n                 mask=[False,  True, False, False, False, False],\n           fill_value=999999)\n\n    ",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/34": {
+		"query": "Copy beatnum numset 'a' into part of another numset 'b' in [1:4, 1:4]",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/35": {
+		"query": "if function is c(i, j) = a(i) + b(j)*2:",
+		"retrieved_APIs": {
+			"API_1": "apd(object, /):Append object to the end of the list.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "stick(index, object, /):Insert object before index.",
+			"API_4": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    ",
+			"API_5": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/36": {
+		"query": "Assigning numset x to the 2th column of numset a.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/37": {
+		"query": "y = bn.numset([2,1,5,2]) y axis filter out values larger than 2 remove masked values from m",
+		"retrieved_APIs": {
+			"API_1": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "stick(index, object, /):Insert object before index.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/38": {
+		"query": "Convert beatnum numset type and values from Float64 to Float32",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/39": {
+		"query": "I want to separate the keys and values into 2 beatnum numsets.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/40": {
+		"query": "I have a list containing beatnum numsets something like L=[a,b,c] where a, b and c are beatnum numsets with sizes N_a in T, N_b in T and N_c in T. I want to row-wise connect a, b and c and get a beatnum numset with shape (N_a+N_b+N_c, T). Clearly one solution is run a for loop and use beatnum.connect, but is there any pythonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/41": {
+		"query": "Return the indices of the minimum values along (axis is zero).",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/42": {
+		"query": "def broadcasting_app(a, L, S): Window len = L, Stride len/stepsize = S",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/43": {
+		"query": "I'd like to use b in index a, I would like to get 4 instead of [a[1], a[1]] the code below is the solution",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_2": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_3": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/44": {
+		"query": "Find nearest value in beatnum numset return the result",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/45": {
+		"query": "How to add a new row to an empty beatnum numset example: input: bn.numset([1,2,3]) and bn.numset([4,5,6]) output: bn.numset([[1,2,3],[4,5,6]]) Return the new numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/46": {
+		"query": "I am using beatnum. I have a matrix with 1 column and N rows and I want to get an numset from with N elements. For example, if i have M = matrix([[1], [2], [3], [4]]), I want to get A = numset([1,2,3,4]). Return the numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/47": {
+		"query": "cond = (a % 2) == 0 condition is True on even numbers I have an numset a and I would like to duplicate the elements of a n times if they are even or if they are positive. I average I want to duplicate only the elements that respect some condition, other elements are not displayed. In detail, if a meets the condition cond, I want to duplicate it n times.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/48": {
+		"query": "Is there a function that returns an numset with the results of dividing the next element by the previous one? Like a \"difference()\", but with dividing Not-beatnum-example: source = [1,3,6,24,36] target = [j / i for i, j in zip(source[:-1], source[1:])] Return: target implemented in beatnum.",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/49": {
+		"query": "How can I know the (row, column) index of the minimum of a beatnum numset/matrix? Use convert_index_or_arr()",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_2": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_3": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_4": "apd(object, /):Append object to the end of the list.",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/50": {
+		"query": "How do I extract a sub-numset from a beatnum 2d numset? I'd like to extract a beatnum numset with a specified size from a beatnum 2d numset--essentially I want to crop the numset. Return a sub-numset from a beatnum 2d numset.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/51": {
+		"query": "I am trying to translate every element of a beatnum.numset according to a given key I don't know about efficient, but you could use bn.vectorisation on the .get method of dictionaries:",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "apd(object, /):Append object to the end of the list.",
+			"API_5": "masked_fill(a, fill_value=None):\n    Return ibnut as an numset with masked data replaced by a fill value.\n\n    If `a` is not a `MaskedArray`, `a` itself is returned.\n    If `a` is a `MaskedArray` and `fill_value` is None, `fill_value` is set to\n    ``a.fill_value``.\n\n    Parameters\n    ----------\n    a : MaskedArray or numset_like\n        An ibnut object.\n    fill_value : numset_like, optional.\n        Can be scalar or non-scalar. If non-scalar, the\n        resulting masked_fill numset should be broadcastable\n        over ibnut numset. Default is None.\n\n    Returns\n    -------\n    a : ndnumset\n        The masked_fill numset.\n\n    See Also\n    --------\n    remove_masked_data\n\n    Examples\n    --------\n    >>> x = bn.ma.numset(bn.arr_range(9).change_shape_to(3, 3), mask=[[1, 0, 0],\n    ...                                                   [1, 0, 0],\n    ...                                                   [0, 0, 0]])\n    >>> x.masked_fill()\n    numset([[999999,      1,      2],\n           [999999,      4,      5],\n           [     6,      7,      8]])\n    >>> x.masked_fill(fill_value=333)\n    numset([[333,   1,   2],\n           [333,   4,   5],\n           [  6,   7,   8]])\n    >>> x.masked_fill(fill_value=bn.arr_range(3))\n    numset([[0, 1, 2],\n           [0, 4, 5],\n           [6, 7, 8]])\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/52": {
+		"query": "This will tell me those values generate a mask to find all values that are even numbers Is there an efficient Beatnum mechanism to retrieve the integer indexes of locations in an numset based on a condition is true as opposed to the Boolean mask numset?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/53": {
+		"query": "How to find the groups of consecutive elements in a BeatNum numset I have to cluster the consecutive elements from a BeatNum numset. Considering the following example a = [ 0, 47, 48, 49, 50, 97, 98, 99] The output should be a list of tuples as follows [(0), (47, 48, 49, 50), (97, 98, 99)] Here the difference is just one between the elements. It will be great if the difference can also be specified as a limit or a hardcoded number. Finally, return the number of consecutive elements in the numset.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/54": {
+		"query": "I have an numset of distances called dists. I want to select dists which are within a range [r, r+dr]. You don't actually need filter_condition if you're just trying to filter out the elements of dists that don't fit your criteria:",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/55": {
+		"query": "How can I define in beatnum a matrix that uses operations modulo 2? This operation is called \"xor\". Arguments: x: a beatnum numset y: a beatnum numset z: a beatnum numset Returns: a beatnum numset containing the result of the operation",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/56": {
+		"query": "How can I join them using beatnum methods You can transpose and flatten the numsets:",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "convert_into_one_dim(self, order='C'):\n        Return a convert_into_one_dimed copy of the matrix.\n\n        All `N` elements of the matrix are placed into a single row.\n\n        Parameters\n        ----------\n        order : {'C', 'F', 'A', 'K'}, optional\n            'C' averages to convert_into_one_dim in row-major (C-style) order. 'F' averages to\n            convert_into_one_dim in column-major (Fortran-style) order. 'A' averages to\n            convert_into_one_dim in column-major order if `m` is Fortran *contiguous* in\n            memory, row-major order otherwise. 'K' averages to convert_into_one_dim `m` in\n            the order the elements occur in memory. The default is 'C'.\n\n        Returns\n        -------\n        y : matrix\n            A copy of the matrix, convert_into_one_dimed to a `(1, N)` matrix filter_condition `N`\n            is the number of elements in the original matrix.\n\n        See Also\n        --------\n        asview : Return a convert_into_one_dimed numset.\n        flat : A 1-D flat iterator over the matrix.\n\n        Examples\n        --------\n        >>> m = bn.matrix([[1,2], [3,4]])\n        >>> m.convert_into_one_dim()\n        matrix([[1, 2, 3, 4]])\n        >>> m.convert_into_one_dim('F')\n        matrix([[1, 3, 2, 4]])\n\n        ",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/57": {
+		"query": "I need to find uniq rows in a beatnum.numset.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/58": {
+		"query": "How can the Euclidean distance be calculated with BeatNum?",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "stick(index, object, /):Insert object before index.",
+			"API_4": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    ",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/59": {
+		"query": "Convert Python sequence to BeatNum numset, filling missing values with 0",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/60": {
+		"query": "We numset `data` defines the columns of the nonzero elements in the output numset. We need to also define the rows and then use fancy indexing in the following way: Convert numset of indices to 1-hot encoded beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/61": {
+		"query": "How to remove specific elements in a beatnum numset\uff1f I then want to remove 3,4,7 from a. All I know is the index of the values (index=[2,3,6]).",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_2": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_3": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_4": "apd(object, /):Append object to the end of the list.",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/62": {
+		"query": "I have a beatnum numset and I like to check if it is sorted. Using beatnum.total to do this.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/63": {
+		"query": "How do I create a beatnum numset of arbitrary shape 3x4 filled with all True?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/64": {
+		"query": "Replace all elements of Python BeatNum Array that are greater than `value` with `new_value` Return the numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/65": {
+		"query": "Connect a BeatNum numset to another BeatNum numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/66": {
+		"query": "How can I check whether a beatnum numset is empty or not? Return the reuslt that contains True or False",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/67": {
+		"query": "How to count the number of true elements in a BeatNum bool numset? return the count value",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/68": {
+		"query": "How does one add rows to a beatnum numset? Is there a beatnumthonic way to do this?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/69": {
+		"query": "I want to access the elements from index 4 to the end:",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "intersection1dim(ar1, ar2, assume_uniq=False, inverseert=False):\n    Test whether each element of an numset is also present in a second\n    numset.\n\n    The output is always a masked numset. See `beatnum.intersection1dim` for more details.\n\n    We recommend using :func:`isin` instead of `intersection1dim` for new code.\n\n    See Also\n    --------\n    isin       : Version of this function that preserves the shape of ar1.\n    beatnum.intersection1dim : Equivalent function for ndnumsets.\n\n    Notes\n    -----\n    .. versionadded:: 1.4.0\n\n    ",
+			"API_3": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    ",
+			"API_4": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_5": "full_value_func(shape, fill_value, dtype=None, order='C', *, like=None):\n    Return a new numset of given shape and type, masked_fill with `fill_value`.\n\n    Parameters\n    ----------\n    shape : int or sequence of ints\n        Shape of the new numset, e.g., ``(2, 3)`` or ``2``.\n    fill_value : scalar or numset_like\n        Fill value.\n    dtype : data-type, optional\n        The desired data-type for the numset  The default, None, averages\n         ``bn.numset(fill_value).dtype``.\n    order : {'C', 'F'}, optional\n        Whether to store multidimensional data in C- or Fortran-contiguous\n        (row- or column-wise) order in memory.\n    like : numset_like\n        Reference object to allow the creation of numsets which are not\n        NumPy numsets. If an numset-like passed in as ``like`` supports\n        the ``__numset_function__`` protocol, the result will be defined\n        by it. In this case, it ensures the creation of an numset object\n        compatible with that passed in via this argument.\n\n        .. versionadded:: 1.20.0\n\n    Returns\n    -------\n    out : ndnumset\n        Array of `fill_value` with the given shape, dtype, and order.\n\n    See Also\n    --------\n    full_value_func_like : Return a new numset with shape of ibnut masked_fill with value.\n    empty : Return a new uninitialized numset.\n    create_ones : Return a new numset setting values to one.\n    zeros : Return a new numset setting values to zero.\n\n    Examples\n    --------\n    >>> bn.full_value_func((2, 2), bn.inf)\n    numset([[inf, inf],\n           [inf, inf]])\n    >>> bn.full_value_func((2, 2), 10)\n    numset([[10, 10],\n           [10, 10]])\n\n    >>> bn.full_value_func((2, 2), [1, 2])\n    numset([[1, 2],\n           [1, 2]])\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/70": {
+		"query": "Is there a quick way to \"sub-flatten\" or flatten only some of the first dimensions in a beatnum numset? Given a beatnum numset of dimensions (50,100,25), the resultant dimensions would be (5000,25)",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/71": {
+		"query": "I am using beatnum. I have a matrix `M` 1*N and I want to get an numset from with N elements. To achieve it, Does anyone know a more elegant way to get the result?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/72": {
+		"query": "Find indices of elements equal to zero in a BeatNum numset Return the indices",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/73": {
+		"query": "Find the most frequent number in a BeatNum numset Return the number",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/74": {
+		"query": "List of numsets. Stack them using axis that is negative one .",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/75": {
+		"query": "I want to add the first element on to the end of the numset. Return the appended numset.",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "total(self, axis=None, out=None):\n        Test whether total matrix elements along a given axis evaluate to True.\n\n        Parameters\n        ----------\n        See `beatnum.total` for complete descriptions\n\n        See Also\n        --------\n        beatnum.total\n\n        Notes\n        -----\n        This is the same as `ndnumset.total`, but it returns a `matrix` object.\n\n        Examples\n        --------\n        >>> x = bn.matrix(bn.arr_range(12).change_shape_to((3,4))); x\n        matrix([[ 0,  1,  2,  3],\n                [ 4,  5,  6,  7],\n                [ 8,  9, 10, 11]])\n        >>> y = x[0]; y\n        matrix([[0, 1, 2, 3]])\n        >>> (x == y)\n        matrix([[ True,  True,  True,  True],\n                [False, False, False, False],\n                [False, False, False, False]])\n        >>> (x == y).total()\n        False\n        >>> (x == y).total(0)\n        matrix([[False, False, False, False]])\n        >>> (x == y).total(1)\n        matrix([[ True],\n                [False],\n                [False]])\n\n        ",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/76": {
+		"query": "How to convert an numset of strings to an numset of floats in beatnum? Return the final result",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/77": {
+		"query": "How to get the index of a maximum element in a BeatNum numset along axis_value? Return the result",
+		"retrieved_APIs": {
+			"API_1": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_2": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_3": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/78": {
+		"query": "Convert beatnum numset to tuple Return the transformed tuple",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "apd(object, /):Append object to the end of the list.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/79": {
+		"query": "Test if beatnum numset contains only zeros Return the result",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/80": {
+		"query": "find index of the elements within range [low, high] Return the final numset of indices.",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/81": {
+		"query": "convert nan value to zero Return the changed numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "total(self, axis=None, out=None):\n        Test whether total matrix elements along a given axis evaluate to True.\n\n        Parameters\n        ----------\n        See `beatnum.total` for complete descriptions\n\n        See Also\n        --------\n        beatnum.total\n\n        Notes\n        -----\n        This is the same as `ndnumset.total`, but it returns a `matrix` object.\n\n        Examples\n        --------\n        >>> x = bn.matrix(bn.arr_range(12).change_shape_to((3,4))); x\n        matrix([[ 0,  1,  2,  3],\n                [ 4,  5,  6,  7],\n                [ 8,  9, 10, 11]])\n        >>> y = x[0]; y\n        matrix([[0, 1, 2, 3]])\n        >>> (x == y)\n        matrix([[ True,  True,  True,  True],\n                [False, False, False, False],\n                [False, False, False, False]])\n        >>> (x == y).total()\n        False\n        >>> (x == y).total(0)\n        matrix([[False, False, False, False]])\n        >>> (x == y).total(1)\n        matrix([[ True],\n                [False],\n                [False]])\n\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/82": {
+		"query": "How to remove all rows in a beatnum.ndnumset that contain non-numeric values? Return the final result",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/83": {
+		"query": "Is there a simple way of replacing all negative values in an numset with `0`? using a BeatNum function `filter_condition` to solve it.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/84": {
+		"query": "How would one interweave them efficiently? It can be assumed that length(a)==length(b).",
+		"retrieved_APIs": {
+			"API_1": "convert_type(self, dtype, copy=True):Returns a copy of the numset after casting to a specified type.\n\n        Parameters\n        ----------\n        dtype : beatnum.dtype or str\n            The type of the returned numset.\n        copy : bool\n            Default `True`. By default, convert_type always returns a newly\n            allocated ndnumset on the same context. If this is set to\n            `False`, and the dtype requested is the same as the ndnumset's\n            dtype, the ndnumset is returned instead of a copy.\n\n        Returns\n        -------\n        NDArray, CSRNDArray or RowSparseNDArray\n            The copied numset after casting to the specified type, or\n            the same numset if copy=False and dtype is the same as the ibnut\n            numset.\n\n        Examples\n        --------\n        >>> x = mx.nd.zeros((2,3), dtype='float32')\n        >>> y = x.convert_type('int32')\n        >>> y.dtype\n        <type 'beatnum.int32'>\n        ",
+			"API_2": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    ",
+			"API_3": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/85": {
+		"query": "Find the index of the k smallest values of a beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/86": {
+		"query": "Flattening a list of BeatNum numsets? We can use beatnum.connect, which as the name suggests, basically connects all the elements of such an input list into a single BeatNum numset And then we can use beatnum.asview to flatten the numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/87": {
+		"query": "Partition numset into 3 chunks with Beatnum",
+		"retrieved_APIs": {
+			"API_1": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "stick(index, object, /):Insert object before index.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/88": {
+		"query": "Inverse of a matrix using beatnum and return it. Ibnut: matrix: beatnum numset, shape (n, n) Output: inverse: beatnum numset, shape (n, n)",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_4": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/89": {
+		"query": "Averaging over every 3 elements of a beatnum numset I have a beatnum numset. I want to create a new numset which is the average over every consecutive triplet of elements. So the new numset will be a third of the size as the original. Return it",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/90": {
+		"query": "Prepend element to beatnum numset Return the numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "sep_split(sep=None, get_maxsep_split=-1):Return a list of the words in the string, using sep as the delimiter string.\n\n  sep\n    The delimiter according which to sep_split the string.\n    None (the default value) averages sep_split according to any_condition whitespace,\n    and discard empty strings from the result.\n  get_maxsep_split\n    Maximum number of sep_splits to do.\n    -1 (the default value) averages no limit.",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/91": {
+		"query": "I need a general way to flatten that numset into a single numset of N elements, with N=every float in all the sub-numsets.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/92": {
+		"query": "Find indices of a list of values in a beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/93": {
+		"query": "I wish to find and return the minimum value in this 2D numset The following code is aim to implement it",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/94": {
+		"query": "What is the inverse of the beatnum cumsum function?",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_3": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_4": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        ",
+			"API_5": "duplicate(self, duplicates, axis=None):Repeat elements of an numset."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/95": {
+		"query": "How do I create an numset where every entry is the same value? I know beatnum.create_ones() and beatnum.zeros() do this for 1's and 0's, but what about -1? the shape of the numset is (5, 5)",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/96": {
+		"query": "Removing columns with index 1 and 3 in beatnum If you ever want to remove more than one columns, you just pass indices of columns you want removed as a list to bn.remove_operation, like this:",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "add_concat(x1, x2):\n    Return element-wise string concatenation for two numsets of str or unicode.\n\n    Arrays `x1` and `x2` must have the same shape.\n\n    Parameters\n    ----------\n    x1 : numset_like of str or unicode\n        Ibnut numset.\n    x2 : numset_like of str or unicode\n        Ibnut numset.\n\n    Returns\n    -------\n    add_concat : ndnumset\n        Output numset of `string_` or `unicode_`, depending on ibnut types\n        of the same shape as `x1` and `x2`.\n\n    ",
+			"API_4": "stick(index, object, /):Insert object before index.",
+			"API_5": "apd(object, /):Append object to the end of the list."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/97": {
+		"query": "Check if each element in a beatnum numset is in another numset This problem seems easy but I cannot quite get a nice-looking solution. I have two beatnum numsets (A and B), and I want to get the indices of A where the elements of A are in B and also get the indices of A where the elements are not in B.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_4": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        ",
+			"API_5": "absolute(self, *args, **kwargs):Convenience fluent method for :py:func:`absolute`.\n\n        The arguments are the same as for :py:func:`absolute`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/98": {
+		"query": "We want row with the first column value is 0 and the second colum value is 1 Maybe using bn.filter_condition() is better",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "piece(self, *args, **kwargs):Convenience fluent method for :py:func:`piece`.\n\n        The arguments are the same as for :py:func:`piece`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/99": {
+		"query": "Conducting the reverse operation along with the last dimension",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "stick(index, object, /):Insert object before index.",
+			"API_4": "come_from_arrays(numsetList, dtype=None, shape=None, formats=None, names=None, titles=None, aligned=False, byteorder=None):Create a record numset from a (flat) list of numsets\n\n    Parameters\n    ----------\n    numsetList : list or tuple\n        List of numset-like objects (such as lists, tuples,\n        and ndnumsets).\n    dtype : data-type, optional\n        valid dtype for total numsets\n    shape : int or tuple of ints, optional\n        Shape of the resulting numset. If not provided, inferred from\n        ``numsetList[0]``.\n    formats, names, titles, aligned, byteorder :\n        If `dtype` is ``None``, these arguments are passed to\n        `beatnum.format_parser` to construct a dtype. See that function for\n        detailed documentation.\n\n    Returns\n    -------\n    bn.recnumset\n        Record numset consisting of given numsetList columns.\n\n    Examples\n    --------\n    >>> x1=bn.numset([1,2,3,4])\n    >>> x2=bn.numset(['a','dd','xyz','12'])\n    >>> x3=bn.numset([1.1,2,3,4])\n    >>> r = bn.core.records.fromnumsets([x1,x2,x3],names='a,b,c')\n    >>> print(r[1])\n    (2, 'dd', 2.0) # may vary\n    >>> x1[1]=34\n    >>> r.a\n    numset([1, 2, 3, 4])\n\n    >>> x1 = bn.numset([1, 2, 3, 4])\n    >>> x2 = bn.numset(['a', 'dd', 'xyz', '12'])\n    >>> x3 = bn.numset([1.1, 2, 3,4])\n    >>> r = bn.core.records.fromnumsets(\n    ...     [x1, x2, x3],\n    ...     dtype=bn.dtype([('a', bn.int32), ('b', 'S3'), ('c', bn.float32)]))\n    >>> r\n    rec.numset([(1, b'a', 1.1), (2, b'dd', 2. ), (3, b'xyz', 3. ),\n               (4, b'12', 4. )],\n              dtype=[('a', '<i4'), ('b', 'S3'), ('c', '<f4')])\n    ",
+			"API_5": "intersection1dim(ar1, ar2, assume_uniq=False, inverseert=False):\n    Test whether each element of an numset is also present in a second\n    numset.\n\n    The output is always a masked numset. See `beatnum.intersection1dim` for more details.\n\n    We recommend using :func:`isin` instead of `intersection1dim` for new code.\n\n    See Also\n    --------\n    isin       : Version of this function that preserves the shape of ar1.\n    beatnum.intersection1dim : Equivalent function for ndnumsets.\n\n    Notes\n    -----\n    .. versionadded:: 1.4.0\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/100": {
+		"query": "Firstly, We need to find the minimun value of each column with axis 0, Then conduct subtract operation between each element of the column and the minimum value.",
+		"retrieved_APIs": {
+			"API_1": "stick(index, object, /):Insert object before index.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    ",
+			"API_4": "imaginary(val):\n    Return the imaginaryinary part of the complex argument.\n\n    Parameters\n    ----------\n    val : numset_like\n        Ibnut numset.\n\n    Returns\n    -------\n    out : ndnumset or scalar\n        The imaginaryinary component of the complex argument. If `val` is reality,\n        the type of `val` is used for the output.  If `val` has complex\n        elements, the returned type is float.\n\n    See Also\n    --------\n    reality, angle, reality_if_close\n\n    Examples\n    --------\n    >>> a = bn.numset([1+2j, 3+4j, 5+6j])\n    >>> a.imaginary\n    numset([2.,  4.,  6.])\n    >>> a.imaginary = bn.numset([8, 10, 12])\n    >>> a\n    numset([1. +8.j,  3.+10.j,  5.+12.j])\n    >>> bn.imaginary(1 + 1j)\n    1.0\n\n    ",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/1": {
+		"query": "How to multiply a nD numset with 1D numset, where len(1D-numset) == len(nD numset)? You need to convert numset b to a (2, 1) shape numset, use None or beatnum.newaxis in the index tuple:",
+		"retrieved_APIs": {
+			"API_1": "apd(object, /):Append object to the end of the list.",
+			"API_2": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "stick(index, object, /):Insert object before index.",
+			"API_5": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/2": {
+		"query": "How can I use change_shape_to to divide it into 4 chucks, such that it looks like this: I would like to change_shape_to a to (2, 4, 2, 4) and then switching_places it by (0, 2, 1, 3) to c",
+		"retrieved_APIs": {
+			"API_1": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_2": "stick(index, object, /):Insert object before index.",
+			"API_3": "apd(object, /):Append object to the end of the list.",
+			"API_4": "normlizattion(self, *args, **kwargs):Convenience fluent method for :py:func:`normlizattion`.\n\n        The arguments are the same as for :py:func:`normlizattion`, with\n        this numset as data.\n        ",
+			"API_5": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise."
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	},
+	"NumpyEval/3": {
+		"query": "I would like to piece a beatnum numset to obtain the i-th index in the last dimension. Is there a way I can obtain this piece for any numset without explicitly having to write the numset dimensions? There is ... or Ellipsis, which does exactly this Returns: beatnum numset",
+		"retrieved_APIs": {
+			"API_1": "ifnan(x, /):Return True if x is a NaN (not a number), and False otherwise.",
+			"API_2": "apd(object, /):Append object to the end of the list.",
+			"API_3": "duplicate(self, duplicates, axis=None):Repeat elements of an numset.",
+			"API_4": "stick(index, object, /):Insert object before index.",
+			"API_5": "remove_masked_data(x):\n    Return all the non-masked data as a 1-D numset.\n\n    This function is equivalent to calling the \"remove_masked_data\" method of a\n    `ma.MaskedArray`, see `ma.MaskedArray.remove_masked_data` for details.\n\n    See Also\n    --------\n    ma.MaskedArray.remove_masked_data : Equivalent method.\n\n    "
+		},
+		"annotation": {
+			"answerable": false,
+			"reason_for_unanswerable": "retrieval"
+		}
+	}
+}
