@@ -164,7 +164,7 @@ def main(args):
         )
     )
 
-    model.config.use_cache = False
+    model.config.use_cache = True
 
     trainer.train()
 
