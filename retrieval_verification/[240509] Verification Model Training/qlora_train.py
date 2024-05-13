@@ -86,12 +86,12 @@ def get_dataset(tokenizer):
     def generate_and_tokenize_prompt(data_point):
         user_prompt = BASELINE_PROMPT.format(query=data_point["query"], apis=data_point["apis"])
         if "pseudo_label" in data_point:
-            full_prompt = f"{user_prompt}{data_point['pseudo_label']}"
+            full_prompt = f"{user_prompt}[{data_point['pseudo_label']}]{tokenizer.eos_token}"
         else:
             full_prompt = user_prompt
 
         tokenized_user_prompt = tokenizer(user_prompt, truncation=True, padding=True)
-        user_prompt_len = len(tokenized_user_prompt["input_ids"]) - 2
+        user_prompt_len = len(tokenized_user_prompt["input_ids"]) - 1
 
         tokenized_full_prompt = tokenizer(full_prompt, truncation=True, padding=True)
         tokenized_full_prompt["labels"] = tokenized_full_prompt["input_ids"].copy()
