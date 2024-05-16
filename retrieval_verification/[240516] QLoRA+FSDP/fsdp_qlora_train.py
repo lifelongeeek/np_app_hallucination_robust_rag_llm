@@ -18,7 +18,7 @@ from transformers import (
 from peft import LoraConfig
 from loguru import logger
 from trl import SFTTrainer
-from prompts import BASELINE_PROMPT
+from prompts import BASELINE_PROMPT, SINGLE_TOKEN_BASELINE_PROMPT
 
 
 def set_custom_seed(seed):
@@ -38,6 +38,7 @@ class ScriptArguments:
     )
     model_id: str = field(default=None, metadata={"help": "Model ID to use for SFT training"})
     max_seq_length: int = field(default=512, metadata={"help": "The maximum sequence length for SFT Trainer"})
+    train_task: str = field(default=None, metadata={"help": "Token to use(raw label or single token)"})
 
 
 @dataclass
@@ -46,13 +47,18 @@ class LogArguments:
     output_base_dir: str = field(default=None, metadata={"help": "Base directory for model saving"})
 
 
-def get_dataset(tokenizer):
+def get_dataset(tokenizer, train_task):
     def generate_and_tokenize_prompt(data_point):
-        user_prompt = BASELINE_PROMPT.format(query=data_point["query"], apis=data_point["apis"])
-        if "pseudo_label" in data_point:
+        if train_task == "raw":
+            user_prompt = BASELINE_PROMPT.format(query=data_point["query"], apis=data_point["apis"])
             full_prompt = f"{user_prompt}[{data_point['pseudo_label']}]{tokenizer.eos_token}"
+        elif train_task == "single_token":
+            label_to_short = {"Answerable": "A", "Partially answerable": "P", "Unanswerable": "U"}
+            user_prompt = SINGLE_TOKEN_BASELINE_PROMPT.format(query=data_point["query"], apis=data_point["apis"])
+            full_prompt = f"{user_prompt}{label_to_short[data_point['pseudo_label']]}{tokenizer.eos_token}"
         else:
-            full_prompt = user_prompt
+            print("train_task only support ['raw', 'single_token']")
+            raise NotImplementedError
 
         tokenized_user_prompt = tokenizer(user_prompt, truncation=True, padding=True)
         user_prompt_len = len(tokenized_user_prompt["input_ids"]) - 1
@@ -65,7 +71,7 @@ def get_dataset(tokenizer):
 
         return tokenized_full_prompt
 
-    dataset_path = os.path.join(os.getcwd(), "dataset_4k_eos.pkl")
+    dataset_path = os.path.join(os.getcwd(), f"dataset_4k_{train_task}.pkl")
     if os.path.isfile(dataset_path):
         with open(dataset_path, "rb") as f:
             trainset, validset = pickle.load(f)
@@ -98,7 +104,7 @@ def training_function(script_args, training_args):
     ################
     # DATASET
     ################
-    train_dataset, test_dataset = get_dataset(tokenizer)
+    train_dataset, test_dataset = get_dataset(tokenizer, script_args.train_task)
 
     ################
     # MODEL
@@ -186,10 +192,12 @@ if __name__ == "__main__":
     torch.cuda.set_device(local_rank)
 
     current_datetime = datetime.datetime.now()
-    formatted_datetime = current_datetime.strftime("%m-%d_%H:%M:%S")
+    hours_to_add = datetime.timedelta(hours=9)
+    result_datetime = current_datetime + hours_to_add
+    formatted_datetime = result_datetime.strftime("%m-%d_%H:%M:%S")
 
     exp_postfix = f"bs{training_args.per_device_train_batch_size}_acc{training_args.gradient_accumulation_steps}_gpu{world_size}"
-    exp_name = f"{log_args.exp_name}_{exp_postfix}_{formatted_datetime}"
+    exp_name = f"{log_args.exp_name}_{script_args.train_task}_{exp_postfix}_{formatted_datetime}"
     output_dir = os.path.join(log_args.output_base_dir, exp_name)
     training_args.output_dir = output_dir
 
