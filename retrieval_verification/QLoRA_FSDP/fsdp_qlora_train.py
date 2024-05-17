@@ -55,7 +55,7 @@ def get_dataset(tokenizer, train_task):
         elif train_task == "single_token":
             label_to_short = {"Answerable": "A", "Partially answerable": "P", "Unanswerable": "U"}
             user_prompt = SINGLE_TOKEN_BASELINE_PROMPT.format(query=data_point["query"], apis=data_point["apis"])
-            full_prompt = f"{user_prompt}{label_to_short[data_point['pseudo_label']]}{tokenizer.eos_token}"
+            full_prompt = f"{user_prompt}{label_to_short[data_point['pseudo_label']]}"
         else:
             print("train_task only support ['raw', 'single_token']")
             raise NotImplementedError
@@ -67,30 +67,34 @@ def get_dataset(tokenizer, train_task):
         tokenized_full_prompt["labels"] = tokenized_full_prompt["input_ids"].copy()
 
         tokenized_full_prompt["labels"] = [-100] * user_prompt_len + tokenized_full_prompt["labels"][user_prompt_len:]
-        tokenized_full_prompt["text"] = user_prompt
+        tokenized_full_prompt["text"] = full_prompt
 
         return tokenized_full_prompt
 
     dataset_path = os.path.join(os.getcwd(), f"dataset_4k_{train_task}.pkl")
     if os.path.isfile(dataset_path):
         with open(dataset_path, "rb") as f:
-            trainset, validset = pickle.load(f)
+            trainset, validset, plav_eval = pickle.load(f)
     else:
         dataset_name = "PLAV_trainset_0508_apu.jsonl"
         dataset = load_dataset("json", data_files=dataset_name, split="train")
         dataset = dataset.train_test_split(test_size=0.1)
 
+        plav_eval = load_dataset("json", data_files="plav_for_eval.jsonl", split="train")
+
         trainset = dataset["train"].shuffle().map(generate_and_tokenize_prompt)
         validset = dataset["test"].map(generate_and_tokenize_prompt)
+        plav_eval = plav_eval.map(generate_and_tokenize_prompt)
 
         trainset = [d for d in trainset if len(d["input_ids"]) < 4096]
         validset = [d for d in validset if len(d["input_ids"]) < 4096]
+        plav_eval = [d for d in plav_eval if len(d["input_ids"]) < 4096]
 
         with open(dataset_path, "wb") as f:
-            pickle.dump([trainset, validset], f)
+            pickle.dump([trainset, validset, plav_eval], f)
         print(f"Dataset saved at {dataset_path}")
 
-    return trainset, validset
+    return trainset, validset, plav_eval
 
 
 def training_function(script_args, training_args):
@@ -104,7 +108,7 @@ def training_function(script_args, training_args):
     ################
     # DATASET
     ################
-    train_dataset, test_dataset = get_dataset(tokenizer, script_args.train_task)
+    train_dataset, test_dataset, plav_eval = get_dataset(tokenizer, script_args.train_task)
 
     ################
     # MODEL
@@ -152,7 +156,7 @@ def training_function(script_args, training_args):
         args=training_args,
         train_dataset=train_dataset,
         dataset_text_field="text",
-        eval_dataset=test_dataset,
+        eval_dataset={"stblib": test_dataset, "plav": plav_eval},
         peft_config=peft_config,
         max_seq_length=script_args.max_seq_length,
         tokenizer=tokenizer,
