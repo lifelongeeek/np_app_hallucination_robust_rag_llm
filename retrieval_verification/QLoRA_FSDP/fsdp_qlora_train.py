@@ -37,7 +37,7 @@ class ScriptArguments:
         metadata={"help": "Path to the dataset"},
     )
     model_id: str = field(default=None, metadata={"help": "Model ID to use for SFT training"})
-    max_seq_length: int = field(default=512, metadata={"help": "The maximum sequence length for SFT Trainer"})
+    max_seq_length: int = field(default=4096, metadata={"help": "The maximum sequence length for SFT Trainer"})
     train_task: str = field(default=None, metadata={"help": "Token to use(raw label or single token)"})
 
 
