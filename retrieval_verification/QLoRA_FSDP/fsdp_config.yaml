@@ -1,9 +1,10 @@
 # log parameters
-exp_name: "llama_3_4k"
+exp_name: "llama-3-8b"
 output_base_dir: "./output"                     # Temporary output directory for model checkpoints
 # script parameters
 model_id: "meta-llama/Meta-Llama-3-8B-Instruct" # Hugging Face model id
-dataset_path: "HuggingFaceH4/no_robots"         # path to dataset
+# model_id: "google/gemma-1.1-7b-it"
+dataset_path: "RaCAV"         # path to dataset
 max_seq_length: 4096                               # max sequence length for model and packing of the dataset
 train_task: "single_token"                      # ['raw', 'single_token']
 # training parameters
@@ -11,10 +12,10 @@ output_dir: "./output"
 report_to: "wandb"                              # report metrics to wandb
 learning_rate: 0.0002                           # learning rate 2e-4
 lr_scheduler_type: "cosine"                     # learning rate scheduler
-num_train_epochs: 20                            # number of training epochs
-per_device_train_batch_size: 8                 # batch size per device during training
-per_device_eval_batch_size: 8                  # batch size for evaluation
-gradient_accumulation_steps: 1                  # number of steps before performing a backward/update pass
+num_train_epochs: 10                            # number of training epochs
+per_device_train_batch_size: 4                 # batch size per device during training
+per_device_eval_batch_size: 4                  # batch size for evaluation
+gradient_accumulation_steps: 4                  # number of steps before performing a backward/update pass
 optim: adamw_torch                              # use torch adamw optimizer
 logging_steps: 1                                # log every 1 steps
 save_strategy: steps                            # save checkpoint every 50 steps 
