@@ -7,7 +7,7 @@
 			"API_3": "HttpReader(source_datapipe: IterDataPipe[str], timeout: Optional[float] = None):\n    Takes file URLs (HTTP URLs pointing to files), and yields tuples of file URL and IO stream.\n\n    Args:\n        source_datapipe: a DataPipe that contains URLs\n        timeout: timeout in seconds for HTTP request\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -19,7 +19,7 @@
 			"API_3": "Shuffler(*args, **kwds):\n    Shuffle the input DataPipe via its indices (functional name: ``shuffle``).\n\n    When it is used with :class:`~torch.utils.data.DataLoader`, the methods to\n    set up random seed are different based on :attr:`num_workers`.\n\n    For single-process mode (:attr:`num_workers == 0`), the random seed is set before\n    the :class:`~torch.utils.data.DataLoader` in the main process. For multi-process\n    mode (:attr:`num_worker > 0`), ``worker_init_fn`` is used to set up a random seed\n    for each worker process.\n\n    Args:\n        datapipe: MapDataPipe being shuffled\n        indices: a list of indices of the MapDataPipe. If not provided, we assume it uses 0-based indexing\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -31,7 +31,7 @@
 			"API_3": "Shuffler(*args, **kwds):\n    Shuffles the input DataPipe with a buffer (functional name: ``shuffle``). The buffer\n    with ``buffer_size`` is filled with elements from the datapipe first. Then,\n    each item will be yielded from the buffer by reservoir sampling via iterator.\n\n    ``buffer_size`` is required to be larger than ``0``. For ``buffer_size == 1``, the\n    datapipe is not shuffled. In order to fully shuffle all elements from datapipe,\n    ``buffer_size`` is required to be greater than or equal to the size of datapipe.\n\n    When it is used with :class:`torch.utils.data.DataLoader`, the methods to\n    set up random seed are different based on :attr:`num_workers`.\n\n    For single-process mode (:attr:`num_workers == 0`), the random seed is set before\n    the :class:`~torch.utils.data.DataLoader` in the main process. For multi-process\n    mode (:attr:`num_worker > 0`), `worker_init_fn` is used to set up a random seed\n    for each worker process.\n\n    Args:\n        datapipe: The IterDataPipe being shuffled\n        buffer_size: The buffer size for shuffling (default to ``10000``)\n        unbatch_level: Specifies if it is necessary to unbatch source data before\n            applying the shuffle\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -43,7 +43,7 @@
 			"API_3": "cycle(*args, **kwds):\n    Cycles the specified input in perpetuity by default, or for the specified number\n    of times (functional name: ``cycle``).\n\n    Args:\n        source_datapipe: source DataPipe that will be cycled through\n        count: the number of times to read through ``source_datapipe` (if ``None``, it will cycle in perpetuity)\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -55,7 +55,7 @@
 			"API_3": "ZipArchiveLoader(*args, **kwds):\n    Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and\n    zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``).\n\n    Args:\n        datapipe: Iterable DataPipe that provides tuples of path name and zip binary stream\n        length: Nominal length of the DataPipe\n\n    Note:\n        The opened file handles will be closed automatically if the default ``DecoderDataPipe``\n        is attached. Otherwise, user should be responsible to close file handles explicitly\n        or let Python's GC close them periodically. Due to how `zipfiles` implements its ``open()`` method,\n        the data_stream variable below cannot be closed within the scope of this function.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -67,7 +67,7 @@
 			"API_3": "zip_with_iter(source_datapipe: IterDataPipe, ref_datapipe: IterDataPipe, key_fn: Callable, ref_key_fn: Optional[Callable] = None, keep_key: bool = False, buffer_size: int = 10000, merge_fn: Optional[Callable] = None):\n    Zips two IterDataPipes together based on the matching key (functional name: ``zip_with_iter``). The keys\n    are computed by ``key_fn`` and ``ref_key_fn`` for the two IterDataPipes, respectively. When there isn't a match\n    between the elements of the two IterDataPipes, the element from ``ref_datapipe`` is stored in a buffer. Then, the\n    next element from ``ref_datapipe`` is tried. After a match is found, the ``merge_fn`` determines how they will\n    be combined and returned (a tuple is generated by default).\n\n    Args:\n        source_datapipe: IterKeyZipper will yield data based on the order of this IterDataPipe\n        ref_datapipe: Reference IterDataPipe from which IterKeyZipper will find items\n            with matching key for ``source_datapipe``\n        key_fn: Callable function that will compute keys using elements from ``source_datapipe``\n        ref_key_fn: Callable function that will compute keys using elements from ``ref_datapipe``\n            If it's not specified, the ``key_fn`` will also be applied to elements from ``ref_datapipe``\n        keep_key: Option to yield the matching key along with the items in a tuple,\n            resulting in `(key, merge_fn(item1, item2))`.\n        buffer_size: The size of buffer used to hold key-data pairs from reference DataPipe until a match is found.\n            If it's specified as ``None``, the buffer size is set as infinite.\n        merge_fn: Function that combines the item from ``source_datapipe`` and the item from ``ref_datapipe``,\n            by default a tuple is created\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -79,7 +79,7 @@
 			"API_3": "ZipArchiveLoader(*args, **kwds):\n    Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and\n    zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``).\n\n    Args:\n        datapipe: Iterable DataPipe that provides tuples of path name and zip binary stream\n        length: Nominal length of the DataPipe\n\n    Note:\n        The opened file handles will be closed automatically if the default ``DecoderDataPipe``\n        is attached. Otherwise, user should be responsible to close file handles explicitly\n        or let Python's GC close them periodically. Due to how `zipfiles` implements its ``open()`` method,\n        the data_stream variable below cannot be closed within the scope of this function.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -91,7 +91,7 @@
 			"API_3": "ZipArchiveLoader(*args, **kwds):\n    Opens/decompresses zip binary streams from an Iterable DataPipe which contains a tuple of path name and\n    zip binary stream, and yields a tuple of path name and extracted binary stream (functional name: ``load_from_zip``).\n\n    Args:\n        datapipe: Iterable DataPipe that provides tuples of path name and zip binary stream\n        length: Nominal length of the DataPipe\n\n    Note:\n        The opened file handles will be closed automatically if the default ``DecoderDataPipe``\n        is attached. Otherwise, user should be responsible to close file handles explicitly\n        or let Python's GC close them periodically. Due to how `zipfiles` implements its ``open()`` method,\n        the data_stream variable below cannot be closed within the scope of this function.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -103,7 +103,7 @@
 			"API_3": "EndOnDiskCacheHolder(datapipe, mode='wb', filepath_fn=None, *, same_filepath_fn=False, skip_read=False):\n    Indicates when the result of prior DataPipe will be saved local files specified\n    by ``filepath_fn`` (functional name: ``end_caching``). Moreover, the result of source DataPipe\n    is required to be a tuple of metadata and data, or a tuple of metadata and file handle.\n\n    Args:\n        datapipe: IterDataPipe with at least one ``OnDiskCacheHolder`` in the graph.\n        mode: Mode in which the cached files are opened to write the data on disk. This is needed\n            to be aligned with the type of data or file handle from ``datapipe``. ``\"wb\"`` is used by default.\n        filepath_fn: Optional function to extract filepath from the metadata from ``datapipe``.\n            By default, it would directly use the metadata as file path.\n        same_filepath_fn: Set to ``True`` to use same ``filepath_fn`` from the ``OnDiskCacheHolder``.\n        skip_read: Boolean value to skip reading the file handle from ``datapipe``.\n            By default, reading is enabled and reading function is created based on the ``mode``.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -115,7 +115,7 @@
 			"API_3": "batch(datapipe: MapDataPipe[T], batch_size: int, drop_last: bool = False, wrapper_class=DataChunk):\n    Create mini-batches of data (functional name: ``batch``). An outer dimension will be added as\n    ``batch_size`` if ``drop_last`` is set to ``True``, or ``length % batch_size`` for the\n    last batch if ``drop_last`` is set to ``False``.\n\n    Args:\n        datapipe: Iterable DataPipe being batched\n        batch_size: The size of each batch\n        drop_last: Option to drop the last batch if it's not full\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -127,7 +127,7 @@
 			"API_3": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -139,7 +139,7 @@
 			"API_3": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -151,7 +151,7 @@
 			"API_3": "add_index(*args, **kwds):\n    Adds an index to an existing Iterable DataPipe with (functional name: ``add_index``). The row or batch\n    within the DataPipe must have the type `Dict`; otherwise, a `NotImplementedError` will be thrown. The index\n    of the data is set to the provided ``index_name``.\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed, its row/batch must be of type `Dict`\n        index_name: Name of the key to store data index\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -163,7 +163,7 @@
 			"API_3": "enumerate(*args, **kwds):\n    Adds an index to an existing DataPipe through enumeration, with\n    the index starting from 0 by default (functional name: ``enumerate``).\n\n    Args:\n        source_datapipe: Iterable DataPipe being indexed\n        starting_index: Index from which enumeration will start\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -175,7 +175,7 @@
 			"API_3": "IoPathFileLister(*args, **kwds):\n    Lists the contents of the directory at the provided ``root`` pathname or URL,\n    and yields the full pathname or URL for each file within the directory.\n\n    Args:\n        root: The root local filepath or URL directory to list files from\n        masks: Unix style filter string or string list for filtering file name(s)\n        pathmgr: Custom ``iopath.PathManager``. If not specified, a default ``PathManager`` is created.\n\n    Note:\n        Default ``PathManager`` currently supports local file path, normal HTTP URL and OneDrive URL.\n        S3 URL is supported only with ``iopath``>=0.1.9.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -187,7 +187,7 @@
 			"API_3": "concat(*args, **kwds):\n    Concatenate multiple Map DataPipes (functional name: ``concat``).\n    The new index of is the cumulative sum of source DataPipes.\n    For example, if there are 2 source DataPipes both with length 5,\n    index 0 to 4 of the resulting `ConcatMapDataPipe` would refer to\n    elements of the first DataPipe, and 5 to 9 would refer to elements\n    of the second DataPipe.\n\n    Args:\n        datapipes: Map DataPipes being concatenated\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	},
@@ -199,7 +199,7 @@
 			"API_3": "EndOnDiskCacheHolder(datapipe, mode='wb', filepath_fn=None, *, same_filepath_fn=False, skip_read=False):\n    Indicates when the result of prior DataPipe will be saved local files specified\n    by ``filepath_fn`` (functional name: ``end_caching``). Moreover, the result of source DataPipe\n    is required to be a tuple of metadata and data, or a tuple of metadata and file handle.\n\n    Args:\n        datapipe: IterDataPipe with at least one ``OnDiskCacheHolder`` in the graph.\n        mode: Mode in which the cached files are opened to write the data on disk. This is needed\n            to be aligned with the type of data or file handle from ``datapipe``. ``\"wb\"`` is used by default.\n        filepath_fn: Optional function to extract filepath from the metadata from ``datapipe``.\n            By default, it would directly use the metadata as file path.\n        same_filepath_fn: Set to ``True`` to use same ``filepath_fn`` from the ``OnDiskCacheHolder``.\n        skip_read: Boolean value to skip reading the file handle from ``datapipe``.\n            By default, reading is enabled and reading function is created based on the ``mode``.\n\n    "
 		},
 		"annotation": {
-			"label": "Partially anwerable",
+			"label": "Partially answerable",
 			"reason_for_unanswerable": "api_deletion"
 		}
 	}
